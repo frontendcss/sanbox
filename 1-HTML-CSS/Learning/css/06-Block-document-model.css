@@ -1,0 +1,163 @@
+section{
+	background-color: #ccc;
+	font-family: "PT Sans", sans-serif;
+	width: 400px;
+	margin-bottom:10px;
+	padding: 5px;
+}
+
+/*Блочные элементы*
+До и после блочного элемента существует перенос строки.
+Блочным элементам можно задавать ширину, высоту, внутренние и внешние отступы.
+Занимают всё доступное пространство по горизонтали.
+*/
+
+/*Строчные элементы
+До и после строчного элемента отсутствуют переносы строки.
+Ширина и высота строчного элемента зависит только от его содержания, задать размеры с помощью CSS нельзя.
+Можно задавать только горизонтальные отступы
+*/
+
+/*Схлопывание» внешних отступов*/
+.document-model-class1
+.class1,
+.class2 {
+	background-color: #99ca48;
+	width: 200px;
+	height: 100px;
+}
+.class1 {margin-bottom: 20px}
+.class2 {margin-top: 10px}
+
+/*Выпадание» внешних отступов*/
+.document-model-class2
+.class1 {
+	background-color: #0f80ff;
+	width: 200px;
+	height: 100px;
+}
+
+.document-model-class2
+.class01 {
+	background-color: #108040;
+	margin-top: 30px;
+	width: 150px;
+	height: 50px;
+}
+
+/*Отцентровать элемент*/
+.document-model-class3
+.class1 {
+	background-color: #408002;
+	width: 200px;
+	height: 100px;
+}
+
+.document-model-class3
+.class01 {
+	background-color: #0f80ff;
+	width: 100px;
+	height: 50px;
+
+	margin: 0 auto;
+}
+
+/*Блочная модель и строчные элементы*/
+.document-model-class4
+span {
+	background-color: #999999;
+	color: white;
+	border: 2px solid #99ca48;
+
+	padding: 20px;
+	opacity: 0.7;
+}
+
+/*Ширина 100% и ширина по умолчанию*/
+.document-model-class5
+.class1 {
+	background-color: #996633;
+	width: 200px;
+	height: 100px;
+	padding: 10px;
+}
+
+.document-model-class5
+.class01 {
+	background-color: #fd8008;
+	/*width: 100%;*/
+	width: auto;
+	height: 60px;
+
+	border: 10px solid #4c4c4c;
+	padding-left: 20px;
+}
+
+/*Проблемы обычной блочной модели*/
+.document-model-class6
+.class1 {
+	background-color: #108040;
+	width: 200px;
+	height: 50px;
+	padding: 10px;
+}
+
+input[type="text"] {
+	font-family: inherit;
+	font-size: 15px;
+
+	width: 100%;
+	padding: 10px 40px;
+
+	box-sizing: border-box;
+}
+
+/*Блочно-строчных*/
+.document-model-class7
+.class1 {
+	background-color: #6666ff;
+	width: 300px;
+}
+
+
+.document-model-class7
+.class1 p{
+	font-size: 40px;
+}
+
+.document-model-class7
+.class1 span {
+	background-color: #fff;
+	display: inline-block;
+	font-size: 10px;
+
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

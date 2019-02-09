@@ -1,0 +1,111 @@
+section{
+	background-color: #ccc;
+	width: 400px;
+	margin-bottom:10px;
+	padding: 5px;
+}
+
+/*Объединение селекторов*/
+.class1.class2{
+	background-color: #99ca48;
+}
+
+/*Псевдокласс :not
+В качестве селектора могут указываться псевдоклассы, теги,
+идентификаторы, классы и селекторы атрибутов. Нельзя использовать
+двойной псевдокласс :not, то есть конструкция :not(:not(...)) не сработает*/
+.not
+li:not(.class3) {
+	background-color: #6666ff;
+}
+
+/*Комбинируем :not*/
+.not2 
+li:not(:first-child):not(:last-child) {
+	background-color: #fd8008;
+}
+
+/*Псевдокласс :first-of-type*/
+/*Выбирать перыий ul на странице*/
+.class-type 
+ul:first-of-type {
+	background-color: #66ffcc;
+}
+
+/*Выбирать паследний ul на странице*/
+/*ul:last-of-type {
+	background-color: #66ffcc;
+}*/
+
+/*Псевдокласс :nth-of-type*/
+/*Произвольно выбирать ul на странице*/
+.class-type-2 
+ul:nth-of-type(2) {
+	background-color: #108080;
+}
+
+/*Псевдокласс nth-last-of-type*/
+.class-type-3
+ul:nth-last-of-type(1) {
+	background-color: #333;
+}
+
+/*Cелектор последующих элементов*/
+.class-type-4
+.class1 ~ .class3 {
+	background-color: #99ca48;
+}
+
+/*Псевдокласс :empty, выбирает только те теги, у которых нет дочерних элементов*/
+/*li:not(:empty) span{display: block;}*/
+.class-type-5
+ul:empty {
+	color: #99ca48;
+	list-style: none;
+}
+
+/*Псевдокласс :only-child*/
+/*Сработает, когда этот <li> в списке единственный.*/
+.class-type-6
+li:only-child {
+	background-color: #99ca48;
+}
+
+/*Псевдокласс :only-of-type*/
+/*если это единственный p внутри своего родителя.*/
+.class-type-7
+p:only-of-type {
+	background-color: #99ca48;
+}
+
+
+/*Псевдоэлемент ::before*/
+.class-type-8
+li::before {
+	content: "Content 1";
+	background-color: #99ca48;
+	position: absolute;
+	left: 160px;
+	padding: 15px;
+}
+
+.class-type-8
+li::after {
+	content: 'Content 3';
+}
+
+/*Псевдоэлементы ::first-line и ::first-letter*/
+.class-type-9
+p::first-letter {
+	font-family: "Times New Roman", serif;
+	font-size:30px;
+	line-height:30px;
+	float: left;
+	color: red;
+	margin-right: 5px;
+}
+
+
+
+
+

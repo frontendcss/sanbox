@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Form</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Form,type">
+		<meta name="description" content="Form">
+		<link href="css/style.css" rel="stylesheet">
+		<!-- meta http-equiv="refresh" content="2; URL=http://fanklip.net"> -->
+	</head>
+	<body>
+		<h1>Регистрация</h1>
+
+		<form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+			<label for="email-field">Ваш логин (email):</label><br>
+			<input id="email-field" name="email"><br>
+
+			<label for="password-field">Пароль:</label><br>
+			<input id="password-field" name="password"><br>
+
+			<label for="commet-field">Информация о себе:</label><br>
+			<textarea rows="3" cols="20" id="commet-field" name="commet"></textarea><br>
+
+			<label>Подписаться</label><br>
+			<input type="radio" name="radio-field" value="p">
+			<input type="radio" name="radio-field" value="b">
+			<input type="radio" name="radio-field" checked value="v">
+
+			<p><i>Ваш год рождения</i></p>
+			<select name="year" size="4" multiple>
+				<option value="2000">2004 год</option>
+				<option value="2000">2003 год</option>
+				<option value="2000">2002 год</option>
+				<option value="2001" selected>2001 год</option>
+			</select><br>
+
+			<input type="checkbox" checked name="box">
+			<label>Подписаться на рассылку</label><br>
+			<input type="submit" value="Зарегистрироваться"><br>
+
+			<p>Выберите изображение для своего аватара:</p>
+			<input type="file" name="avatar">
+
+			<p>Скрытое поле</p>
+			<input type="hidden" name="account_number">
+		</form>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
