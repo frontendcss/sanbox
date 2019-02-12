@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Selectors part-2</title>
+		<meta charset="utf-8">
+		<meta name="discription" content="Структура HTML">
+		<meta name="keywords" content="HTML,CSS,JavaScript">
+		<!-- <meta http-equiv="refresh" content="5; URL=https://uzmusichd.net"> -->
+		<link href="css/04-Selectors-part-2.css" rel="stylesheet">
+	</head>
+	<body>
+
+	<section>
+		<h4>Объединение селекторов ( .class1.class2 )</h4>
+		<ul>
+			<li class="class1 class2">class1 class2</li>
+			<li class="class1">class1</li>
+			<li class="class2">class2</li>
+		</ul>
+	</section>
+
+	<section>
+		<h4>Псевдокласс :not ( li:not(.class3) )</h4>
+		<ul class="not">
+			<li class="class1">class1</li>
+			<li class="class1">class1</li>
+			<li class="class1 class3">class1 class3</li>
+			<li class="class1">class1</li>
+		</ul>
+	</section>
+
+	<section>
+		<h4>Комбинируем :not ( li:not(:first-child):not(:last-child) )</h4>
+		<ul class="not2">
+			<li>block1</li>
+			<li>block2</li>
+			<li>block3</li>
+			<li>block4</li>
+		</ul>
+	</section>
+
+	<section class="class-type">
+		<h4>Псевдокласс :first-of-type</h4>
+		<h4>Псевдокласс :last-of-type</h4>
+		<div class="class4">div</div>
+		<ul><li>ul 1</li></ul>
+		<ul><li>ul 1</li></ul>
+		<ul><li>ul 2</li></ul>
+	</section>
+
+	<section class="class-type-2">
+		<h4>Псевдокласс :nth-of-type(even,odd)</h4>
+		<ul><li>ul 1</li></ul>
+		<ul><li>ul 2</li></ul>
+		<ul><li>ul 4</li></ul>
+	</section>
+
+	<section class="class-type-3">
+		<h4>Псевдокласс :nth-last-of-type</h4>
+		<ul><li>ul 1</li></ul>
+		<ul><li>ul 2</li></ul>
+		<ul><li>ul 4</li></ul>
+	</section>
+
+	<section class="class-type-4">
+		<h4>Cелектор последующих элементов</h4>
+		<ul>
+			<li class="class1">ul 1</li>
+			<li>ul 2</li>
+			<li class="class3">ul 3</li>
+			<li>ul 4</li>
+		</ul>
+	</section>
+
+		<section class="class-type-5">
+			<h4>Псевдокласс :empty</h4>
+			<ul>ul 1</ul>
+			<ul><li>ul 2</li></ul>
+			<ul>ul 3</ul>
+		</section>
+
+		<section class="class-type-6">
+			<h4>Псевдокласс :only-child</h4>
+			<ul>
+				<li>block1</li>p
+			</ul>
+			<ul>
+				<li>block2</li>
+				<li>block3</li>
+			</ul>
+		</section>
+
+		<section class="class-type-7">
+			<h4>Псевдокласс :only-of-type</h4>
+			<ul>
+				<li>
+					<p>block1</p>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<p>block2</p>
+					<p>block3</p>
+				</li>
+			</ul>
+		</section>
+
+		<section class="class-type-8">
+			<h4>Псевдоэлемент ::before</h4>
+			<ul>
+				<li>
+					<p>Content 2</p>
+				</li>
+			</ul>
+		</section>
+
+		<section class="class-type-9">
+			<h4>Псевдоэлементы ::first-line и ::first-letter</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque consequatur sunt a perspiciatis, cumque quod blanditiis atque eum, ex repudiandae non possimus ab magni recusandae. Officia quam numquam modi itaque.
+			</p>
+		</section>
+
+
+
+
+
+
+
+		<script src="external.js"></script>
+	</body>
+</html>

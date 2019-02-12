@@ -1,0 +1,80 @@
+section{
+	background-color: #ccc;
+	width: 300px;
+	margin-bottom:10px;
+	padding: 5px;
+}
+
+/*Селекторы по тегов*/
+section p{
+	background-color: #996633;
+}
+
+/*Селекторы классов*/
+.class-selectors{
+	background-color: #20ffff;
+}
+
+/*Соседние селекторы*/
+.hit1+.hit2{
+	background-color: green;
+}
+
+/*Дочерние селекторы*/
+.places>li{
+	border-top: solid 2px #999;
+}
+
+/*Псевдоклассы*/
+.pseudo-classes li:first-child,
+.pseudo-classes li:last-child {
+	background-color: #99ca48;
+}
+
+/* Нечетный */
+.pseudo-classes li:nth-child(odd) {
+	background-color: #99ca48;
+}
+
+/* Четный */
+.pseudo-classes li:nth-child(even) {
+	background-color: #fd8008;
+}
+
+.pseudo-classes li:nth-last-child(1) {
+	background-color: #999;
+}
+/*
+a:link { ... }
+a:visited { ... }
+a:hover { ... }
+a:active { ... }
+input:focus (...)
+*/
+/* hover*/
+.pseudo-classes li:hover {
+	background-color: yellow;
+}
+
+/* Селекторы по атрибутов */
+input[type="password"] {
+	background-color: #999;
+}
+
+div[full] {
+	background-color: #fd8008;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
