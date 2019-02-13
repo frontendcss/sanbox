@@ -1,3 +1,9 @@
+/*Ширина и высота SVG*/
+/*Если SVG просто вставить на страницу не указывая размеры,
+он отобразится размером 300×150 пикселей:*/
+
+/*Задавать размеры можно как атрибутами, так и в CSS:*/
+
 /*Svg*/
 svg {
 	border: 2px solid #ccc;
@@ -55,7 +61,66 @@ svg {
 
 .leyer3 {
 	stroke: gold;
-	stroke-width: 10px;
+	stroke-width: 10;
 	stroke-linejoin: bevel;
 	fill: none;
 }
+
+/*Пунктирные линииs*/
+.str-dash {
+	fill: gold;
+	stroke: #99ca48;
+	stroke-width: 5;
+	stroke-dasharray: 40 5 10 5;
+}
+
+/*Сдвиг обводки*/
+.stroke-off {
+	stroke-dasharray: 20 5;
+	stroke-dashoffset: 3;
+	fill: none;
+	stroke: gold;
+	stroke-width: 30;
+}
+
+/*Атрибут viewBox*/
+/*
+Это поведение можно изменить, задав размер области, которая будет
+тянуться, с помощью свойства viewBox (его можно задать только атрибутом)
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
