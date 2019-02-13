@@ -1,6 +1,8 @@
 /*Svg*/
 svg {
 	border: 2px solid #ccc;
+	display: block;
+	margin-bottom: 10px;
 }
 
 /*Заливки*/
@@ -17,4 +19,43 @@ svg {
 .stroke {
 	stroke: teal;
 	stroke-width: 7px;
+}
+
+/*Концы линий*/
+.stroke-line {
+	stroke-linecap: square;
+}
+
+/*Вид сгибов*/
+.shape-linejoin {
+	stroke-linejoin: bevel;
+}
+
+/*зигзаг*/
+/* Используемые цвета:
+	teal, lightseagreen, gold
+*/
+svg {
+	border: 1px solid #dddddd;
+}
+
+.leyer1 {
+	stroke: teal;
+	stroke-width: 80px;
+	stroke-linecap: square;
+}
+
+.leyer2 {
+	stroke: lightseagreen;
+	stroke-width: 50px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
+.leyer3 {
+	stroke: gold;
+	stroke-width: 10px;
+	stroke-linejoin: bevel;
+	fill: none;
 }
