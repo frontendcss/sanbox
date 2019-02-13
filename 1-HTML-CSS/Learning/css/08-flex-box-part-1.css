@@ -1,0 +1,136 @@
+body{margin: 0;}
+
+.flex-container {
+	background-color: #ccc;
+	/*padding: 20px 0;*/
+
+	display: flex;
+	flex-direction: row;
+	/*flex-direction: row-reverse;*/
+	/*flex-direction: column;*/
+	/*flex-direction: column-reverse;*/
+
+	/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+	/* Распределение флекс-элементов главной оси в блоке*/
+	/*justify-content: flex-start;*/
+	/*justify-content: center;*/
+	/*justify-content: flex-end;*/
+
+	/*Равномерное распределение*/
+	/*Значение по умолчанию	stretch*/
+	/*justify-content: space-between;*/
+	/*justify-content: space-around;*/
+	/*justify-content: space-evenly;*/
+
+	/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+	/*Если есть только один ряд флекс-элементов, то работает align-items.
+	Если есть несколько рядов, то работает align-content.
+	Подчеркнём, что align-content влияет на ряды, а не на отдельные элементы.*/
+
+	/*Распределение ряд элементов вдоль поперечной оси*/
+	/*align-content: flex-start;*/
+	/*align-content: center;*/
+	/*align-content: flex-end;*/
+	/*align-content: space-between;*/
+	/*align-content: space-around;*/
+
+	/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+	/*Расположить флекс-элементы в начале или в конце поперечной оси*/
+	/*Значение по умолчанию	stretch*/
+	/*align-items: flex-start;*/
+	/*align-items: center;*/
+	/*align-items: flex-end;*/
+
+	/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+	/*Перенос флекс-элементов*/
+	/*Значение по умолчанию	nowrap*/
+	/*flex-wrap: nowrap;*/
+	flex-wrap: wrap;
+	flex-shrink: 0;
+	/*flex-wrap: wrap-reverse;*/
+}
+.block1 {
+	width: 100%;
+	height: 100px;
+	margin: 10px;
+}
+
+.block2,
+.block3 {
+	min-width: 300px;
+	height: 100px;
+	margin: 10px;
+
+	flex-grow: 1;
+}
+
+.block1{
+	/*margin-left: auto;*/
+
+	/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+
+	/*Эгоистичное выравнивание*/
+	/*align-self: flex-start;*/
+	/*align-self: center;*/
+	/*align-self: flex-end;*/
+}
+
+
+
+.block1 {background-color: #99ca48;}
+.block2 {background-color: #9e7551;}
+.block3 {background-color: #0bb44a;}
+.block4 {background-color: #618039;}
+
+
+/*Особенности свойства margin «ломает» механизмы выравнивания,*/
+/*.items1 {
+	margin-right: auto;
+	margin-left: auto;
+
+	margin-top: auto;
+	margin-bottom: auto;
+}*/
+
+/*Коэффициент растягивания элементов, flex-grow */
+/*Получается, что базовый размер — это исходный размер флекс-элементов до применения flex-grow*/
+/*flex-grow: 0; по умолчанию*/
+
+/*.items4 {
+	flex-grow: 1;
+}*/
+
+/*Коэффициент сжатия элементов, flex-shrink */
+/*flex-shrink: 1; по умолчанию*/
+
+/*.items1 {
+	flex-shrink: 0;
+}
+
+/*Сокращённое свойство flex*/
+/*порядке: flex: flex-grow, flex-shrink и flex-basis:*/
+/*flex-flow: <flex-direction> || <flex-wrap>;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

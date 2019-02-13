@@ -1,0 +1,113 @@
+body {
+	background: #999;
+}
+
+/*.cont {
+	background-image: url(../img/qot.jpg);
+	width: 400px;
+	height: 300px;
+	margin: 70px auto;
+
+	border: 20px solid #56d72b;
+	outline: 40px ridge #fff;
+	outline-offset: -40px;
+
+	border-radius: 35%;
+}*/
+
+/*.cont {
+	background-image: url(../img/qot.jpg);
+	width: 400px;
+	height: 300px;
+	margin: 70px auto;
+
+	border-radius: 12px 140px 0 0 / 160px 10px 0 0;
+}*/
+
+/*.cont {
+	border: 60px solid rgba(0, 0, 0, 0.4);
+	border-image-source: url("../img/logo.png");
+	border-image-slice: 50;
+	background-color: #ccc;
+	width: 400px;
+	height: 300px;
+	margin: 70px auto;
+}*/
+
+/*Стрелка с помощью рамки*/
+/*.cont {
+	background-color: #99ca48;
+	position: relative;
+	width: 300px;
+	height: 50px;
+	margin: 50px auto;
+}
+
+.cont::after {
+	position: absolute;
+	content:"";
+	border: 40px solid #fff;
+
+	top: -15px;
+	right: -40px;
+
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: #99ca48;
+	border-right-color: #a4cdff;
+
+	border-right-width: 0;
+}*/
+
+/*Круглая стрелка с помощью рамки*/
+
+
+.cont {
+	position: relative;
+	margin: 100px auto;
+	width: 200px;
+	height: 200px;
+	border: 50px solid #0074d9;
+	border-right-color: transparent;
+	border-radius: 50%;
+}
+
+
+.cont::after {
+	position: absolute;
+	content: "";
+	
+	border: 100px solid #fff;
+	border-bottom-color: #0074d9;
+	border-left-color: transparent;
+	
+	top: -45px;
+	left: 130px;
+	
+	border-top-width:0;
+	border-right-width:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

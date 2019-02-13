@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Structure HTML</title>
+		<meta name="discription" content="Структура HTML">
+		<meta name="keywords" content="HTML,CSS,JavaScript">
+		<!-- Narmalize.css -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="external.css" rel="stylesheet">
+		<style>
+			.flex-container {
+				background-color: #99ca48;
+				font: bold 30px/35px "PT Sans", sans-serif;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				text-align: center;
+			}
+
+			.flex-container::before,
+			.flex-container::after {
+				background-color: #fff;
+				content: "";
+				display: inline-block;
+				height: 3px;
+				min-width: 50px;
+
+				flex-grow: 1;
+				flex-shrink: 0;
+			}
+
+			.flex-container::before {
+				margin-right: 10px;
+			}
+
+			.flex-container::after {
+				margin-left: 10px;
+			}
+
+			@media (min-width: 320px) {
+
+			}
+
+			@media (min-width: 768px) {
+
+			}
+
+			@media (min-width: 1200px) {
+
+			}
+
+			@media (min-width: 900px) and (max-width: 1200px){
+
+			}
+		</style>
+	</head>
+	<body>
+
+	<p class="flex-container">
+		Hello world Hello lorem Hello world Hello lorem
+	</p>
+
+
+
+		<script src="external.js"></script>
+	</body>
+</html>
