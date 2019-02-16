@@ -27,8 +27,8 @@ header {
 	line-height: 50px;
 }
 
-
 main {
+	/*300px / 320px*/
 	width: 93.75%;
 	margin: 0 auto;
 	display: block;

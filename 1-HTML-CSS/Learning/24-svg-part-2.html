@@ -9,8 +9,7 @@
 		<!-- meta http-equiv="refresh" content="2; URL=http://fanklip.net"> -->
 	</head>
 	<body>
-	<!-- Заливки -->
-	<svg>
+	<!-- Заливки -->	<svg>
 		<circle fill="none" r="60" cx="150" cy="50%" stroke="green" stroke-width="5" class="fill"></circle>
 	</svg>
 	<!-- Прозрачность заливки -->
@@ -49,8 +48,20 @@
 		<rect class="stroke-off" x="100" y="20" width="100" height="100">
 	</svg>
 	<!-- Ширина и высота SVG -->
-	<svg width="400" height="400" viewBox="0 0 200 200">
-		<circle сx="40" cy="60" r="60"></circle>
+	<svg width="300" viewBox="0 0 40 40">
+		<g>
+			<circle fill="#4D76A1" cx="20" cy="20" r="20"/>
+		</g>
+	</svg>
+
+	<svg style="display: none;">
+		<symbol id="ring" viewBox="0 0 100 100">
+			<circle class="style-css" r="50" cx="50" cy="50" fill="green" stroke="yellow" stroke-width="2"></circle>
+		</symbol>
+	</svg>
+
+	<svg width="200" height="300">
+		<use xlink:href="#ring"></use>
 	</svg>
 	</body>
 </html>
