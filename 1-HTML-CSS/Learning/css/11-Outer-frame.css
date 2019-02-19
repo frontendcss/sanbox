@@ -54,7 +54,7 @@ body {
 	border-top-color: transparent;
 	border-bottom-color: transparent;
 	border-left-color: #99ca48;
-	border-right-color: #a4cdff;
+	border-right-color: #99ca48;
 
 	border-right-width: 0;
 }*/
@@ -62,7 +62,7 @@ body {
 /*Круглая стрелка с помощью рамки*/
 
 
-.cont {
+/*.cont {
 	position: relative;
 	margin: 100px auto;
 	width: 200px;
@@ -76,17 +76,17 @@ body {
 .cont::after {
 	position: absolute;
 	content: "";
-	
+
 	border: 100px solid #fff;
 	border-bottom-color: #0074d9;
 	border-left-color: transparent;
-	
+
 	top: -45px;
 	left: 130px;
-	
+
 	border-top-width:0;
 	border-right-width:0;
-}
+}*/
 
 
 

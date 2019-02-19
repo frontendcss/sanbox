@@ -116,13 +116,6 @@ body {
 	opacity: 0.5;
 }
 
-.main-menu ul {
-	background-color: #000;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
 .main-menu > li {
 	background-color: #000;
 	display: inline-block;
@@ -132,8 +125,12 @@ body {
 	margin-left: -1px;
 }
 
-
 .main-menu .sub-menu {
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
 	position: absolute;
 	z-index: 1;
 	display: none;
