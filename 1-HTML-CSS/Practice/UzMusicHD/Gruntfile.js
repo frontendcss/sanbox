@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files: {
-						'css/all.min.css': 'less/*.less'
+						'css/all.min.css': 'less/all.less'
 					}
 				}
 			},
