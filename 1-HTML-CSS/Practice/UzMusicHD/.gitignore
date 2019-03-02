@@ -1,7 +1,0 @@
-node_modules/
-.idea/
-*.log
-*.lock
-.DS_Store
-.publish
-Thumbs.db
