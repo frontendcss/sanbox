@@ -12,7 +12,6 @@ img {
 .main-header {
 	background-color: @bg-color;
 	width: 320px;
-	height: 50px;
 	margin: 0 auto;
 	.main-logo {
 		height: 50px;
@@ -24,42 +23,64 @@ img {
 	.main-logo__inner {
 		background-color: @bg-inner-color;
 		padding: 5px 10px;
+		a {
+			font-size: 20px;
+			text-decoration: none;
+			color: @text-color;
+		}
 	}
-	a {
-		text-decoration: none;
-		color: @text-color;
+}
+
+.mixin-navigation-title(@left-right: 15px; @wh: 17px;) {
+	background-color: @bg-inner-color;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-left: @left-right;
+	height: 45px;
+	margin: 0;
+	font-size: 18px;
+	svg {
+		width: @wh;
+		height: @wh;
+		margin-right: @left-right;
+		fill: @text-color;
 	}
 }
 
 .main-navigation__title {
-	background-color: @bg-inner-color;
-	display: flex;
-	padding: 12px 15px;
-	margin: 0;
-	font-size: 18px;
-	svg {
-		width: 17px;
-		height: 17px;
-		margin-right: 15px;
-		fill: @text-color;
-	}
+	.mixin-navigation-title();
 }
 
-.main-navigation__list {
+.mixin-navigation-list(@left-right: 15px; @wh: 17px;) {
 	background-color: @bg-inner-color;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	.main-navigation__item {
+	.navigation-item {
+		margin-bottom: 3px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.navigation-link {
 		background-color: @bg-color;
 		display: flex;
-		margin-bottom: 3px;
-		padding: 12px 15px;
+		flex-direction: row;
+		align-items: center;
+		padding-left: @left-right;
+		height: 45px;
+		text-decoration: none;
+		color: @text-color;
 	}
 	svg {
-		width: 17px;
-		height: 17px;
-		margin-right: 15px;
+		width: @wh;
+		height: @wh;
+		margin-right: @left-right;
 		fill: @text-color;
 	}
+}
+
+.navigation-list {
+	.mixin-navigation-list();
 }

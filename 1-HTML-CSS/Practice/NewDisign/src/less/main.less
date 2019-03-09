@@ -1,6 +1,78 @@
 main {
-	display: block;
+	background-color: @bg-inner-color;
 	width: 320px;
-	height: 200px;
 	margin: 0 auto;
+}
+
+.music-title {
+	.mixin-navigation-title();
+}
+
+.music-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	.music-item {
+		margin-bottom: 3px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.music-link {
+		background-color: @bg-color;
+		position: relative;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-left: 10px;
+		padding-right: 45px;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: #fff;
+	}
+	svg {
+		margin-right: 10px;
+		width: 27px;
+		height: 27px;
+		fill: @text-color;
+		flex-shrink: 0;
+	}
+	.music-name {
+		display: flex;
+		flex-direction: column;
+		font-weight: normal;
+		margin: 0;
+		text-transform: capitalize;
+	}
+	.author-name {
+		font-size: 14px;
+	}
+	.music-name {
+		font-size: 12px;
+	}
+	.xit {
+		background-color: @bg-inner-color;
+		position: absolute;
+		right: 5px;
+		width: 35px;
+		height: 35px;
+		text-align: center;
+		line-height: 38px;
+		border-radius: 50%;
+		text-transform: uppercase;
+		font-size: 15px;
+
+	}
+}
+
+.uz-artist__title {
+	.mixin-navigation-title(@left-right: 12px; @wh: 24px;);
+}
+
+.uz-artist .navigation-list {
+	.mixin-navigation-list(@left-right: 10px; @wh: 27px;);
+}
+
+.music-title {
+	.mixin-navigation-title(@left-right: 12px; @wh: 24px;);
 }
