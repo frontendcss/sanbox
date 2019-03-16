@@ -71,6 +71,7 @@ img {
 		padding-left: @left-right;
 		height: 45px;
 		text-decoration: none;
+		font-size: 14px;
 		color: @text-color;
 	}
 	svg {
@@ -83,4 +84,25 @@ img {
 
 .navigation-list {
 	.mixin-navigation-list();
+}
+
+@media (min-width: 480px) {
+	.main-header {
+		width: 480px;
+	}
+	.main-navigation__title {
+		padding-left: 20px;
+	}
+	.navigation-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		padding-left: 20px;
+		padding-right: 20px;
+		.navigation-item {
+			width: 215px;
+		}
+	}
 }

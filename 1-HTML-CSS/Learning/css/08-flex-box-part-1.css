@@ -114,7 +114,27 @@ body{margin: 0;}
 
 
 
+.container {
+	background-color: #ccc;
+	margin: 0 auto;
+	width: 440px;
+	height: 90px;
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: flex-start;
+}
 
+.container-item {
+	background-color: #808003;
+	width: 210px;
+	height: 28px;
+	margin-bottom: 2px;
+	margin-left: 3px;
+	flex-shrink: 0;
+	flex-grow: 1;
+}
 
 
 
