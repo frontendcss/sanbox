@@ -60,8 +60,7 @@ main {
 		line-height: 38px;
 		border-radius: 50%;
 		text-transform: uppercase;
-		font-size: 15px;
-
+		font-size: 12px;
 	}
 }
 
@@ -77,6 +76,21 @@ main {
 	.mixin-navigation-title(@left-right: 12px; @wh: 24px;);
 }
 
+@media (min-width: 360px) {
+	main {
+		width: 360px;
+		.music-title,
+		.uz-artist__title {
+			padding-left: 20px;
+		}
+		.music-list,
+		.uz-artist .navigation-list {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
 @media (min-width: 480px) {
 	main {
 		width: 480px;
@@ -89,5 +103,30 @@ main {
 			padding-left: 20px;
 			padding-right: 20px;
 		}
+	}
+}
+
+
+@media (min-width: 1200px) {
+	main {
+		width: 1200px;
+		display: flex;
+	}
+	.left-bar__inner {
+		width: 800px;
+		display: flex;
+		flex-direction: row;
+		align-content: flex-start;
+		flex-wrap: wrap;
+		.uz-music,
+		.ru-music,
+		.euro-music,
+		.turk-music {
+			width: 400px;
+		}
+	}
+	.music-inner {
+		width: 400px;
+		order: 2;
 	}
 }
