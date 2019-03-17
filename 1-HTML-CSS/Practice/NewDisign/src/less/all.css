@@ -603,11 +603,13 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-top: 15px;
   }
   .main-footer .social,
   .main-footer .email,
   .main-footer .dmc {
     width: 360px;
+    height: auto;
   }
   .main-footer .social {
     -webkit-box-ordinal-group: 2;
@@ -615,6 +617,7 @@ main {
             order: 1;
   }
   .main-footer .email {
+    margin-top: 0;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
