@@ -86,10 +86,7 @@ main {
 
 .author-content {
 	background-color: @bg-color;
-	margin-top: 0;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-bottom: 3px;
+	margin: 0 20px 3px 20px;
 	padding: 5px;
 	img {
 		float: left;
@@ -98,14 +95,9 @@ main {
 	}
 }
 
-.author-content__single {
+.author-content__meta {
 	display: flex;
 	flex-direction: column;
-	.author-content__meta {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
 	table {
 		border-collapse: collapse;
 	}
@@ -113,6 +105,12 @@ main {
 		padding: 7px;
 		border: 3px solid #213848;
 	}
+}
+
+.author-content-audio {
+	padding: 7px;
+	border: 3px solid #213848;
+	border-top: none;
 }
 
 .paginator {
@@ -212,12 +210,27 @@ main {
 		.turk-music {
 			width: 400px;
 		}
-		.author-content__single {
-			width: 750px;
+		.author-content__category {
+			width: 760px;
+			display: flex;
+			justify-content: flex-start;
+		}
+		.author-content__meta {
+			width: 552px;
 			flex-direction: row;
+			align-content: flex-start;
+			flex-wrap: wrap;
+			table {
+				width: 368px;
+			}
 		}
 		.author-content__img {
+			width: 170px;
 			margin-bottom: 0;
+		}
+		.author-content-audio {
+			border-top: 3px solid @bg-inner-color;
+			width: 531px;
 		}
 	}
 	.music-inner {
@@ -227,4 +240,3 @@ main {
 		width: 350px;
 	}
 }
-

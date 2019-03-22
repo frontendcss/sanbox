@@ -34,7 +34,7 @@ img {
   background-color: #273747;
   padding: 5px 10px;
 }
-.main-header .main-logo__inner a {
+.main-header .main-logo__link {
   font-size: 20px;
   text-decoration: none;
   color: #ffffff;
@@ -387,10 +387,7 @@ main .left-bar__inner--modify {
 }
 .author-content {
   background-color: #2c3e50;
-  margin-top: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 3px;
+  margin: 0 20px 3px 20px;
   padding: 5px;
 }
 .author-content img {
@@ -398,7 +395,7 @@ main .left-bar__inner--modify {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.author-content__single {
+.author-content__meta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,17 +404,17 @@ main .left-bar__inner--modify {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.author-content__single .author-content__meta {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.author-content__single table {
+.author-content__meta table {
   border-collapse: collapse;
 }
-.author-content__single td {
+.author-content__meta td {
   padding: 7px;
   border: 3px solid #213848;
+}
+.author-content-audio {
+  padding: 7px;
+  border: 3px solid #213848;
+  border-top: none;
 }
 .paginator {
   margin-top: 20px;
@@ -527,15 +524,36 @@ main .left-bar__inner--modify {
   .left-bar__inner .turk-music {
     width: 400px;
   }
-  .left-bar__inner .author-content__single {
-    width: 750px;
+  .left-bar__inner .author-content__category {
+    width: 760px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .left-bar__inner .author-content__meta {
+    width: 552px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .left-bar__inner .author-content__meta table {
+    width: 368px;
   }
   .left-bar__inner .author-content__img {
+    width: 170px;
     margin-bottom: 0;
+  }
+  .left-bar__inner .author-content-audio {
+    border-top: 3px solid #273747;
+    width: 531px;
   }
   .music-inner {
     width: 400px;
