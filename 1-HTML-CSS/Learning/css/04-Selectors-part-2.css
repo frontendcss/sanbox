@@ -20,14 +20,14 @@ li:not(.class3) {
 }
 
 /*Комбинируем :not*/
-.not2 
+.not2
 li:not(:first-child):not(:last-child) {
 	background-color: #fd8008;
 }
 
 /*Псевдокласс :first-of-type*/
 /*Выбирать перыий ul на странице*/
-.class-type 
+.class-type
 ul:first-of-type {
 	background-color: #66ffcc;
 }
@@ -39,7 +39,7 @@ ul:first-of-type {
 
 /*Псевдокласс :nth-of-type*/
 /*Произвольно выбирать ul на странице*/
-.class-type-2 
+.class-type-2
 ul:nth-of-type(2) {
 	background-color: #108080;
 }
