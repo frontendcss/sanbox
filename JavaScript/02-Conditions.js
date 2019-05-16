@@ -51,7 +51,7 @@ console.log('anor ' + typeof anor.toString());
 var num = '1';
 
 console.log('Строгое сравнение чисел: ' + typeof(num));
-console.log('Строгое сравнение чисел: ' + typeof(parseInt(num, 10)));
+console.log('Строгое сравнение чисел: ' + typeof(parseInt(num, 16)));
 
 // Вложенные условия
 var enoughDevelopers = true;
@@ -104,9 +104,9 @@ var onVacation = false;
 var onSickLeave = false;
 
 if (enoughDevelopers && techAvailable && !onVacation && !onSickLeave) {
-  console.log('Можно начинать проект');
+	console.log('Можно начинать проект');
 }else {
-  console.log('Нельзя начинать проект');
+	console.log('Нельзя начинать проект');
 }
 
 
