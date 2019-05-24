@@ -36,3 +36,12 @@ var totalPages = 9;
 for (var page = 2; page <= totalPages; page += 2) {
 	console.log("Hello World!");
 }
+
+// Накопление в цикле
+
+var sum = 0;
+
+for(var i = 1; i <= 10; i++){
+	sum += 2;
+	console.log('Накопление в цикле');
+}
