@@ -78,7 +78,7 @@ for (var i = 1; i <= 10; i++) {
 		console.log('нечётное число');
 	}
 
-	console.log('sum: ' + sum);
+	// console.log('sum: ' + sum);
 }
 
 
