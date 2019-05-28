@@ -42,6 +42,65 @@ for (var page = 2; page <= totalPages; page += 2) {
 var sum = 0;
 
 for(var i = 1; i <= 10; i++){
-	sum += 2;
-	console.log('Накопление в цикле');
+	sum += 1;
+	console.log('Накопление в цикле ' + sum);
 }
+
+// Проверки в циклах
+
+var sumTu = 0;
+for(var index = 1; index  <= 10; index++ ){
+ if(index <= 2){
+	sumTu += 1;
+ }
+ else {
+	sumTu += 2;
+ }
+ console.log("for ishladi: " + sumTu);
+}
+
+// Поиск чётного числа 
+
+var astatoc = 20 % 8;
+console.log("Astatoq ot delenya: " + astatoc);
+
+var sum = 0;
+
+for (var i = 1; i <= 10; i++) {
+	console.log('i: ' + i);
+
+	if(i % 2 === 0){
+		sum += 2;
+		console.log("чётное число");
+	}
+	else{
+		sum++;
+		console.log('нечётное число');
+	}
+
+	console.log('sum: ' + sum);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
