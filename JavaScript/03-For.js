@@ -8,8 +8,10 @@ for(var anor = 1; anor <= olma; anor = anor + 1) {
 var totalPages = 5;
 
 for (var page = totalPages; page > 0; page = page - 1) {
-	console.log("Печатаем страницы в обратном порядке");
+	totalPages -= 1;
+	console.log("Печатаем страницы в обратном порядке " + totalPages);
 }
+console.log("-----------");
 
 /*
 Печатаем только нечётные страницы
@@ -50,13 +52,14 @@ for(var i = 1; i <= 10; i++){
 
 var sumTu = 0;
 for(var index = 1; index  <= 10; index++ ){
- if(index <= 2){
-	sumTu += 1;
- }
- else {
-	sumTu += 2;
- }
- console.log("for ishladi: " + sumTu);
+	if(index <= 2){
+		sumTu += 1;
+	}
+	else {
+		sumTu += 2;
+		console.log("else ishladi");
+	}
+	console.log("for ishladi: " + sumTu);
 }
 
 // Поиск чётного числа 
