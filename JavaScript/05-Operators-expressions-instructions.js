@@ -38,3 +38,54 @@ console.log(a);  // результат: 2.5
 // Строковый оператор конкатенации +
 
 // Поразрядные операторы
+
+// Специальные операторы
+// Тернарный оператор
+
+var riddit = 11;
+
+var theme = (riddit < 10) ? '10 Katta a dan' : 'a katta 10 dan';
+console.log(theme);
+
+// Оператор запятая var а = 10, b = 0;
+
+//Оператор delete
+
+var mass = ['soart','limpus','web'];
+console.log(mass);
+
+delete mass[1];
+console.log(mass);
+console.log(mass[1]);
+
+mass[1] = '4';
+console.log(mass);
+console.log(mass[1]);
+
+// Оператор in
+if(2 in mass){
+	console.log("Это значение есть в массиве");
+}
+else{
+	console.log("Это значение нет в массиве");
+}
+
+// Оператор typeof
+
+var boll = true;
+console.log(typeof boll);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
