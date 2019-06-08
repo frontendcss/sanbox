@@ -64,7 +64,7 @@ console.log(mass[1]);
 
 // Оператор in
 if(2 in mass){
-	console.log("Это значение есть в массиве");
+	console.log("Это значение есть в массиве " + mass[2]);
 }
 else{
 	console.log("Это значение нет в массиве");
@@ -74,6 +74,7 @@ else{
 
 var boll = true;
 console.log(typeof boll);
+
 
 
 

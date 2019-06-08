@@ -20,6 +20,9 @@ console.log(true); // Boolean
 console.log('Hello, World' - 2); // NaN
 console.log(AgeLore); // undefined
 
+console.log(NaN  === NaN);
+console.log(0.2 + 0.1);
+
 
 // -Сложные типы данных
 console.log([50, 320, 480]);
@@ -54,8 +57,89 @@ console.log(имяПеременной);
 */
 
 /*
-Из-за того, что JavaScript умеет изменять тип операндов на лету, он называется языком с динамическим приведением типов.
+Из-за того, что JavaScript умеет изменять тип операндов на лету,
+он называется языком с динамическим приведением типов.
 */
+console.log(" ");
+console.log(5 + "5");
+console.log(typeof(5 + "5"));
+console.log("5" * "4");
+console.log(typeof("5" * "4"));
+console.log("4" * "hi");
+console.log(typeof("4" * "hi"));
+
+console.log(" ");
+
+console.log("5" == 5);
+console.log("0" == false);
+console.log("" == false);
+console.log("4" == true);
+console.log("" == false);
+
+console.log(" ");
+
+console.log(null == false);
+console.log(undefined == false);
+console.log(undefined == null);
+
+console.log(" ");
+
+console.log(Number("55"));
+console.log(typeof Number("55"));
+
+console.log(String(7680));
+console.log(typeof String(7680));
+
+console.log(Boolean("1"));
+console.log(typeof Boolean("1"));
+
+console.log(parseInt("5 px", 10));
+console.log(parseFloat("34.35 em"));
+
+console.log(" ");
+
+console.log(!!5); // to boolean
+console.log(typeof(!!5));
+
+console.log(3434 + ""); // to string
+console.log(typeof(3434 + ""));
+
+console.log(+"464");
+console.log(typeof(+"464"));
+console.log(+"" );
+console.log(+true);
+console.log(+false  );
+
+var n = 4;
+// n = null;
+
+console.log(n.value)
+console.log(typeof(n.value));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

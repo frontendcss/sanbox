@@ -110,6 +110,12 @@ if (enoughDevelopers && techAvailable && !onVacation && !onSickLeave) {
 }
 
 
+var a = 0,
+		MyNum = true;
+
+MyNum && (a = 5);
+
+console.log(a);
 
 
 

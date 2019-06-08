@@ -4,7 +4,6 @@
 // Чтение из массива по индексу
 var UserAll = [20000, 27000];
 var allUser = UserAll[1];
-
 console.log(allUser);
 
 var mass = ['soart', 'limpus', 'web', 'sarvar'];
