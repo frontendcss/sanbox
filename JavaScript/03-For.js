@@ -68,6 +68,7 @@ var astatoc = 20 % 8;
 console.log("Astatoq ot delenya: " + astatoc);
 
 var sum = 0;
+// 1.3
 
 for (var i = 1; i <= 10; i++) {
 	console.log('i: ' + i);

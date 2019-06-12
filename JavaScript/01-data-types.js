@@ -5,10 +5,10 @@
 Так как это многострочный комментарий.
 */
 
-// 50 * (42 / 100); Comand
+// 50 * (42 / 100); Инструкция
 
 // Типы данных
-// -Примитивные типы данных
+// Примитивные типы данных
 
 var AgeLore;
 
@@ -24,7 +24,7 @@ console.log(NaN  === NaN);
 console.log(0.2 + 0.1);
 
 
-// -Сложные типы данных
+// Сложные типы данных
 console.log([50, 320, 480]);
 console.log({meal: 'Завтрак', energy: 50});
 
@@ -50,19 +50,13 @@ console.log(имяПеременной);
 */
 
 /*
-Сложение	+
-Вычитание	-
-Умножение	*
-Деление	/
-*/
-
-/*
 Из-за того, что JavaScript умеет изменять тип операндов на лету,
 он называется языком с динамическим приведением типов.
 */
 console.log(" ");
 console.log(5 + "5");
 console.log(typeof(5 + "5"));
+
 console.log("5" * "4");
 console.log(typeof("5" * "4"));
 console.log("4" * "hi");
@@ -93,7 +87,7 @@ console.log(typeof String(7680));
 console.log(Boolean("1"));
 console.log(typeof Boolean("1"));
 
-console.log(parseInt("5 px", 10));
+console.log(parseInt("5.55", 10));
 console.log(parseFloat("34.35 em"));
 
 console.log(" ");

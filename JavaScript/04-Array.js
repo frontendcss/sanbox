@@ -12,13 +12,13 @@ console.log(mass);
 // console.log(mass[0]);
 // console.log(mass[mass.length - 2]);
 
-// var totalUsers = 0;
-// for(var i = 0; i < mass.length; i++){
-// 	totalUsers += mass[i];
-// 	console.log(mass[i]);
-// }
+var totalUsers = 0;
+for(var i = 0; i < mass.length; i++){
+	totalUsers += mass[i];
+	console.log(mass[i]);
+}
 
-// console.log(totalUsers);
+console.log(totalUsers);
 
 var catName = new Array('soart', 'limpus');
 console.log(catName);
@@ -28,7 +28,7 @@ var userName = [];
 userName[0] = 'Soart';
 userName[10] = 'Limpus';
 
-var totalName = 0;
+// var totalName = 0;
 for (i = 0; i < userName.length; i++){
 	console.log(userName[i]);
 }

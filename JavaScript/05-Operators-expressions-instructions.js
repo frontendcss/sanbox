@@ -44,13 +44,17 @@ console.log(a);  // результат: 2.5
 
 var riddit = 11;
 
-var theme = (riddit < 10) ? '10 Katta a dan' : 'a katta 10 dan';
-console.log(theme);
+var theme = (riddit > 10)?'riddit katta 10 dan':'riddit kichkina 10 dan';console.log(theme);
+if(riddit > 10){console.log("riddit katta 10 dan");}else{console.log("riddit kichkina 10 dan");}
+
 
 // Оператор запятая var а = 10, b = 0;
+var them = (10, 15, 30);
+console.log((them, "Hello"));
+
+
 
 //Оператор delete
-
 var mass = ['soart','limpus','web'];
 console.log(mass);
 
@@ -75,8 +79,26 @@ else{
 var boll = true;
 console.log(typeof boll);
 
+// var i = 0;
+// var i  = 10;
+var i;
 
+// while(i < 10){
+// 	console.log(i++);
+// 	// i++;
+// }
 
+// while(i--){
+// 	console.log(i);
+// }
+
+// do {
+// 	console.log(i++);
+// } while(i < 10);
+
+for(i = 5; i--;){
+	console.log(i);
+}
 
 
 

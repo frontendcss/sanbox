@@ -48,7 +48,7 @@ console.log('anor ' + typeof anor.toString());
 
 // Строгое сравнение чисел
 
-var num = '1';
+var num = '1.88';
 
 console.log('Строгое сравнение чисел: ' + typeof(num));
 console.log('Строгое сравнение чисел: ' + typeof(parseInt(num, 16)));
