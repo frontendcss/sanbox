@@ -12,13 +12,10 @@ console.log(mass);
 // console.log(mass[0]);
 // console.log(mass[mass.length - 2]);
 
-var totalUsers = 0;
 for(var i = 0; i < mass.length; i++){
-	totalUsers += mass[i];
 	console.log(mass[i]);
 }
 
-console.log(totalUsers);
 
 var catName = new Array('soart', 'limpus');
 console.log(catName);
@@ -44,3 +41,11 @@ console.log(bestAlbum);
 // Методы для работы с массивами
 console.log(bestAlbum.join());
 console.log(bestAlbum);
+
+
+var mass = ["Soart", "Limpus", "CapSum"]
+
+
+mass[3] = "Web";
+
+console.log(mass);

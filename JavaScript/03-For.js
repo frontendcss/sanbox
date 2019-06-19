@@ -1,3 +1,16 @@
+for (var i = 1; i <= 10; i++) {
+	console.log(i);
+
+	if(i % 2 === 0){
+		sum += 2;
+		console.log("чётное число");
+	}
+	else{
+		sum += 1;
+		console.log('нечётное число');
+	}
+}
+
 var olma = 10;
 
 for(var anor = 1; anor <= olma; anor = anor + 1) {
@@ -67,25 +80,20 @@ for(var index = 1; index  <= 10; index++ ){
 var astatoc = 20 % 8;
 console.log("Astatoq ot delenya: " + astatoc);
 
+console.log("---------------");
 var sum = 0;
-// 1.3
 
-for (var i = 1; i <= 10; i++) {
-	console.log('i: ' + i);
-
+for(var i = 1; i < 10; i++){
+	// console.log(i);
 	if(i % 2 === 0){
 		sum += 2;
-		console.log("чётное число");
+		console.log("Chotniy chislo " + i);
 	}
 	else{
-		sum++;
-		console.log('нечётное число');
+		sum += 1;
+		console.log("Ne chotniy chislo " + i);
 	}
-
-	// console.log('sum: ' + sum);
 }
-
-
 
 
 

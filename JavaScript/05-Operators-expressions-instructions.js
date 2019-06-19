@@ -51,8 +51,7 @@ if(riddit > 10){console.log("riddit katta 10 dan");}else{console.log("riddit kic
 // Оператор запятая var а = 10, b = 0;
 var them = (10, 15, 30);
 console.log((them, "Hello"));
-
-
+console.log(them);
 
 //Оператор delete
 var mass = ['soart','limpus','web'];
