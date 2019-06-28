@@ -5,6 +5,14 @@
 Так как это многострочный комментарий.
 */
 
+// Переменные
+// camelCase (верблюжья нотация) и snake_case (змеиная нотация)
+
+/*
+Во-первых, команда var для создания каждой переменной используется всего один раз.
+Дальше вы обращаетесь к переменной по её имени, без var.
+*/
+
 // 50 * (42 / 100); Инструкция
 
 // Типы данных
@@ -19,41 +27,9 @@ console.log('Hello, World'); // String
 console.log(true); // Boolean
 console.log('Hello, World' - 2); // NaN
 console.log(AgeLore); // undefined
-
 console.log(NaN  === NaN);
 console.log(0.2 + 0.1);
-console.log(" ");
 
-// Сложные типы данных
-console.log([50, 320, 480]);
-console.log({meal: 'Завтрак', energy: 50});
-console.log(typeof function(){});
-
-// Переменные
-// camelCase (верблюжья нотация) и snake_case (змеиная нотация)
-
-var имяПеременной = 300;
-console.log(имяПеременной);
-
-/*
-Во-первых, команда var для создания каждой переменной используется всего один раз.
-Дальше вы обращаетесь к переменной по её имени, без var.
-*/
-
-// Операции
-
-50 + 100;
-+1
-
-/*
-Операция сложения — бинарная, так как в ней два операнда. Бинарные операции самые распространённые.
-Но существуют и унарные операции, с одним операндом, и тернарные операции, с тремя операндами.
-*/
-
-/*
-Из-за того, что JavaScript умеет изменять тип операндов на лету,
-он называется языком с динамическим приведением типов.
-*/
 console.log(" ");
 
 console.log(5 + "5");
@@ -72,7 +48,7 @@ console.log("0" == false);
 console.log("" == false);
 console.log("4" == true);
 
-console.log(" ");
+console.log("");
 
 console.log(null == false);
 console.log(undefined == false);
@@ -94,6 +70,7 @@ console.log(parseFloat("34.35 em"));
 
 console.log(" ");
 
+console.log(!!" ");
 console.log(!!5); // to boolean
 console.log(typeof(!!5));
 
@@ -112,12 +89,32 @@ var n = 4;
 console.log(n.value)
 console.log(typeof(n.value));
 
+var test = 1 / 0;
+var test2 = 1 / 'fgf';
+console.log(typeof test);
+console.log(typeof(test2));
+
+console.log(typeof null);
+console.log(typeof function(){});
+// Сложные типы данных
+console.log([50, 320, 480]);
+console.log({meal: 'Завтрак', energy: 50});
+console.log(typeof function(){});
 
 
+// Операции
+50 + 100;
++1
 
+/*
+Операция сложения — бинарная, так как в ней два операнда. Бинарные операции самые распространённые.
+Но существуют и унарные операции, с одним операндом, и тернарные операции, с тремя операндами.
+*/
 
-
-
+/*
+Из-за того, что JavaScript умеет изменять тип операндов на лету,
+он называется языком с динамическим приведением типов.
+*/
 
 
 

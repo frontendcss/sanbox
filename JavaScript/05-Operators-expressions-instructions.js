@@ -47,6 +47,12 @@ var riddit = 11;
 var theme = (riddit > 10)?'riddit katta 10 dan':'riddit kichkina 10 dan';console.log(theme);
 if(riddit > 10){console.log("riddit katta 10 dan");}else{console.log("riddit kichkina 10 dan");}
 
+var vaspro = (20 < 10) ? "10 katta 20 dan":
+						 (20 < 15) ? "15 katta 20 dan":
+						 (20 < 25) ? "25 katta 20 dan":
+						 "Yech qaysi do'g'ri galmadi";
+
+console.log(vaspro);
 
 // Оператор запятая var а = 10, b = 0;
 var them = (10, 15, 30);
@@ -78,25 +84,57 @@ else{
 var boll = true;
 console.log(typeof boll);
 
-// var i = 0;
-// var i  = 10;
-var i;
+//alert
+// alert("Limpus");
 
-// while(i < 10){
-// 	console.log(i++);
-// 	// i++;
+//prompt
+// var madal = prompt("Soart", "Default");
+// console.log(madal);
+
+//confirm
+// var madal = confirm("Bizni Shartlarga rozimisiz?");
+// console.log(madal);
+
+// var userName = prompt("Login", "");
+
+// if(userName == "admin"){
+// 	var pass = prompt("Password", "");
+// 	if(pass == "Soart"){
+// 		alert("Xush keleibsiz " + userName);
+// 	}else if(pass == null){
+// 		alert("Xech narsa yozilmagan");
+// 	}
+// 	else{
+// 		alert("No tog'ri yozilgan");
+// 	}
+// }else if (userName == null){
+// 	alert("Xech narsa yozilmagan");
+// }
+// else{
+// 	alert("No tog'ri yozilgan");
 // }
 
-// while(i--){
-// 	console.log(i);
-// }
 
-// do {
-// 	console.log(i++);
-// } while(i < 10);
+var per;
+false || (per = 10);
+console.log(per);
 
-for(i = 5; i--;){
-	console.log(i);
+var per1  = "" || false || 0;
+console.log(per1);
+
+
+// Проверка if внутри диапазона
+var dip = 15;
+if(dip >= 14 && dip <= 90){
+	console.log("chislo 14 dan katta va 90 dan kichkina: " + dip);
+}else {
+	console.log(dip);
+}
+
+var dip2 = 10;
+
+if(!(dip2 >= 14 && dip2 <= 90)){
+	console.log("chislo 14 bilan 90ni ichinda mas");
 }
 
 

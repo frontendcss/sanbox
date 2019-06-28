@@ -82,12 +82,9 @@ var willieNelson = Object.create(Person);
 console.log(willieNelson.feet); // выводит 2
 
 
-// console.log(navigator["аррVersion"]);
 
 
-// for(propb in window){
-// 	console.log(window[propb]);
-// }
+
 
 
 

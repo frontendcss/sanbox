@@ -1,3 +1,4 @@
+// 'use strict'
 /*
 Параметры это имена, которые вы указываете в определении функции.
 Аргументы это значения, которые вы передаете функции.
@@ -56,7 +57,7 @@ function func3(param1){
 	}
 }
 
-func3("Soart")
+func3()
 console.log(" ");
 
 // Получение значений аргументов с помощью объекта arguments
@@ -83,21 +84,7 @@ function func(){
 		}
 	innerFunc();
 }
-
 func();
-
-// function AllUser(){
-// 	var Age = 20;
-// 	console.log(Age);
-// 	function innerAllUser(){
-// 		var Age = 26;
-// 		console.log(Age);
-// 	}
-// 	innerAllUser();
-// }
-
-// AllUser();
-
 
 //Анонимные функции
 
@@ -112,11 +99,11 @@ var AnaFunction = function (){
 1) Между созданием именованной функции и присвоением анонимной функции пере­менной имеются
 важные и иногда полезные различия. Первое из них состоит в том, что анонимные функции, 
 присвоенные переменной, существуют и могут вызываться лишь после выполнения операции присваивания.
-Доступ же к именованным функци­ ям возможен в любом месте программы.
+Доступ же к именованным функци­ям возможен в любом месте программы.
 
 2) Суть второго различия заключается в том, что в случае анонимных функций зна­чение переменной
 может быть в любой момент изменено, и ей может быть присвоена другая функция. Это делает механизм
-анонимных функций более гибким по сравне­ нию с именованными функциями.
+анонимных функций более гибким по сравне­нию с именованными функциями.
 
 */
 
@@ -129,16 +116,144 @@ var AnaFunction = function (){
 
 //Рекурсия
 
-function recur(index){
-	console.log(index);
-	if(index < 10){
-		recur(index + 1);
+// function recur(index){
+// 	console.log(index);
+// 	if(index < 10){
+// 		recur(index + 1);
+// 	}
+// 	else{
+// 		return;
+// 	}
+// }
+// recur(1);
+
+
+function showMessage(text) {
+	text = text || 'Текст не передан';
+	console.log(text);
+}
+
+showMessage();
+
+/*
+Если аргументов передано больше, чем надо, например showMessage("Маша", "привет", 1, 2, 3)
+то ошибки не будет. Но, чтобы получить такие «лишние» аргументы, нужно будет прочитать их из
+специального объекта arguments, который мы рассмотрим в главе Псевдомассив аргументов "arguments".
+*/
+
+/*
+showMessage(..)     // префикс show, "показать" сообщени
+getAge(..)          // get, "получает" возраст
+calcD(..)           // calc, "вычисляет" дискриминант
+createForm(..)      // create, "создает" форму
+checkPermission(..) // check, "проверяет" разрешение, возвращает true/false
+*/
+
+// function checkAge(age) {
+// 	if (age > 18) {
+// 		return true;
+// 	} else {
+// 		return 'разрешили?';
+// 	}
+// }
+
+// console.log(typeof checkAge(20));
+
+// function checkAge(age){
+// 	return (age > 18) ? true: console.log("разрешили?");
+// }
+
+// checkAge(20);
+
+// function checkAge(age) {
+// 	return (age > 18) || console.log('Родители разрешили?');
+// }
+
+// checkAge();
+
+// Функцию можно скопировать в другую переменную:
+// function func(){
+// 	console.log("copyFunc");
+// }
+// var copyFunction = func;
+// copyFunction();
+
+
+// Объявление Function Expression
+
+// Function Declaration
+sum1();
+function sum1(){
+	console.log("Hello Declaration Function");
+}
+
+// Function Expression
+var sum2 = function(){
+	console.log("Hello Expression Function");
+}
+
+sum2();
+
+// Условное объявление функции 'use strict'
+
+var age = +prompt("Сколько вам лет?", 20);
+if (age >= 18) {
+	function sayHi() {
+		alert( 'Прошу вас!' );
 	}
-	else{
-		return;
+} else {
+	function sayHi() {
+		alert( 'До 18 нельзя' );
 	}
 }
-recur(1);
+
+sayHi();
+
+// var age = +prompt("Сколько вам лет?", 20);
+// var sayHi;
+// if (age >= 18) {
+// 	sayHi = function() {
+// 		alert( 'Прошу вас!' );
+// 	}
+// } else {
+// 	sayHi = function() {
+// 		alert( 'До 18 нельзя' );
+// 	}
+// }
+
+// sayHi();
+
+// Анонимные функции
+// function ask(quastions, ok, no){
+// 	if(confirm(quastions)){
+// 		ok();
+// 	}
+// 	else{
+// 		no();
+// 	}
+// }
+
+// function ok(){
+// 	alert("Siz Rozi Bo'ldingiz");
+// }
+
+// function no(){
+// 	alert("Siz No Rozisiz");
+// }
+
+// ask("Siz Rozimisizs?", ok, no);
+
+// ask(
+// 	"Siz Rozimisizs?",
+// 	function(){alert("Siz Rozi Bo'ldingiz");},
+// 	function(){alert("Siz No Rozisiz");}
+// );
+
+
+
+
+
+
 
 
 

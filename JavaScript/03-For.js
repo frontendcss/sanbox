@@ -1,16 +1,3 @@
-for (var i = 1; i <= 10; i++) {
-	console.log(i);
-
-	if(i % 2 === 0){
-		sum += 2;
-		console.log("чётное число");
-	}
-	else{
-		sum += 1;
-		console.log('нечётное число');
-	}
-}
-
 var olma = 10;
 
 for(var anor = 1; anor <= olma; anor = anor + 1) {
@@ -43,22 +30,22 @@ console.log("-----------");
 var totalPages = 12;
 
 for (var page = 1; page <= totalPages; page += 2) {
-	console.log("Печатаем только нечётные страницы");
+	console.log("Печатаем только нечётные страницы " + page);
 }
 
-var totalPages = 9;
+var totalPages = 12;
 
 for (var page = 2; page <= totalPages; page += 2) {
-	console.log("Hello World!");
+	console.log("Печатаем только чётные страницы " + page);
 }
 
 // Накопление в цикле
 
-var sum = 0;
+// var sum = 0;
 
 for(var i = 1; i <= 10; i++){
-	sum += 1;
-	console.log('Накопление в цикле ' + sum);
+	// sum += 1;
+	console.log('Накопление в цикле ' + i);
 }
 
 // Проверки в циклах
@@ -94,6 +81,78 @@ for(var i = 1; i < 10; i++){
 		console.log("Ne chotniy chislo " + i);
 	}
 }
+
+
+// var i = 0;
+// var i  = 10;
+var i;
+
+// while(i < 10){
+// 	console.log(i++);
+// 	// i++;
+// }
+
+// while(i--){
+// 	console.log(i);
+// }
+
+// do {
+// 	console.log(i++);
+// } while(i < 10);
+
+// for(i = 5; i--;){
+// 	console.log(i);
+// }
+
+// Директива break в строке (*), если посетитель ничего не ввёл,полностью прекращает
+// выполнение цикла и передаёт управление на строку за его телом, то есть на alert.
+// var sum  = 0;
+// while(true){
+// 	var value  = +prompt("Chisloni yozing", "");
+// 	if(!value) break;
+// 	// sum += value;
+// }
+
+// alert("Summa: " + sum);
+
+
+// Директива continue прекращает выполнение текущей итерации цикла.
+
+// Метки для break/continue
+// Метка имеет вид "имя:", имя должно быть уникальным. Она ставится перед циклом, вот так:
+// outer: for (var i = 0; i < 3; i++) { ... }
+
+// var i = 0;
+// while (++i < 5){
+// 	console.log(i);
+// }
+
+// console.log("---");
+
+// var i = 0;
+// while (i++ < 5){
+// 	console.log(i);
+// }
+
+// var sum;
+// do{
+// 	sum = prompt("Summa ", 0);
+// }while(sum <= 100 && sum != null);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

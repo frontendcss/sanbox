@@ -119,7 +119,76 @@ console.log(a);
 
 
 
+// В case могут быть любые выражения, в том числе включающие в себя переменные и функции.
+// var x = 5;
 
+// switch(x){
+// 	case 1:
+// 	console.log("1");
+// 	break;
+
+// 	case 2:
+// 	console.log("2");
+// 	break;
+
+// 	case 3:
+// 	console.log("3");
+// 	break;
+
+// 	default:
+// 	console.log("Yech qaysi to'g'ri kelmadi");
+// }
+
+// Тип имеет значение
+// var agr = prompt("Yoshingiz", "");
+// switch(agr){
+// 	case "0":
+// 	case "1":
+// 	console.log("0 yoki 1");
+// 	break;
+
+// 	case "2":
+// 	console.log("2");
+// 	break;
+
+// 	case 3:
+// 	console.log("3");
+// 	break;
+
+// 	default:
+// 	console.log("Hech qaysi");
+// }
+
+// switch (browser) {
+// 	case 'IE':
+// 		alert( 'О, да у вас IE!' );
+// 		break;
+
+// 	case 'Chrome':
+// 	case 'Firefox':
+// 	case 'Safari':
+// 	case 'Opera':
+// 		alert( 'Да, и эти браузеры мы поддерживаем' );
+// 		break;
+
+// 	default:
+// 		alert( 'Мы надеемся, что и в вашем браузере все ок!' );
+// }
+
+
+
+// var agr = prompt("Sizda qasi browser o'rnatilgan?", "");
+
+// if("IE" === agr){
+// 	console.log("Xa sizda IE o'rnatilgan");
+// }else if(agr === "chrome" ||
+// 				 agr === "firefox" ||
+// 				 agr === "safari" ||
+// 				 agr === "opera"){
+// 	console.log("Xa sizda chrome yoki firefox yoki safari yoki opera");
+// }else{
+// 	console.log("bitta xam browser to'g'ri kelmadi uzur");
+// }
 
 
 

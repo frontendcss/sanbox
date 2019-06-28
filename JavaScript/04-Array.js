@@ -16,7 +16,6 @@ for(var i = 0; i < mass.length; i++){
 	console.log(mass[i]);
 }
 
-
 var catName = new Array('soart', 'limpus');
 console.log(catName);
 
@@ -44,8 +43,6 @@ console.log(bestAlbum);
 
 
 var mass = ["Soart", "Limpus", "CapSum"]
-
-
 mass[3] = "Web";
 
 console.log(mass);
