@@ -1,3 +1,4 @@
+// 'use strict'
 // Определение объектов с помощью объектных литералов
 
 var obj = {
@@ -9,8 +10,6 @@ var obj = {
 // Точечная нотация
 obj.soart = 10;
 obj.limpus = 20;
-
-var line = "family"; // Not Fond
 obj.line = 79868;
 
 console.log(obj);
@@ -81,7 +80,12 @@ var willieNelson = Object.create(Person);
 // проверка наличия унаследованных свойств 
 console.log(willieNelson.feet); // выводит 2
 
+var f = function factarial(name){
+	// factarial = soart;
+	alert( factarial );
+}
 
+f();
 
 
 

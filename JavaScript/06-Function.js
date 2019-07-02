@@ -1,4 +1,4 @@
-// 'use strict'
+'use strict'
 /*
 Параметры это имена, которые вы указываете в определении функции.
 Аргументы это значения, которые вы передаете функции.
@@ -57,15 +57,15 @@ function func3(param1){
 	}
 }
 
-func3()
+func3("Soart")
 console.log(" ");
 
 // Получение значений аргументов с помощью объекта arguments
 function flexibleWelcome() {
-	var welcome = "Добро пожаловать,";
+	var welcome = "Добро пожаловать, ";
 	for (i = 0; i < arguments.length; i++) {
-	welcome = welcome + arguments[i] + " ";
-}
+		welcome = welcome + arguments[i] + " ";
+	}
 return welcome;
 }
 
@@ -87,7 +87,6 @@ function func(){
 func();
 
 //Анонимные функции
-
 var AnaFunction = function (){
 	var text = "AnamimFunction";
 	return text;
@@ -166,17 +165,17 @@ checkPermission(..) // check, "проверяет" разрешение, воз�
 // checkAge(20);
 
 // function checkAge(age) {
-// 	return (age > 18) || console.log('Родители разрешили?');
+// 	return (age > 18) || console.log('разрешили?');
 // }
 
-// checkAge();
+// checkAge(20);
 
 // Функцию можно скопировать в другую переменную:
-// function func(){
-// 	console.log("copyFunc");
-// }
-// var copyFunction = func;
-// copyFunction();
+function func(){
+	console.log("copyFunc");
+}
+var copyFunction = func;
+copyFunction();
 
 
 // Объявление Function Expression
@@ -196,18 +195,18 @@ sum2();
 
 // Условное объявление функции 'use strict'
 
-var age = +prompt("Сколько вам лет?", 20);
-if (age >= 18) {
-	function sayHi() {
-		alert( 'Прошу вас!' );
-	}
-} else {
-	function sayHi() {
-		alert( 'До 18 нельзя' );
-	}
-}
+// var age = +prompt("Сколько вам лет?", 20);
+// if (age >= 18) {
+// 	function sayHi() {
+// 		alert( 'Прошу вас!' );
+// 	}
+// } else {
+// 	function sayHi() {
+// 		alert( 'До 18 нельзя' );
+// 	}
+// }
 
-sayHi();
+// sayHi();
 
 // var age = +prompt("Сколько вам лет?", 20);
 // var sayHi;
@@ -222,7 +221,6 @@ sayHi();
 // }
 
 // sayHi();
-
 // Анонимные функции
 // function ask(quastions, ok, no){
 // 	if(confirm(quastions)){
@@ -250,11 +248,85 @@ sayHi();
 // );
 
 
+// Именованные функциональные выражения
+// function func(age, name){
+// 	return age + name;
+// }
+
+// console.log(func(4, 4));
+
+// var newFunc = func;
+// func = null;
+
+// console.log(newFunc(1,1));
 
 
+// var method = "Hello, World";
+// console.log(method.length);
+// console.log(method.toUpperCase());
 
 
+// Числа
 
+console.log(0xFF); // в шестнадцатиричной системе
+console.log(3e-5); // здесь 3 сдвинуто 5 раз вправо, за десятичную точку. <- запись с плавающей точкой
+console.log(1e500); // Infinity
+console.log(10 / 0); // Infinity
+console.log(-10 / 0); // -Infinity
+console.log(Infinity > 945984503); // true
+console.log(Infinity + 5 === Infinity); // true
+console.log(-Infinity === Infinity); // false
+
+// NaN (Not-A-Number)
+
+var n = 0 / 0;
+console.log(isNaN(n));
+
+console.log("----");
+console.log(isFinite(Infinity));
+console.log(isFinite(-Infinity));
+console.log(isFinite(NaN));
+console.log(isFinite(2));
+
+console.log("----");
+// Преобразование к числу
+var nu = 34.45;
+var su = "string"
+console.log(+nu);
+console.log(+su);
+// Мягкое преобразование: parseInt и parseFloat
+console.log(parseInt("12px"));
+console.log(parseFloat("12.34.543"));
+console.log(parseFloat("px34.454"));
+console.log(parseInt("10", 16));
+
+var num = 34;
+console.log(isNaN(num));
+
+// toString(система счисления) Основание может быть любым от 2 до 36.
+
+var numString = 4490640608799;
+console.log(numString.toString(36));
+
+// Округление
+
+console.log(Math.floor(3.1)); // Округляет вниз
+console.log(Math.ceil(3.1));  // Округляет вверх
+console.log(Math.round(3.1)); // Округляет до ближайшего целого
+
+// Округление идёт до ближайшего значения, аналогично Math.round и возвращает результат в виде строки:
+var num2 = 34.34;
+console.log(typeof +num2.toFixed(1));
+
+console.log(0.1 + 0.2 == 0.3);
+
+// Неточные вычисления
+var num3 = 0.1 + 0.2;
+console.log(+num3.toFixed(10));
+
+// Форматирование
+var number = 123456789;
+console.log(number.toLocaleString());
 
 
 

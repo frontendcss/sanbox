@@ -32,7 +32,7 @@ console.log(a);  // результат: 2.5
 / Деление
 % Взятие остатка
 ++ Инкремент
-- Декремент
+-- Декремент
 */
 
 // Строковый оператор конкатенации +
@@ -134,9 +134,14 @@ if(dip >= 14 && dip <= 90){
 var dip2 = 10;
 
 if(!(dip2 >= 14 && dip2 <= 90)){
-	console.log("chislo 14 bilan 90ni ichinda mas");
+	console.log("chislo 14 bilan 90 ni ichinda mas");
 }
 
+var dip2 = 91;
+
+if(dip2 <= 14 || dip2 >= 90){
+	console.log("chislo 14 bilan 90 ni ichinda mas");
+}
 
 
 
