@@ -24,7 +24,6 @@ var userName = [];
 userName[0] = 'Soart';
 userName[10] = 'Limpus';
 
-// var totalName = 0;
 for (i = 0; i < userName.length; i++){
 	console.log(userName[i]);
 }
@@ -46,3 +45,48 @@ var mass = ["Soart", "Limpus", "CapSum"]
 mass[3] = "Web";
 
 console.log(mass);
+
+var massNew = [
+		"Soart",
+		false,
+		function(num){},
+		{
+			value: "Limpus"
+		}
+]
+
+console.log(massNew[3]);
+
+console.log("---");
+// Методы pop/push, shift/unshift
+// Конец массива
+var fruits = ["Olma", "Anor", "Uzum"];
+console.log(fruits);
+console.log(fruits.pop());
+console.log(fruits);
+
+console.log("---");
+console.log(fruits.push("Grusha", "Limon"));
+console.log(fruits);
+
+// Начало массива
+console.log("---");
+console.log(fruits.shift());
+console.log(fruits.unshift("Kiwi", "banan"));
+console.log(fruits);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
