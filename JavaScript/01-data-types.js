@@ -218,13 +218,18 @@ if(~search.indexOf("JavaScript")){
 // substring(start [, end])
 var strSub = "Hello, World";
 console.log(strSub.substring(4,9));
+console.log(strSub.substr(4,9));
+console.log(strSub.slice(4,9));
 
+// Кодировка Юникод
+console.log(String.fromCharCode(59));
 
+var str = "н";
+console.log(str.charCodeAt());
 
-
-
-
-
+console.log("L" < "U");
+// code L -> 76
+// code U -> 85
 
 
 
