@@ -36,11 +36,6 @@ bestAlbum[0][2] = 'Soart';
 console.log(bestAlbum[0][1]);
 console.log(bestAlbum);
 
-// Методы для работы с массивами
-console.log(bestAlbum.join());
-console.log(bestAlbum);
-
-
 var mass = ["Soart", "Limpus", "CapSum"]
 mass[3] = "Web";
 
@@ -58,6 +53,7 @@ var massNew = [
 console.log(massNew[3]);
 
 console.log("---");
+// Методы для работы с массивами
 // Методы pop/push, shift/unshift
 // Конец массива
 var fruits = ["Olma", "Anor", "Uzum"];
@@ -75,7 +71,70 @@ console.log(fruits.shift());
 console.log(fruits.unshift("Kiwi", "banan"));
 console.log(fruits);
 
+// Особенности работы length
+var leng = [];
+leng[10] = "dlina";
 
+console.log(leng.length);
+
+// Используем length для укорачивания массива
+var lengUc = [1,2,3,4,5];
+lengUc.length = 0;
+console.log(lengUc);
+
+// Метод Split
+// позволяет превратить строку в массив
+var str = 'a, b, d, v, t';
+// var arr = str.split(', ', 2);
+var arr = str.split(', ');
+
+for(var i = 0; i < arr.length; i++){
+	console.log(arr[i]);
+}
+
+// Метод join
+var str = arr.join(';');
+console.log(typeof str);
+
+// Удаление из массива
+var delMass = ['a', 'b', 'd'];
+delete delMass[0];
+console.log(delMass);
+
+// Метод splice
+var delMassC = ["olma", "anor", "nok", "uzum"];
+delMassC.splice(0,2, "Kiwi", "Klubnika");
+console.log(delMassC);
+
+// вставлять элементы без удаления
+delMassC.splice(-1,0, "Avacoda");
+console.log(delMassC);
+
+// Метод slice
+// Если вообще не указать аргументов – скопируется весь массив:
+var arr = ["a", "b", "d", "v"];
+var arr2 = arr.slice(0,2);
+console.log(arr);
+console.log(arr2);
+
+// Сортировка, метод sort(fn)
+function campareNumeric(a,b){
+	if(a > b) return 1;
+	if(a < b) return -1;
+}
+
+var arrSort = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+arrSort.sort(campareNumeric);
+console.log(arrSort);
+
+// Метод reverse
+arrSort.reverse();
+console.log(arrSort);
+
+// Метод concat
+var arrCancat = [0,1];
+var arrCancatCopy = arrCancat.concat(2,3);
+console.log(arrCancatCopy);
 
 
 
