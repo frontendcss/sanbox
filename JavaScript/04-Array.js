@@ -10,7 +10,7 @@ var mass = ['soart', 'limpus', 'web', 'sarvar'];
 
 console.log(mass);
 // console.log(mass[0]);
-// console.log(mass[mass.length - 2]);
+console.log(mass[mass.length - 2]);
 
 for(var i = 0; i < mass.length; i++){
 	console.log(mass[i]);
@@ -94,6 +94,7 @@ for(var i = 0; i < arr.length; i++){
 
 // Метод join
 var str = arr.join(';');
+console.log(str);
 console.log(typeof str);
 
 // Удаление из массива
@@ -136,7 +137,10 @@ var arrCancat = [0,1];
 var arrCancatCopy = arrCancat.concat(2,3);
 console.log(arrCancatCopy);
 
-
+// indexOf/lastIndexOf
+var arrIndexOf = [0, false, "index", "last"];
+console.log(arrIndexOf.indexOf("last"));
+console.log(arrIndexOf.lastIndexOf("last"));
 
 
 

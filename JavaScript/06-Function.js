@@ -1,4 +1,5 @@
-'use strict'
+
+
 /*
 Параметры это имена, которые вы указываете в определении функции.
 Аргументы это значения, которые вы передаете функции.
@@ -259,11 +260,6 @@ sum2();
 // func = null;
 
 // console.log(newFunc(1,1));
-
-
-// var method = "Hello, World";
-// console.log(method.length);
-// console.log(method.toUpperCase());
 
 
 

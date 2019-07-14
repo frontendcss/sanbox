@@ -193,7 +193,7 @@ console.log(str.length);
 
 // Доступ к символам
 var strSybol = "JQuery"; // 6
-console.log(strSybol.charAt(7)); // emty string
+console.log(strSybol.charAt(5)); // emty string
 console.log(strSybol[7]); // undefined
 
 // Смена регистра
@@ -212,7 +212,6 @@ if(~search.indexOf("JavaScript")){
 	console.log("Topilmadi");
 }
 
-
 // Взятие подстроки: substring, substr, slice
 
 // substring(start [, end])
@@ -222,7 +221,7 @@ console.log(strSub.substr(4,9));
 console.log(strSub.slice(4,9));
 
 // Кодировка Юникод
-console.log(String.fromCharCode(59));
+console.log(String.fromCharCode(98));
 
 var str = "н";
 console.log(str.charCodeAt());
