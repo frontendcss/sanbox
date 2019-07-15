@@ -1,3 +1,4 @@
+// "use strict"
 // Вообще, в массиве можно хранить любые данные: строки, булевы значения, числа и даже другие массивы.
 // Рефакторинг это переписывание программы, после которого она должна работать так же, но быть более гибкой.
 
@@ -142,9 +143,30 @@ var arrIndexOf = [0, false, "index", "last"];
 console.log(arrIndexOf.indexOf("last"));
 console.log(arrIndexOf.lastIndexOf("last"));
 
+// Доступ к «лишним» аргументам
+function sayHi(x){
+	// for(var i = 0; i < arguments.length; ++i){
+	// 	console.log(arguments[i], "Soart");
+	// }
+	console.log(arguments[0] = "Limpus");
+	console.log(x);
+	console.log(typeof arguments);
+}
 
+sayHi("Hello");
+console.log("------");
+// обычный массив из arguments, например так:
 
+var massObjectCopy = [];
 
+function massObjectC(){
+	for(var i = 0; i < arguments.length; i++){
+		massObjectCopy[i] = arguments[i];
+	}
+}
+
+massObjectC("Objectini massiva aylantirdik");
+console.log(massObjectCopy.concat(1,2));
 
 
 
