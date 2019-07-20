@@ -144,16 +144,16 @@ console.log(arrIndexOf.indexOf("last"));
 console.log(arrIndexOf.lastIndexOf("last"));
 
 // Доступ к «лишним» аргументам
-function sayHi(x){
+function sayHi(){
 	// for(var i = 0; i < arguments.length; ++i){
 	// 	console.log(arguments[i], "Soart");
 	// }
 	console.log(arguments[0] = "Limpus");
-	console.log(x);
+	console.log(arguments[0]);
 	console.log(typeof arguments);
 }
-
 sayHi("Hello");
+
 console.log("------");
 // обычный массив из arguments, например так:
 
@@ -167,6 +167,68 @@ function massObjectC(){
 
 massObjectC("Objectini massiva aylantirdik");
 console.log(massObjectCopy.concat(1,2));
+
+// Именованные аргументы
+
+function showWarning(options){
+	var width = options.width || 200;
+	var height = options.height || 400;
+	var content = options.content || "Sizni Telfoningiz Tog'ri Kelmaydi (:";
+
+	console.log(content);
+}
+
+showWarning({
+	content: "Sizni Telfoningiz To'g'ri Keladi!!!",
+});
+
+console.log("------");
+
+// Дата и Время
+
+var now = new Date();
+console.log(now);
+
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getHours());
+// console.log(now.getMinutes());
+// console.log(now.getSeconds());
+// console.log(now.getYear());
+// console.log(now.getMilliseconds());
+// console.log(now.getDay());
+
+// UTC
+console.log(now.getHours());
+console.log(now.getUTCHours());
+
+// Возвращает разницу между местным и UTC-временем, в минутах.
+console.log(new Date().getTimezoneOffset());
+
+console.log("-----");
+
+var today = new Date(2019, 0 ,32);
+today.setDate(today.getDate() + 2);
+console.log(today);
+
+// Бенчмаркинг
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
