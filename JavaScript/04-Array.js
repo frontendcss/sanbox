@@ -11,7 +11,7 @@ var mass = ['soart', 'limpus', 'web', 'sarvar'];
 
 console.log(mass);
 // console.log(mass[0]);
-console.log(mass[mass.length - 2]);
+console.log(mass.length - 2);
 
 for(var i = 0; i < mass.length; i++){
 	console.log(mass[i]);
@@ -50,7 +50,6 @@ var massNew = [
 			value: "Limpus"
 		}
 ]
-
 console.log(massNew[3]);
 
 console.log("---");
@@ -75,7 +74,6 @@ console.log(fruits);
 // Особенности работы length
 var leng = [];
 leng[10] = "dlina";
-
 console.log(leng.length);
 
 // Используем length для укорачивания массива

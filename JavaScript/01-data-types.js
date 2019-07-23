@@ -81,26 +81,13 @@ console.log(+"464"); // to number
 console.log(typeof(+"464"));
 console.log(+"" );
 console.log(+true);
-console.log(+false  );
-
-var n = 4;
-// n = null;
-
-console.log(n.value)
-console.log(typeof(n.value));
-
-var test = 1 / 0;
-var test2 = 1 / 'fgf';
-console.log(typeof test);
-console.log(typeof(test2));
+console.log(+false);
 
 console.log(typeof null);
 console.log(typeof function(){});
 // Сложные типы данных
 console.log([50, 320, 480]);
 console.log({meal: 'Завтрак', energy: 50});
-console.log(typeof function(){});
-
 
 // Операции
 50 + 100;
@@ -132,19 +119,24 @@ console.log(-Infinity === Infinity); // false
 var n = 0 / 0;
 console.log(isNaN(n));
 
+var x = NaN;
+console.log(x != x);
+console.log(x !== x);
+
 console.log("----");
 
 console.log(isFinite(Infinity));
 console.log(isFinite(-Infinity));
 console.log(isFinite(NaN));
-console.log(isFinite(2));
+console.log(isFinite(0));
 
 console.log("----");
 // Преобразование к числу
-var nu = 34.45;
-var su = "string"
+var nu = "34.45";
+var su = "string";
 console.log(+nu);
 console.log(+su);
+
 // Мягкое преобразование: parseInt и parseFloat
 console.log(parseInt("12px"));
 console.log(parseFloat("12.34.543"));
@@ -164,7 +156,7 @@ console.log(Math.round(3.1)); // Округляет до ближайшего ц
 
 // Округление идёт до ближайшего значения, аналогично Math.round и возвращает результат в виде строки:
 var num2 = 34.34;
-console.log(typeof +num2.toFixed(1));
+console.log(num2.toFixed(1));
 
 console.log(0.1 + 0.2 == 0.3);
 
@@ -230,9 +222,7 @@ console.log("L" < "U");
 // code L -> 76
 // code U -> 85
 
-
-
-
+console.log("----");
 
 
 

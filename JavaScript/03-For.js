@@ -41,11 +41,11 @@ for (var page = 2; page <= totalPages; page += 2) {
 
 // Накопление в цикле
 
-// var sum = 0;
+var sum = 0;
 
 for(var i = 1; i <= 10; i++){
-	// sum += 1;
-	console.log('Накопление в цикле ' + i);
+	sum += 1;
+	console.log('Накопление в цикле ' + sum);
 }
 
 // Проверки в циклах
@@ -108,8 +108,8 @@ for(var i = 1; i < 10; i++){
 // var sum  = 0;
 // while(true){
 // 	var value  = +prompt("Chisloni yozing", "");
-// 	if(!value) break;
-// 	// sum += value;
+// 	if(!value){break;}
+// 	sum += value;
 // }
 
 // alert("Summa: " + sum);

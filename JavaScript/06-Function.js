@@ -1,5 +1,3 @@
-
-
 /*
 Параметры это имена, которые вы указываете в определении функции.
 Аргументы это значения, которые вы передаете функции.
@@ -61,19 +59,6 @@ function func3(param1){
 func3("Soart")
 console.log(" ");
 
-// Получение значений аргументов с помощью объекта arguments
-function flexibleWelcome() {
-	var welcome = "Добро пожаловать, ";
-	for (i = 0; i < arguments.length; i++) {
-		welcome = welcome + arguments[i] + " ";
-	}
-return welcome;
-}
-
-console.log(flexibleWelcome("Christopher" , "James" , "Phoenix" , "Minnick"));
-console.log(flexibleWelcome("Eva" , "Ann" , "Holland"));
-console.log(" ");
-
 // Область видимости функции
 var i = 15;
 function func(){
@@ -109,10 +94,23 @@ var AnaFunction = function (){
 
 //Самовыполняющиеся анонимные функции
 
-// (function(){
-// 	var limpus = "Ananim function";
-// 	console.log();
-// })();
+var ananim = "Variable Glabal";
+
+(function(){
+	var lacalV = "Lacal Variable";
+	console.log("Ananim Function! " + ananim);
+})()
+
+// console.log(lacalV);
+
+function test(){
+	var testLacalV = "Test Lacal Variable";
+	console.log("Test Ananim Function");
+}
+
+test();
+
+// console.log(testLacalV);
 
 //Рекурсия
 
@@ -134,12 +132,6 @@ function showMessage(text) {
 }
 
 showMessage();
-
-/*
-Если аргументов передано больше, чем надо, например showMessage("Маша", "привет", 1, 2, 3)
-то ошибки не будет. Но, чтобы получить такие «лишние» аргументы, нужно будет прочитать их из
-специального объекта arguments, который мы рассмотрим в главе Псевдомассив аргументов "arguments".
-*/
 
 /*
 showMessage(..)     // префикс show, "показать" сообщени
@@ -261,9 +253,7 @@ sum2();
 
 // console.log(newFunc(1,1));
 
-
-
-
+console.log(" ");
 
 
 

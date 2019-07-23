@@ -8,9 +8,11 @@ var obj = {
 // Методы: function
 }
 // Точечная нотация
+var test = "Test";
 obj.soart = 10;
 obj.limpus = 20;
 obj.line = 79868;
+obj.test = "String Test";
 
 console.log(obj);
 
@@ -101,8 +103,6 @@ if("name" in objAsses){
 	console.log("svoystva age yo'q");
 }
 
-console.log(objAsses.soart);
-
 if(objAsses.soart === undefined){
 	objAsses.soart = "Limpus";
 }else{
@@ -131,6 +131,7 @@ var objAsses2 = {
 console.log(objAsses2.browser.google);
 
 console.log("---");
+
 // Объекты: перебор свойств
 var objPer = {
 	name: "Soart",
@@ -202,6 +203,88 @@ for(var key in objOrginal){
 clone.name = "Limpus";
 clone.age = 27;
 console.log(clone);
+
+console.log("\nГлобальный объект");
+
+/* 
+В JavaScript все глобальные переменные и функции являются свойствами специального объекта,
+который называется «глобальный объект» (global object) window.
+*/
+
+var varGlobal = "glabal Variable";
+console.log(window.varGlobal);
+
+console.log("a" in window);
+console.log(window.a);
+var a = "Variable";
+console.log(window.a);
+
+console.log(" ");
+
+console.log(testVariableD() in window);
+function testVariableD(){};
+
+console.log(testVariableE in window);
+var testVariableE = function(){
+	console.log("Hi");
+};
+
+console.log(" ");
+// Присвоение переменной без объявления
+
+// console.log(x);
+x = 4;
+console.log(x);
+
+console.log(" ");
+
+// Возврат функции
+function makeCounter(){
+	// LexicalEnvironment = { currentCount: undefined }
+	var currentConter = 1;
+	// При запуске функция создает объект
+	// LexicalEnvironment = { currentCount: 1 }
+	return function(){
+		return currentConter++;
+		// [[Scope]] свойство
+	};
+}
+
+// var counter = makeCounter();
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+console.log(" ");
+
+var counter2 = makeCounter();
+console.log(counter2());
+console.log(" ");
+
+// Свойства функции
+function makeCounter(){
+	function counter(){
+		return counter.currentConter2++;
+	};
+	counter.currentConter2 = 1;
+	return counter;
+}
+var counter2 = makeCounter();
+console.log(counter2());
+counter2.currentConter2 = 5;
+console.log(counter2());
+console.log(counter2());
+
+
+
+
+
+
+
+
+
+
 
 
 
