@@ -276,11 +276,138 @@ counter2.currentConter2 = 5;
 console.log(counter2());
 console.log(counter2());
 
+console.log(" ");
 
+// Счётчик-объект
+function makeCount(){
+	var currentCount = 0;
+	return{
+		getNext: function(){
+			return currentCount++;
+		},
+		set: function(value){
+			currentCount = value;
+		},
+		reset: function(){
+			currentCount = 0;
+		}
+	};
+}
 
+var count = makeCount();
 
+console.log(count.getNext());
+console.log(count.getNext());
+console.log(count.getNext());
 
+count.set(500);
 
+console.log(count.getNext());
+console.log(count.getNext());
+console.log(count.getNext());
+
+count.reset();
+
+console.log(count.getNext());
+console.log(count.getNext());
+console.log(count.getNext());
+
+console.log(" ");
+
+// Счётчик-объект 2
+
+function mekeCount(){
+	var currentCount = 1;
+
+	function counter(){
+		return currentCount++;
+	}
+
+	// ...и добавляем ей методы!
+	counter.set = function(value){
+		currentCount = value;
+	};
+
+	counter.reset = function(){
+		currentCount = 1;
+	};
+
+	return counter;
+}
+
+var count = mekeCount();
+
+console.log(count());
+console.log(count());
+console.log(count());
+
+count.set(600);
+
+console.log(count());
+console.log(count());
+console.log(count());
+
+console.log(" ");
+
+// Сумма через замыкание
+
+function sum(a){
+	return function(b){
+		return a + b;
+	}
+}
+
+console.log(sum(10)(20));
+
+// Функция - строковый буфер
+
+function makeBufer(){
+	var text = "";
+
+	function buff(price){
+		if(arguments.length == 0){
+			return text;
+		}
+		else{
+			text += price;
+		}
+	};
+
+	buff.clear = function(){
+		return text = "";
+	}
+
+	return buff;
+}
+
+var bufer = makeBufer();
+
+bufer("Hello ");
+bufer("World ");
+bufer("2019");
+
+console.log(bufer());
+bufer.clear();
+console.log(bufer());
+
+// Модули через замыкания
+
+// var massege = "Hello";
+
+// function funcMassege(){
+// 	document.write(massege);
+// }
+
+// + - !
+(function(){
+	var massege = "Hello";
+
+	function funcMassege(){
+		document.write(massege);
+	}
+
+	funcMassege();
+}());
 
 
 
