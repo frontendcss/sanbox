@@ -409,6 +409,58 @@ console.log(bufer());
 	funcMassege();
 }());
 
+// Управление памятью в JavaScript
+/*Есть одно упрощение для работы с памятью: «значение остаётся в памяти,
+пока на него есть хотя бы одна ссылка».*/
+
+/* Объект LexicalEnvironment живёт ровно до тех пор, пока на него существуют ссылки.
+В коде ниже после удаления ссылки на g умирает:*/
+
+function f() {
+	var value = 123;
+
+	function g() {}
+
+	return g;
+}
+
+var g = f(); // функция g жива
+// а значит в памяти остается соответствующий объект переменных f()
+
+g = null; // ..а вот теперь память будет очищена
+
+
+function testPam(){
+	var test = "Del";
+
+	function testDel(){
+		console.log(test);
+	}
+
+	return testDel;
+}
+
+var testDel2 = testPam();
+
+testDel2();
+
+// Устаревшая конструкция "with"
+
+var a = 5;
+
+var obj = {
+	a: 10
+}
+
+with(obj){
+	console.log(a);
+}
+
+
+
+
+
+
 
 
 
