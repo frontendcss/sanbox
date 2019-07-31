@@ -238,241 +238,97 @@ console.log(x);
 
 console.log(" ");
 
-// Возврат функции
-function makeCounter(){
-	// LexicalEnvironment = { currentCount: undefined }
-	var currentConter = 1;
-	// При запуске функция создает объект
-	// LexicalEnvironment = { currentCount: 1 }
-	return function(){
-		return currentConter++;
-		// [[Scope]] свойство
-	};
-}
-
-// var counter = makeCounter();
-
-// console.log(counter());
-// console.log(counter());
-// console.log(counter());
-
-console.log(" ");
-
-var counter2 = makeCounter();
-console.log(counter2());
-console.log(" ");
-
-// Свойства функции
-function makeCounter(){
-	function counter(){
-		return counter.currentConter2++;
-	};
-	counter.currentConter2 = 1;
-	return counter;
-}
-var counter2 = makeCounter();
-console.log(counter2());
-counter2.currentConter2 = 5;
-console.log(counter2());
-console.log(counter2());
-
-console.log(" ");
-
-// Счётчик-объект
-function makeCount(){
-	var currentCount = 0;
-	return{
-		getNext: function(){
-			return currentCount++;
-		},
-		set: function(value){
-			currentCount = value;
-		},
-		reset: function(){
-			currentCount = 0;
-		}
-	};
-}
-
-var count = makeCount();
-
-console.log(count.getNext());
-console.log(count.getNext());
-console.log(count.getNext());
-
-count.set(500);
-
-console.log(count.getNext());
-console.log(count.getNext());
-console.log(count.getNext());
-
-count.reset();
-
-console.log(count.getNext());
-console.log(count.getNext());
-console.log(count.getNext());
-
-console.log(" ");
-
-// Счётчик-объект 2
-
-function mekeCount(){
-	var currentCount = 1;
-
-	function counter(){
-		return currentCount++;
+// Методы объектов, this
+var objectM = {
+	str: "Method",
+	met: function(param){
+		console.log("Hello ", param);
 	}
+};
 
-	// ...и добавляем ей методы!
-	counter.set = function(value){
-		currentCount = value;
-	};
+objectM.met("World");
 
-	counter.reset = function(){
-		currentCount = 1;
-	};
+// присвоили метод после создания объекта
+objectM.met2 = function(){};
+console.log(objectM);
 
-	return counter;
-}
-
-var count = mekeCount();
-
-console.log(count());
-console.log(count());
-console.log(count());
-
-count.set(600);
-
-console.log(count());
-console.log(count());
-console.log(count());
-
-console.log(" ");
-
-// Сумма через замыкание
-
-function sum(a){
-	return function(b){
-		return a + b;
+// В this будет храниться ссылка на текущий объект user
+// Использование this гарантирует, что функция работает именно с тем объектом, в контексте которого вызвана.
+var user = {
+	name: "Limpus",
+	nameMethod: function(){
+		console.log("Hello", this.name);
 	}
 }
 
-console.log(sum(10)(20));
 
-// Функция - строковый буфер
+user.nameMethod();
+console.log(" ");
 
-function makeBufer(){
-	var text = "";
+/* Через this метод может не только обратиться к любому свойству объекта,
+но и передать куда-то ссылку на сам объект целиком:*/
 
-	function buff(price){
-		if(arguments.length == 0){
-			return text;
-		}
-		else{
-			text += price;
-		}
-	};
-
-	buff.clear = function(){
-		return text = "";
+var objec = {
+	name: "Soart",
+	objThis: function(){
+		sayHi(this);
 	}
+};
 
-	return buff;
+
+function sayHi(param){
+	console.log(param.name);
 }
 
-var bufer = makeBufer();
+objec.objThis();
 
-bufer("Hello ");
-bufer("World ");
-bufer("2019");
+// Подробнее про this
+var user = {firstName: 1};
+var admin = {firstName: 2};
 
-console.log(bufer());
-bufer.clear();
-console.log(bufer());
 
-// Модули через замыкания
-
-// var massege = "Hello";
-
-// function funcMassege(){
-// 	document.write(massege);
-// }
-
-// + - !
-(function(){
-	var massege = "Hello";
-
-	function funcMassege(){
-		document.write(massege);
-	}
-
-	funcMassege();
-}());
-
-// Управление памятью в JavaScript
-/*Есть одно упрощение для работы с памятью: «значение остаётся в памяти,
-пока на него есть хотя бы одна ссылка».*/
-
-/* Объект LexicalEnvironment живёт ровно до тех пор, пока на него существуют ссылки.
-В коде ниже после удаления ссылки на g умирает:*/
-
-function f() {
-	var value = 123;
-
-	function g() {}
-
-	return g;
+function func(){
+	console.log(this.firstName);
 }
 
-var g = f(); // функция g жива
-// а значит в памяти остается соответствующий объект переменных f()
+user.f = func;
+admin.g = func;
 
-g = null; // ..а вот теперь память будет очищена
+user.f();
+admin.g();
 
+console.log(" ");
 
-function testPam(){
-	var test = "Del";
-
-	function testDel(){
-		console.log(test);
-	}
-
-	return testDel;
+function fun(){
+	console.log(this);
 }
 
-var testDel2 = testPam();
+fun();
 
-testDel2();
+// Ссылочный тип
 
-// Устаревшая конструкция "with"
+var user = {
+	name: "Vasya",
+	hi: function(){
+		console.log(this.name);
+	},
+	by: function(){
+		console.log("by by");
+	}
+}
 
-var a = 5;
+var full = (user.name == "Vasya" ? user.hi: user.by)();
+console.log(full); // undefined
+console.log(" ");
+
+// Задачи
 
 var obj = {
-	a: 10
+	go: function(){
+		console.log(this);
+	}
 }
 
-with(obj){
-	console.log(a);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+;(obj.go)();
 
 
