@@ -114,6 +114,9 @@ console.log(Infinity > 945984503); // true
 console.log(Infinity + 5 === Infinity); // true
 console.log(-Infinity === Infinity); // false
 
+// специальные числовые значения
+// Infinity, -Infinity и NaN
+
 // NaN (Not-A-Number)
 
 var n = 0 / 0;
@@ -222,11 +225,69 @@ console.log("L" < "U");
 // code L -> 76
 // code U -> 85
 
-console.log("----");
+console.log(" ");
 
 
 
 
+
+
+// Переменные
+console.log("New JavaScript");
+
+let newVariable = "Hello, World"
+console.log(newVariable);
+
+let newVariable2 = "HTML", newVariable3 = "CSS", newVariable4 = "JavaScript";
+console.log(newVariable4);
+
+// Константы
+const BIRTHDAY = "16.05.1993";
+console.log(BIRTHDAY);
+
+const age = 26;
+console.log(age);
+
+// В JavaScript существует три типа кавычек.
+let varib = 2+3;
+console.log(`Num: ${varib}`);
+
+/*
+В JavaScript есть 7 основных типов.
+
+number для любых чисел: целочисленных или чисел с плавающей точкой.
+string для строк. Строка может содержать один или больше символов, нет отдельного символьного типа.
+boolean для true/false.
+null для неизвестных значений – отдельный тип, имеющий одно значение null.
+undefined для неприсвоенных значений – отдельный тип, имеющий одно значение undefined.
+object для более сложных структур данных.
+symbol для уникальных идентификаторов.
+*/
+
+
+// Операторы
+
+/* Приоритет операторов
+В JavaScript много операторов. Каждый оператор имеет соответствующий номер приоритета.
+Тот, у кого это число больше – выполнится раньше. Если приоритет одинаковый,
+то порядок выполнения – слева направо.
+*/
+
+
+console.log("Возведение в степень");
+console.log(2 ** 3); // 2 * 2 * 2 // 8
+
+console.log("Инкремент/декремент");
+
+// «постфиксная форма»: counter++
+let icr = 1;
+let result  = icr++;
+console.log(result);
+
+// «Префиксная форма» ++counter
+let icr2 = 1;
+let result2  = ++icr2;
+console.log(result2);
 
 
 
