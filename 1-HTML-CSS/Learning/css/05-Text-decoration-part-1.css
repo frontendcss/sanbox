@@ -79,11 +79,11 @@ span {
 
 /*Верхние и нижние индексы на CSS*/
 .index-top {
-	vertical-align: sub;
+	vertical-align: super;
 }
 
 .index-bottom {
-	vertical-align: super;
+	vertical-align: sub;
 }
 
 /*line-height: управляем высотой строки*/
