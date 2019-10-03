@@ -1,3 +1,10 @@
+// Одно выполнение тела цикла по-научному называется итерация. Цикл в примере выше совершает три итерации.
+// Если тело цикла состоит лишь из одной инструкции, мы можем опустить фигурные скобки {…}:
+
+// for (начало; условие; шаг) {
+//   // ... тело цикла ...
+// }
+
 var olma = 10;
 
 for(var anor = 1; anor <= olma; anor = anor + 1) {
@@ -112,6 +119,16 @@ for(var i = 1; i < 10; i++){
 // 	sum += value;
 // }
 
+// let id = 0;
+// while(id < 6){
+// 	if(id === 3){
+// 		break;
+// 	}
+// 	id = id + 1;
+// }
+
+// console.log(id);
+
 // alert("Summa: " + sum);
 
 
@@ -121,7 +138,19 @@ for(var i = 1; i < 10; i++){
 // Метка имеет вид "имя:", имя должно быть уникальным. Она ставится перед циклом, вот так:
 // outer: for (var i = 0; i < 3; i++) { ... }
 
-// console.log("---");
+// Переход к следующей итерации: continue
+for(let i = 0; i < 10; i++){
+	if(i % 2 == 0) continue;
+	console.log(i);
+}
+// Вызов break/continue возможен только внутри цикла, и метка должна находиться где-то выше этой директивы
+
+console.log(" ");
+for(let i = 2; i <= 10; i += 2){
+	console.log(i);
+}
+
+console.log(" ");
 
 // var i = 0;
 // while (i++ < 5){
@@ -133,21 +162,22 @@ for(var i = 1; i < 10; i++){
 // 	sum = prompt("Summa ", 0);
 // }while(sum <= 100 && sum != null);
 
+// Замените for на while
+let y = 0;
+while(y < 3){
+	console.log(`number ${y}`);
+	y++;
+}
 
+console.log(" ");
 
+// Повторять цикл, пока ввод неверен
+// let num;
+// do{
+// 	num = prompt("100 dan katta sonni yozing", 0);
+// }while(num <= 100 && num);
 
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(num);
 
 
 

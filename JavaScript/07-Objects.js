@@ -331,4 +331,50 @@ var obj = {
 
 ;(obj.go)();
 
+console.log("-----------------");
+
+// JS New 
+
+let newObj = new Object(); // синтаксис "конструктор объекта"
+let newObj2 = {}; // синтаксис "литерал объекта"
+
+newObj2.obj1 = "Name1";
+newObj2.obj2 = "Name2";
+newObj2["obj 3"] = "Name3";
+
+console.log(newObj2.obj1);
+console.log(newObj2.obj2);
+console.log(newObj2["obj 3"]);
+
+delete newObj2.obj1;
+
+console.log(newObj2.obj1);
+
+// let usersAll1 = {
+// 	age: "26",
+// 	color: "Red"
+// };
+
+
+// let keyPop = prompt("Ismingizni Yozing", "age");
+
+// alert(usersAll1[keyPop]);
+// alert(usersAll1.keyPop);
+
+let numKey = prompt("Ismni Toping", "apple");
+
+let userAll = {
+	[numKey]: "MacOS",
+}
+
+console.log(userAll.apple);
+
+
+
+
+
+
+
+
+
 

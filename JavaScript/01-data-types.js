@@ -33,58 +33,60 @@ console.log(0.2 + 0.1);
 console.log(" ");
 
 console.log(5 + "5");
-console.log(typeof(5 + "5"));
+console.log(typeof(5 + "5")); // string
 
 console.log("5" * "4");
-console.log(typeof("5" * "4"));
+console.log(typeof("5" * "4")); // number
 
-console.log("4" * "hi");
-console.log(typeof("4" * "hi"));
+console.log("4" * "hi"); // NaN
+console.log(t
+ypeof("4" * "hi")); // number
 
 console.log(" ");
 
-console.log("5" == 5);
-console.log("0" == false);
-console.log("" == false);
-console.log("4" == true);
+console.log("5" == 5); // true
+console.log("0" == false); // true
+console.log("" == false); // true
+console.log("4" == true); // false
 
 console.log("");
 
-console.log(null == false);
-console.log(undefined == false);
-console.log(undefined == null);
+console.log(null == false); // false
+console.log(undefined == false); // false
+console.log(undefined == null); // true
 
 console.log(" ");
 
 console.log(Number("55"));
-console.log(typeof Number("55"));
+console.log(typeof Number("55")); // number
 
 console.log(String(7680));
-console.log(typeof String(7680));
+console.log(typeof String(7680)); // string
 
 console.log(Boolean("1"));
-console.log(typeof Boolean("1"));
+console.log(typeof Boolean("1")); // boolean
 
-console.log(parseInt("5.55", 10));
-console.log(parseFloat("34.35 em"));
+console.log(parseInt("5.55", 10)); // возвращает целое число или значение NaN
+console.log(parseFloat("34.35 px")); // Если первый символ не может быть сконвертирован в число, то возвращается NaN
 
 console.log(" ");
 
-console.log(!!" ");
+console.log(!!" "); // true
 console.log(!!5); // to boolean
-console.log(typeof(!!5));
+console.log(typeof(!!5)); // boolean
 
 console.log(3434 + ""); // to string
-console.log(typeof(3434 + ""));
+console.log(typeof(3434 + "")); // string
 
 console.log(+"464"); // to number
-console.log(typeof(+"464"));
-console.log(+"" );
-console.log(+true);
-console.log(+false);
+console.log(typeof(+"464")); // number
+console.log(+"" ); // 0
+console.log(+true); // 1
+console.log(+false); // 0
 
-console.log(typeof null);
-console.log(typeof function(){});
+console.log(typeof null); // object
+console.log(typeof function(){}); // function
+
 // Сложные типы данных
 console.log([50, 320, 480]);
 console.log({meal: 'Завтрак', energy: 50});
@@ -141,35 +143,35 @@ console.log(+nu);
 console.log(+su);
 
 // Мягкое преобразование: parseInt и parseFloat
-console.log(parseInt("12px"));
-console.log(parseFloat("12.34.543"));
-console.log(parseFloat("px34.454"));
-console.log(parseInt("10", 16));
+console.log(parseInt("12px")); // 12
+console.log(parseFloat("12.34.543")); // 12.34
+console.log(parseFloat("px34.454")); // NaN
+console.log(parseInt("10", 16)); // 16
 
 // toString(система счисления) Основание может быть любым от 2 до 36.
 
 var numString = 4490640608799;
-console.log(numString.toString(36));
+console.log(numString.toString(36)); // 1layzh1r3
 
 // Округление
 
-console.log(Math.floor(3.1)); // Округляет вниз
-console.log(Math.ceil(3.1));  // Округляет вверх
-console.log(Math.round(3.1)); // Округляет до ближайшего целого
+console.log(Math.floor(3.1)); // Округляет вниз 3
+console.log(Math.ceil(3.1));  // Округляет вверх 4
+console.log(Math.round(3.1)); // Округляет до ближайшего целого 3
 
 // Округление идёт до ближайшего значения, аналогично Math.round и возвращает результат в виде строки:
 var num2 = 34.34;
-console.log(num2.toFixed(1));
+console.log(num2.toFixed(1)); // 34.3
 
-console.log(0.1 + 0.2 == 0.3);
+console.log(0.1 + 0.2 == 0.3); // false
 
 // Неточные вычисления
 var num3 = 0.1 + 0.2;
-console.log(+num3.toFixed(10));
+console.log(+num3.toFixed(10)); // 0.3
 
 // Форматирование
 var number = 123456789;
-console.log(number.toLocaleString());
+console.log(number.toLocaleString()); // 123 456 789
 
 
 // Строки
