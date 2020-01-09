@@ -10,9 +10,9 @@ input {
 }
 
 /* Google Fonts*/
-article {
-	font-family: 'Charmonman', cursive;
-	font-size: 20px;
+.left-bar {
+	font-size: 15px;
+	font-family: 'Charmonman';
 	font-weight: bold;
 }
 
@@ -26,16 +26,17 @@ article {
 }
 */
 
-article {
-	font-family: 'beer_moneyregular', verdana;
-	font-size: 40px;
+@font-face {
+	font-family: 'charmonman';
+	src: url('../font/charmonman/charmonman-bold-webfont.woff2') format('woff2'),
+			 url('../font/charmonman/charmonman-bold-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+
 }
 
-fieldset {
-	border: 1px solid #4A6F2DFF;
-}
-
-legend {
-	background-color: #2FF;
-	color: #000;
+.left-bar {
+	font-size: 15px;
+	font-family: 'Charmonman';
+	font-weight: bold;
 }
