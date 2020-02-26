@@ -39,9 +39,6 @@ console.log("5" * "4");
 console.log(typeof("5" * "4")); // number
 
 console.log("4" * "hi"); // NaN
-console.log(t
-ypeof("4" * "hi")); // number
-
 console.log(" ");
 
 console.log("5" == 5); // true
@@ -246,6 +243,10 @@ console.log(newVariable4);
 // Константы
 const BIRTHDAY = "16.05.1993";
 console.log(BIRTHDAY);
+
+//Error
+// const BIRTHDAY = "K";
+// console.log(BIRTHDAY);
 
 const age = 26;
 console.log(age);
