@@ -71,15 +71,21 @@ console.log(Math.min(2,4) + 100);
 // 	break;
 // }
 
-// let qubik = 7;
-// for(let counter = 0; counter <= qubik.length; counter += 1){
-// 	console.log("\n");
-// 	console.log(qubik);
-// }
+let qubik = "";
+for(let counter = 7; counter >= qubik.length; qubik += "#"){
+	console.log(qubik);
+}
 
-// if(){
-// 	qubik
-// }
+
+let count;
+
+for(let counter = 0; counter <= 100; counter += 1){
+	if(counter % 3 == 0 ){
+		count = counter;
+		console.log(count + " Fizz");
+	}
+}
+
 
 
 
