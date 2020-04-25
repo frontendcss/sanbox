@@ -1,14 +1,14 @@
 // Variable
-let age = 26;
-let age1 = 26, age2 = 27;
-console.log(age2);
+// let age = 26;
+// let age1 = 26, age2 = 27;
+// console.log(age2);
 
-var age3 = 25; // -2015
-console.log(age);
+// var age3 = 25; // -2015
+// console.log(age);
 
 // Canstant
-const AGE = 27;
-console.log(AGE);
+// const AGE = 27;
+// console.log(AGE);
 
 // Выполнение функции называется ее вызовом
 // Значения, передаваемые функциям, называются аргументами
@@ -18,8 +18,8 @@ console.log(AGE);
 // console.log(password);
 
 // Возвращение значений
-console.log(Math.max(2,3,4,5,6))
-console.log(Math.min(2,4) + 100);
+// console.log(Math.max(2,3,4,5,6))
+// console.log(Math.min(2,4) + 100);
 
 // Условное выполнение
 // let theNumber = Number(prompt("Number yozing"));
@@ -71,20 +71,90 @@ console.log(Math.min(2,4) + 100);
 // 	break;
 // }
 
-let qubik = "";
-for(let counter = 7; counter >= qubik.length; qubik += "#"){
-	console.log(qubik);
-}
+//Dz 1
+// let qubik = "";
+// for(let counter = 7; counter >= qubik.length; qubik += "#"){
+// 	console.log(qubik);
+// }
 
+//Dz 2
+// for(let x = 0; x <= 100; x = x + 1){
+// 	let output = "";
+// 	if(x % 3 == 0) output = "FizzBuzz";
+// 	if(x % 5 == 0) output = "Buzz";
+// 	console.log(output || x);
+// }
 
-let count;
+// Dz 3
+// let size = 8;
+// let bloc = "";
 
-for(let counter = 0; counter <= 100; counter += 1){
-	if(counter % 3 == 0 ){
-		count = counter;
-		console.log(count + " Fizz");
+// for(let x = 0; x <= size; x++){
+// 	for(let y = 0; y <= size; y++){
+// 		if((x + y) % 2 == 0){
+// 			bloc += " ";
+// 		}else{
+// 			bloc += "#";
+// 		}
+// 	}
+// 	bloc += "\n";
+// }
+
+// console.log(bloc);
+
+//Function 
+
+const power = function (ikki, on){
+	let result = 1;
+	for(let count = 0; count < on; count++){
+		result *= ikki;
 	}
+	return result;
+};
+
+console.log(power(2,10));
+
+const can = function(){};
+console.log(can());
+
+
+// Функции как значения
+let funct = function(v){
+	console.log("Hello " + v);
 }
+
+funct("birchi funct");
+let funct2 = funct; // Capy function
+funct2("Copy function");
+
+
+// Декларативная запись
+
+fun("Декларативная запись")
+function fun (param){
+	console.log(param);
+}
+
+//Трелочные функции
+
+const funct3 = param => {
+	console.log(param);
+}
+
+funct3("Трелочные функции");
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
