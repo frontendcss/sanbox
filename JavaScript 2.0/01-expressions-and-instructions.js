@@ -1,144 +1,83 @@
-// Variable
-// let age = 26;
-// let age1 = 26, age2 = 27;
-// console.log(age2);
+// about:blank
 
-// var age3 = 25; // -2015
-// console.log(age);
+// leteral
+//"abs", 353
 
-// Canstant
-// const AGE = 27;
-// console.log(AGE);
+// Арифметические операторы
+// Операции
+//+=-
 
-// Выполнение функции называется ее вызовом
-// Значения, передаваемые функциям, называются аргументами
-// Разным функциям могут потребоваться разное количество и разные типы аргументов.
-// Функция Number преобразует значение в число.
-// let password = prompt("Parolni yozing");
-// console.log(password);
+// Остаток от деления (%)
 
-// Возвращение значений
-// console.log(Math.max(2,3,4,5,6))
-// console.log(Math.min(2,4) + 100);
+// Логические операторы
+// Логическое И (&&)
+// Логическое ИЛИ (||)
+// Логическое НЕ (!)
 
-// Условное выполнение
-// let theNumber = Number(prompt("Number yozing"));
-// if(!Number.isNaN(theNumber)){
-// 	console.log("oqnoni ichina yozilgan "+ theNumber +" qaytardi");
+// Строковые операторы
+// mystring += "bet";
+// console.log("my " + "string");
+
+// Условный (тернарный) оператор
+// condition ? val1 : val2
+// var status = (age >= 18) ? "val1" : "val2";
+
+// Оператор запятая
+// let abs = 1;
+// let result = (abs++, abs);
+// console.log(result);
+
+
+// Унарные операторы
+// delete obj, valueObject, array;
+
+/*
+Значение operand может быть строкой, переменной, дескриптором,или объектом,
+тип которого следует определить. Скобки вокруг операнда необязательны.
+ */
+// Оператор typeof
+// let str = "String";
+// let num = 2;
+// let bull = true;
+// let arr = [];
+// let obj = {};
+
+// console.log(typeof(str));
+// console.log(typeof(num));
+// console.log(typeof(bull));
+// console.log(typeof(arr));
+// console.log(typeof(obj));
+// console.log(typeof typeof(obj));
+
+// Оператор void
+
+// let noNember = "abs";
+// console.log(void(noNember));
+
+// Оператор группировки
+// let b = 2;
+// let c = 3;
+// let a = 1;
+
+// let result = a + (b * c);
+// console.log(result);
+
+// Constant
+// const CAN = "abs";
+// console.log(CAN);
+// CAN = "dsb";
+
+// Блоки
+// {
+// 	let abs = "Limpus";
+// 	console.log(abs);
 // }
 
-//  Циклы while и do
+// console.log(abs);
 
-// let number = 0;
-// while(number <= 12){
-// 	console.log(number);
-// 	number = number + 2;
-// }
-
-// все строки, кроме "", преобразуются в true
-// let userName;
-// do{
-// 	userName = prompt("Isminggizni yozmang");
-// } while(!userName);
-
-// console.log(userName);
-
-// Циклы for
-
-// for(let numberUser = 0; numberUser <= 20; numberUser = numberUser + 2){
-// 	console.log(numberUser);
-// }
-
-// Принудительный выход из цикла
-
-// for(let pitsa = 20; ; pitsa = pitsa + 1){
-// 	if(pitsa % 7 == 0){
-// 		console.log(pitsa);
-// 		break;
-// 	}
-// }
-
-// Диспетчеризация по значению с помощью switch
-
-// switch(prompt("Ko'chada qanaka hovo?")){
-// 	case "quyoshli":
-// 	case "bulutli":
-// 	console.log("Aylanib kelsa bo'ldi");
-// 	break;
-
-// 	case "yomg'ir":
-// 	console.log("Ko'chada yomg'ir zo'ntik bilan chiqish garak");
-// 	break;
-// }
-
-//Dz 1
-// let qubik = "";
-// for(let counter = 7; counter >= qubik.length; qubik += "#"){
-// 	console.log(qubik);
-// }
-
-//Dz 2
-// for(let x = 0; x <= 100; x = x + 1){
-// 	let output = "";
-// 	if(x % 3 == 0) output = "FizzBuzz";
-// 	if(x % 5 == 0) output = "Buzz";
-// 	console.log(output || x);
-// }
-
-// Dz 3
-// let size = 8;
-// let bloc = "";
-
-// for(let x = 0; x <= size; x++){
-// 	for(let y = 0; y <= size; y++){
-// 		if((x + y) % 2 == 0){
-// 			bloc += " ";
-// 		}else{
-// 			bloc += "#";
-// 		}
-// 	}
-// 	bloc += "\n";
-// }
-
-// console.log(bloc);
-
-//Function 
-
-const power = function (ikki, on){
-	let result = 1;
-	for(let count = 0; count < on; count++){
-		result *= ikki;
-	}
-	return result;
-};
-
-console.log(power(2,10));
-
-const can = function(){};
-console.log(can());
-
-
-// Функции как значения
-let funct = function(v){
-	console.log("Hello " + v);
+// Условные конструкции
+if (выражение) {
+	// Инструкция
+}else{
+	// Инструкция
 }
-
-funct("birchi funct");
-let funct2 = funct; // Capy function
-funct2("Copy function");
-
-
-// Декларативная запись
-
-fun("Декларативная запись")
-function fun (param){
-	console.log(param);
-}
-
-//Трелочные функции
-
-const funct3 = param => {
-	console.log(param);
-}
-
-funct3("Трелочные функции");
