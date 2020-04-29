@@ -27,6 +27,9 @@
 // 	console.log("oqnoni ichina yozilgan "+ theNumber +" qaytardi");
 // }
 
+// true ? 1 : 2 // 1
+// false ? 1 : 2 // 2
+
 //  Циклы while и do
 
 // let number = 0;
@@ -36,6 +39,7 @@
 // }
 
 // все строки, кроме "", преобразуются в true
+
 // let userName;
 // do{
 // 	userName = prompt("Isminggizni yozmang");
@@ -144,13 +148,38 @@ const funct3 = param => {
 funct3("Трелочные функции");
 
 
+// Замыкание
+
+// function counter(){
+// 	let count = 0;
+
+// 	return function(){
+// 		count++;
+
+// 		return count;
+// 	}
+// }
+
+// let result = counter();
+// console.log(result());
+// console.log(result());
+// console.log(result());
+
+function counter(){
+	let count = 0;
+
+	return () => {
+		count++;
+
+		return count;
+	}
+}
 
 
+let result = counter();
+console.log(result());
 
-
-
-
-
+// Рекурсия
 
 
 
