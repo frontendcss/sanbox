@@ -20,13 +20,12 @@
 
 // Условный (тернарный) оператор
 // condition ? val1 : val2
-// var status = (age >= 18) ? "val1" : "val2";
+// let status = (age >= 18) ? "val1" : "val2";
 
 // Оператор запятая
 // let abs = 1;
 // let result = (abs++, abs);
 // console.log(result);
-
 
 // Унарные операторы
 // delete obj, valueObject, array;
@@ -84,3 +83,78 @@
 // }else{
 // 	// Инструкция
 // }
+
+// Циклы
+// let num = 10;
+// while(num--){
+// 	console.log(num);
+// }
+
+// let num2 = 1;
+// do{
+// 	console.log(num2);
+// }while(num2--);
+
+// i = i + 1;
+// for(let i = 0; i <= 10; i++){
+// 	console.log(i);
+// }
+
+// Функции
+// function func(num){
+// 	return num + num;
+// }
+// let abs = 1;
+// console.log(func(abs));
+
+// Область видимости
+// технически называемая лексическая область видимости
+
+// let s = 5;
+// function fun(){
+// 	// let s = 2; agar bu yo'q bo'lasa tashqarida oladi
+// 	let a = 1;
+
+// 	function inner(){
+// 		let b = 2;
+// 		console.log(a + b + s); // a go'rsanadi
+// 	}
+
+// 	return inner();
+// 	// return b; go'rsanimidi
+// }
+
+// fun();
+
+
+// const NOLOG = 0.2;
+// const TEL = 999;
+// const CHXOL = 130;
+// const OLINMIDI = 40000;
+// let schot = 20000;
+
+// function eldorodo(){
+// 	for(i = schot; i >= TEL; i = i - TEL){
+// 		i = i + NOLOG;
+// 		console.log(i);
+// 	}
+
+
+
+// 	for(a = OLINMIDI; a > TEL; a = a - CHXOL){
+// 		console.log(a);
+// 	}
+// }
+
+// eldorodo();
+
+
+
+
+
+
+
+
+
+
+
