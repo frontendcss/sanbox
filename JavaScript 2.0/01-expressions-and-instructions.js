@@ -1,30 +1,93 @@
-// Variable
-// let age = 26;
-// let age1 = 26, age2 = 27;
-// console.log(age2);
+"use strict";
+// about:blank
 
-// var age3 = 25; // -2015
-// console.log(age);
+// leteral
+//"abs", 353
 
-// Canstant
-// const AGE = 27;
-// console.log(AGE);
+// Арифметические операторы
+// Операции
+//+=-
 
-// Выполнение функции называется ее вызовом
-// Значения, передаваемые функциям, называются аргументами
-// Разным функциям могут потребоваться разное количество и разные типы аргументов.
-// Функция Number преобразует значение в число.
-// let password = prompt("Parolni yozing");
-// console.log(password);
+// Остаток от деления (%)
 
-// Возвращение значений
-// console.log(Math.max(2,3,4,5,6))
-// console.log(Math.min(2,4) + 100);
+// Логические операторы
+// Логическое И (&&)
+// Логическое ИЛИ (||)
+// Логическое НЕ (!)
 
-// Условное выполнение
-// let theNumber = Number(prompt("Number yozing"));
-// if(!Number.isNaN(theNumber)){
-// 	console.log("oqnoni ichina yozilgan "+ theNumber +" qaytardi");
+// Строковые операторы
+// mystring += "bet";
+// console.log("my " + "string");
+
+// Условный (тернарный) оператор
+// condition ? val1 : val2
+// let status = (age >= 18) ? "val1" : "val2";
+
+// Оператор запятая
+// let abs = 1;
+// let result = (abs++, abs);
+// console.log(result);
+
+// Унарные операторы
+// delete obj, valueObject, array;
+
+/*
+Значение operand может быть строкой, переменной, дескриптором,или объектом,
+тип которого следует определить. Скобки вокруг операнда необязательны.
+ */
+// Оператор typeof
+// let str = "String";
+// let num = 2;
+// let bull = true;
+// let arr = [];
+// let obj = {};
+
+// console.log(typeof(str));
+// console.log(typeof(num));
+// console.log(typeof(bull));
+// console.log(typeof(arr));
+// console.log(typeof(obj));
+// console.log(typeof typeof(obj));
+
+// Оператор void
+
+// let noNember = "abs";
+// console.log(void(noNember));
+
+// Оператор группировки
+// let b = 2;
+// let c = 3;
+// let a = 1;
+
+// let result = a + (b * c);
+// console.log(result);
+
+// Constant
+// const CAN = "abs";
+// console.log(CAN);
+// CAN = "dsb";
+
+// Блоки
+// {
+// 	let abs = "Limpus";
+// 	console.log(abs);
+// }
+// console.log(abs);
+
+// Условные конструкции
+/*
+при приведении к логическому значению они станут значением false, такие
+значения включают в себя 
+"" (пустая строка)
+0, -0, NaN (некорректное число)
+null, undefined
+false
+
+*/
+// if (выражение) {
+// 	// Инструкция
+// }else{
+// 	// Инструкция
 // }
 
 // true ? 1 : 2 // 1
@@ -41,145 +104,190 @@
 // все строки, кроме "", преобразуются в true
 
 // let userName;
+
+// Циклы
+// let num = 10;
+// while(num--){
+// 	console.log(num);
+// }
+
+// let num2 = 1;
+
 // do{
-// 	userName = prompt("Isminggizni yozmang");
-// } while(!userName);
+// 	console.log(num2);
+// }while(num2--);
 
-// console.log(userName);
-
-// Циклы for
-
-// for(let numberUser = 0; numberUser <= 20; numberUser = numberUser + 2){
-// 	console.log(numberUser);
+// i = i + 1;
+// for(let i = 0; i <= 10; i++){
+// 	console.log(i);
 // }
 
-// Принудительный выход из цикла
+// Функции
 
-// for(let pitsa = 20; ; pitsa = pitsa + 1){
-// 	if(pitsa % 7 == 0){
-// 		console.log(pitsa);
-// 		break;
+// function func(num){
+// 	return num + num;
+// }
+// let abs = 1;
+// console.log(func(abs));
+
+// Область видимости
+// технически называемая лексическая область видимости
+
+// let s = 5;
+// function fun(){
+// 	// let s = 2; agar bu yo'q bo'lasa tashqarida oladi
+// 	let a = 1;
+
+// 	function inner(){
+// 		let b = 2;
+// 		console.log(a + b + s); // a go'rsanadi
+// 	}
+
+// 	return inner();
+// 	// return b; go'rsanimidi
+// }
+
+// fun();
+
+// Объекты
+
+// let obj = {
+// 	a: 948,
+// 	b: "String",
+// 	d: true,
+// 	g: function(){
+// 		let le = "Hello Object";
+// 		return le;
 // 	}
 // }
 
-// Диспетчеризация по значению с помощью switch
+// console.log(typeof obj.g);
+// Скобочная нотация полезна, если у вас есть имя свойства, содержащее спецсимволы
+// console.log(typeof obj["a"])
 
-// switch(prompt("Ko'chada qanaka hovo?")){
-// 	case "quyoshli":
-// 	case "bulutli":
-// 	console.log("Aylanib kelsa bo'ldi");
-// 	break;
+// Массив
 
-// 	case "yomg'ir":
-// 	console.log("Ko'chada yomg'ir zo'ntik bilan chiqish garak");
-// 	break;
+// let mass = [26, "Limpus", true];
+// console.log(mass[0]);
+// console.log(mass.length);
+// console.log(typeof mass);
+
+// Методы встроенных типов
+
+// let a = "Hello world";
+// let b = 3.44049;
+
+// console.log(a.length);
+// console.log(b.toFixed(1));
+// console.log(a.toUpperCase());
+
+// Истинный и ложный
+
+// let obj = {};
+// let mass = [];
+// function func(){}
+
+// if(func){
+// 	console.log("true");
 // }
 
-//Dz 1
-// let qubik = "";
-// for(let counter = 7; counter >= qubik.length; qubik += "#"){
-// 	console.log(qubik);
-// }
+// Равенство
+// ==, ===, != и !==
 
-//Dz 2
-// for(let x = 0; x <= 100; x = x + 1){
-// 	let output = "";
-// 	if(x % 3 == 0) output = "FizzBuzz";
-// 	if(x % 5 == 0) output = "Buzz";
-// 	console.log(output || x);
-// }
+// Неравенство
+// <, >, <= и >=
 
-// Dz 3
-// let size = 8;
-// let bloc = "";
+// Переменные
+/*Идентификатор должен начинаться с a-z, A-Z, $ или _. Дальше он может содержать
+любые из этих же символов плюс цифры 0-9.*/
 
-// for(let x = 0; x <= size; x++){
-// 	for(let y = 0; y <= size; y++){
-// 		if((x + y) % 2 == 0){
-// 			bloc += " ";
-// 		}else{
-// 			bloc += "#";
-// 		}
-// 	}
-// 	bloc += "\n";
-// }
-
-// console.log(bloc);
-
-//Function 
-
-const power = function (ikki, on){
-	let result = 1;
-	for(let count = 0; count < on; count++){
-		result *= ikki;
-	}
-	return result;
-};
-
-console.log(power(2,10));
-
-const can = function(){};
-console.log(can());
-
-
-// Функции как значения
-let funct = function(v){
-	console.log("Hello " + v);
-}
-
-funct("birchi funct");
-let funct2 = funct; // Capy function
-funct2("Copy function");
-
-
-// Декларативная запись
-
-fun("Декларативная запись")
-function fun (param){
-	console.log(param);
-}
-
-//Трелочные функции
-
-const funct3 = param => {
-	console.log(param);
-}
-
-funct3("Трелочные функции");
-
+// Выражения немедленно вызываемых функций (Immediately Invoked Function Expressions (IIFEs))
+// Функции IIFE также могут возвращать значения:
+// (function foo(){
+// 	console.log("Hello world");
+// })()
 
 // Замыкание
 
-// function counter(){
-// 	let count = 0;
-
-// 	return function(){
-// 		count++;
-
-// 		return count;
-// 	}
+// function foo(x){
+// 	function add(y){
+// 		return y + x;
+// 	};
+// 	return add;
 // }
 
-// let result = counter();
-// console.log(result());
-// console.log(result());
-// console.log(result());
-
-function counter(){
-	let count = 0;
-
-	return () => {
-		count++;
-
-		return count;
-	}
-}
+// let result1 = foo(1);
+// console.log(result1(3));
 
 
-let result = counter();
-console.log(result());
+// let result2 = foo(5);
+// console.log(result2(10));
 
 // Рекурсия
+
+// Модули
+
+// function User(){
+// 	let username;
+// 	let password;
+
+// 	function doLogin(user, pwo){
+// 		username = user;
+// 		password = pwo;
+// 	};
+
+// 	let poblicAPI = {
+// 		login: doLogin,
+// 	}
+
+// 	return poblicAPI;
+// }
+
+
+// let fred = User;
+// fred("Limpus", "fd09945hgio");
+
+// Идентификатор this
+
+// Agar "use strict" yonib durgan bo'lsa oshibka baradi
+// function func(){
+// 	console.log(this.th);
+// }
+
+// var th = "Glabal";
+// func();
+
+// var obj = {
+// 	th: "Local",
+// 	svs: func
+// }
+
+// obj.svs();
+
+// var obj1 = {
+// 	th: "Erorr EcmaScript ES6"
+// }
+
+// func.call(obj1);
+
+// new func();
+
+// Прототипы
+
+let obj = {
+	a: 26
+};
+
+let proto = Object.create(obj); // prototype link
+proto.b = "Limpus";
+
+console.log(proto.a);
+
+
+
+
+
+
 
 
 
