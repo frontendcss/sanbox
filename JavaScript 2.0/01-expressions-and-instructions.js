@@ -1,3 +1,4 @@
+"use strict";
 // about:blank
 
 // leteral
@@ -76,7 +77,12 @@
 // Условные конструкции
 /*
 при приведении к логическому значению они станут значением false, такие
-значения включают в себя 0 и ""
+значения включают в себя 
+"" (пустая строка)
+0, -0, NaN (некорректное число)
+null, undefined
+false
+
 */
 // if (выражение) {
 // 	// Инструкция
@@ -126,35 +132,135 @@
 
 // fun();
 
+// Объекты
 
-// const NOLOG = 0.2;
-// const TEL = 999;
-// const CHXOL = 130;
-// const OLINMIDI = 40000;
-// let schot = 20000;
-
-// function eldorodo(){
-// 	for(i = schot; i >= TEL; i = i - TEL){
-// 		i = i + NOLOG;
-// 		console.log(i);
-// 	}
-
-
-
-// 	for(a = OLINMIDI; a > TEL; a = a - CHXOL){
-// 		console.log(a);
+// let obj = {
+// 	a: 948,
+// 	b: "String",
+// 	d: true,
+// 	g: function(){
+// 		let le = "Hello Object";
+// 		return le;
 // 	}
 // }
 
-// eldorodo();
+// console.log(typeof obj.g);
+// Скобочная нотация полезна, если у вас есть имя свойства, содержащее спецсимволы
+// console.log(typeof obj["a"])
+
+// Массив
+
+// let mass = [26, "Limpus", true];
+// console.log(mass[0]);
+// console.log(mass.length);
+// console.log(typeof mass);
+
+// Методы встроенных типов
+
+// let a = "Hello world";
+// let b = 3.44049;
+
+// console.log(a.length);
+// console.log(b.toFixed(1));
+// console.log(a.toUpperCase());
+
+// Истинный и ложный
+
+// let obj = {};
+// let mass = [];
+// function func(){}
+
+// if(func){
+// 	console.log("true");
+// }
+
+// Равенство
+// ==, ===, != и !==
+
+// Неравенство
+// <, >, <= и >=
+
+// Переменные
+/*Идентификатор должен начинаться с a-z, A-Z, $ или _. Дальше он может содержать
+любые из этих же символов плюс цифры 0-9.*/
+
+// Выражения немедленно вызываемых функций (Immediately Invoked Function Expressions (IIFEs))
+// Функции IIFE также могут возвращать значения:
+// (function foo(){
+// 	console.log("Hello world");
+// })()
+
+// Замыкание
+
+// function foo(x){
+// 	function add(y){
+// 		return y + x;
+// 	};
+// 	return add;
+// }
+
+// let result1 = foo(1);
+// console.log(result1(3));
 
 
+// let result2 = foo(5);
+// console.log(result2(10));
 
 
+// Модули
+
+// function User(){
+// 	let username;
+// 	let password;
+
+// 	function doLogin(user, pwo){
+// 		username = user;
+// 		password = pwo;
+// 	};
+
+// 	let poblicAPI = {
+// 		login: doLogin,
+// 	}
+
+// 	return poblicAPI;
+// }
 
 
+// let fred = User;
+// fred("Limpus", "fd09945hgio");
 
+// Идентификатор this
 
+// Agar "use strict" yonib durgan bo'lsa oshibka baradi
+// function func(){
+// 	console.log(this.th);
+// }
 
+// var th = "Glabal";
+// func();
 
+// var obj = {
+// 	th: "Local",
+// 	svs: func
+// }
 
+// obj.svs();
+
+// var obj1 = {
+// 	th: "Erorr EcmaScript ES6"
+// }
+
+// func.call(obj1);
+
+// new func();
+
+// Прототипы
+
+let obj = {
+	a: 26
+};
+
+let proto = Object.create(obj); // prototype link
+proto.b = "Limpus";
+
+console.log(proto.a);
