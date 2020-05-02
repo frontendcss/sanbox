@@ -90,21 +90,6 @@ false
 // 	// Инструкция
 // }
 
-// true ? 1 : 2 // 1
-// false ? 1 : 2 // 2
-
-//  Циклы while и do
-
-// let number = 0;
-// while(number <= 12){
-// 	console.log(number);
-// 	number = number + 2;
-// }
-
-// все строки, кроме "", преобразуются в true
-
-// let userName;
-
 // Циклы
 // let num = 10;
 // while(num--){
@@ -112,7 +97,6 @@ false
 // }
 
 // let num2 = 1;
-
 // do{
 // 	console.log(num2);
 // }while(num2--);
@@ -123,7 +107,6 @@ false
 // }
 
 // Функции
-
 // function func(num){
 // 	return num + num;
 // }
@@ -223,7 +206,6 @@ false
 // let result2 = foo(5);
 // console.log(result2(10));
 
-// Рекурсия
 
 // Модули
 
@@ -282,15 +264,6 @@ let proto = Object.create(obj); // prototype link
 proto.b = "Limpus";
 
 console.log(proto.a);
-
-
-
-
-
-
-
-
-
 
 
 
