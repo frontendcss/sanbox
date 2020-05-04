@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 // about:blank
 
 // leteral
@@ -256,19 +256,90 @@ false
 
 // Прототипы
 
-let obj = {
-	a: 26
+// let obj = {
+// 	a: 26
+// };
+
+// let proto = Object.create(obj); // prototype link
+// proto.b = "Limpus";
+
+// console.log(proto.a);
+
+// Почему важно отличать LHS b = от RHS a?
+
+// function foo(a){
+// 	console.log(a + b); // ReferenceError
+// 	b = a;
+// }
+
+// foo(2);
+// console.log(b()); // TypeError
+
+// Лексическая область видимости
+// function foo(a) {
+//  var b = a * 2;
+
+//  function bar(c) {
+//  	console.log( a, b, c );
+//  }
+
+//   bar( b * 3 );
+//  }
+
+//  foo( 2 ); // 2 4 12
+
+
+// Искажение лексической области видимости 2 примера!
+// Function eval
+// setInterval
+// setTimeout
+
+// function foo(str, a){
+// 	eval(str);
+
+// 	console.log(a, b);
+// }
+
+// foo("var b = 3;", 1);
+
+
+// with
+// "use strict bilan ishlamidi"
+// let obj = {
+// 	a: 1,
+// 	b: 2,
+// 	c: 3
+// }
+
+// // "более простая" сокращенная запись
+// with(obj){
+// 	a = 2;
+// 	b = 3;
+// 	c = 4;
+// }
+
+// console.log(obj.a);
+
+function foo(obj){
+	with(obj){
+		a = 5;
+	}
+}
+
+let o1 = {
+	a: 2
 };
 
-let proto = Object.create(obj); // prototype link
-proto.b = "Limpus";
+let o2 = {
+ b: 3
+};
 
-console.log(proto.a);
+foo(o1);
+console.log(o1.a); // 5
 
+foo(o2);
+console.log(o2.a); //undefined
 
-
-
-
-
+console.log(a); //  2 — ой, утечка глобального значения!
 
 
