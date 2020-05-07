@@ -133,20 +133,80 @@
 
 // ====== Поднятие ======
 
-a = 2;
-var a;
-console.log( a );
+// a = 2;
+// var a;
+// console.log( a );
 
-var a; //^ Поднятие
-a = 2;
-console.log( a );
+// var a; //^ Поднятие
+// a = 2;
+// console.log( a );
 
 
 
-console.log( a );
-var a = 2;
+// console.log( a );
+// var a = 2;
 
-var a; //^ Поднятие
-console.log( a );
-a = 2;
+// var a; //^ Поднятие
+// console.log( a );
+// a = 2;
 
+// Объявления функций поднимаются
+
+// foo(); // Вызов функции
+
+// function foo(){ // Объявления функций
+// 	console.log("Hello");
+// }
+
+// foo(); // ReferenceError: Cannot access 'foo' before initialization
+
+// let foo = function bar(){ // Объявления функций
+// 	console.log("Hello");
+// };
+
+// Сначала функции
+
+// let a = false;
+// if(a){
+// 	function foo(){
+// 		console.log("birichi let");
+// 	}
+// 	foo();
+// }else{
+// 	function foo(){
+// 		console.log("birinchi function");
+// 	}
+// 	foo();
+// }
+
+
+// Замыкание области видимости
+
+// function foo(){
+// 	let a = "Hello";
+
+// 	function fooInner(){
+// 		console.log(a);
+// 		// bar() все еще содержит ссылку на эту область видимости, и эта 
+// 		// ссылка называется замыканием.
+// 	}
+
+// 	return fooInner;
+// }
+
+// let baz = foo();
+// baz();
+
+function foo(){
+	let a = "Hello";
+
+	function baz(){
+		console.log(a);
+	}
+
+	bar(baz);
+}
+
+function bar(fn){
+	fn();
+}
