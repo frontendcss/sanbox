@@ -158,6 +158,7 @@
 // 	console.log("Hello");
 // }
 
+
 // foo(); // ReferenceError: Cannot access 'foo' before initialization
 
 // let foo = function bar(){ // Объявления функций
@@ -197,16 +198,123 @@
 // let baz = foo();
 // baz();
 
-function foo(){
-	let a = "Hello";
+// Теперь я вижу
 
-	function baz(){
-		console.log(a);
+// function wait(masagge){
+
+// 	setTimeout(function time(){
+// 		console.log(masagge);
+// 	}, 1000)
+// }
+
+// wait("Hello closure!");
+
+
+// Циклы и замыкания
+
+// for(var i = 1; i <= 5; i++){
+// 	(function(j){
+// 		setTimeout(function timer(){
+// 			console.log(j);
+// 		}, j * 1000)
+// 	})(i);
+// }
+
+// for(let i = 1; i <= 5; i++){
+// 	setTimeout(function timer(){
+// 		console.log(i);
+// 	}, i * 1000)
+// }
+
+
+// Модули
+
+// Этот паттерн JavaScript называется модулем
+
+// function coolMudle(){ //  для создания экземпляра модуля
+// 	var something = "Limpus";
+// 	var anather = [1, 2, 3];
+
+// 	function doSomething(){
+// 		console.log(something);
+// 	}
+
+// 	function doAnather(){
+// 		console.log(anather.join(" ! "));
+// 	}
+
+// 	// вернуть внутреннюю функцию напрямую
+// 	// return doAnather;
+
+// 	return{
+// 		birinchi: doSomething,
+// 		ikkinchi: doAnather
+// 	}
+// }
+
+// var foo = coolMudle();
+// foo.birinchi();
+// foo.ikkinchi();
+// foo();
+
+// Ikkinchi variant
+// Здесь функция модуля была преобразована в выражение IIFE
+// var foo = (function coolMudle(){
+// 	var something = "Limpus";
+// 	var anather = [1, 2, 3];
+
+// 	function doSomething(){
+// 		console.log(something);
+// 	}
+
+// 	function doAnather(){
+// 		console.log(anather.join(" ! "));
+// 	}
+
+// 	// вернуть внутреннюю функцию напрямую
+// 	// return doAnather;
+
+// 	return{
+// 		birinchi: doSomething,
+// 		ikkinchi: doAnather
+// 	}
+// })();
+
+// foo.birinchi();
+// foo.ikkinchi();
+
+
+/*Модули представляют собой обычные функции, так что они могут
+получать параметры:*/
+
+// function myModel(id){
+
+// 	function indintify(){
+// 		console.log(id);
+// 	}
+
+// 	return{
+// 		indintify: indintify
+// 	}
+// }
+
+// var foo = myModel("Hello JavaScript");
+// foo.indintify();
+
+
+function myModel(id){
+	function indintify(){
+		console.log(id);
 	}
 
-	bar(baz);
+	return{
+		indintify: indintify
+	}
+
 }
 
-function bar(fn){
-	fn();
-}
+var foo1 = myModel("Hello Model 1");
+var foo2 = myModel("Hello Model 2");
+
+foo1.indintify();
+foo2.indintify();
