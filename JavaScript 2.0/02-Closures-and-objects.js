@@ -288,7 +288,6 @@
 получать параметры:*/
 
 // function myModel(id){
-
 // 	function indintify(){
 // 		console.log(id);
 // 	}
@@ -296,25 +295,41 @@
 // 	return{
 // 		indintify: indintify
 // 	}
+
 // }
 
-// var foo = myModel("Hello JavaScript");
-// foo.indintify();
+// var foo1 = myModel("Hello Model 1");
+// var foo2 = myModel("Hello Model 2");
 
+// foo1.indintify();
+// foo2.indintify();
 
-function myModel(id){
-	function indintify(){
+// Современные модули
+
+var foo = (function coolMudle(id){
+	function change(){
+		//изменение открытого API
+		pubicAPI.idintify = idintify2;
+	}
+
+	function idintify1(){
 		console.log(id);
 	}
 
-	return{
-		indintify: indintify
+	function idintify2(){
+		console.log(id.toUpperCase());
 	}
 
-}
+	var pubicAPI = {
+		idintify: idintify1,
+		change: change
+	}
 
-var foo1 = myModel("Hello Model 1");
-var foo2 = myModel("Hello Model 2");
+	return pubicAPI;
 
-foo1.indintify();
-foo2.indintify();
+
+})("MyModel 2020");
+
+foo.idintify();
+foo.change();
+foo.idintify();
