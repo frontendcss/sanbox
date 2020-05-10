@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // ====== Почему важно отличать LHS b = от RHS a? ======
 
@@ -306,30 +306,83 @@
 
 // Современные модули
 
-var foo = (function coolMudle(id){
-	function change(){
-		//изменение открытого API
-		pubicAPI.idintify = idintify2;
-	}
+// var foo = (function coolMudle(id){
+// 	function change(){
+// 		//изменение открытого API
+// 		pubicAPI.idintify = idintify2;
+// 	}
 
-	function idintify1(){
-		console.log(id);
-	}
+// 	function idintify1(){
+// 		console.log(id);
+// 	}
 
-	function idintify2(){
-		console.log(id.toUpperCase());
-	}
+// 	function idintify2(){
+// 		console.log(id.toUpperCase());
+// 	}
 
-	var pubicAPI = {
-		idintify: idintify1,
-		change: change
-	}
+// 	var pubicAPI = {
+// 		idintify: idintify1,
+// 		change: change
+// 	}
 
-	return pubicAPI;
+// 	return pubicAPI;
 
 
-})("MyModel 2020");
+// })("MyModel 2020");
 
-foo.idintify();
-foo.change();
-foo.idintify();
+// foo.idintify();
+// foo.change();
+// foo.idintify();
+
+
+// Динамическая область видимости
+
+// function foo(){
+// 	console.log(a);
+// }
+
+// function foo2(){
+// 	var abc = 3;
+// 	foo();
+// }
+
+// var a = 2;
+
+// foo();
+
+// Неявные и явные блоки
+
+// {
+// 	let a = 2;
+// 	console.log(a);
+// }
+
+// console.log(a);
+
+// Лексическое this
+
+// стрелочные функции
+
+// var foo = (a) => {
+// 	console.log(a);
+
+// };
+
+// foo(2);
+
+// var abc = {
+// 	id: "Osome",
+// 	cool: function (){
+// 		console.log(this.id);
+// 	}
+// }
+
+// var id = "Not osome";
+// abc.cool();
+// setTimeout(abc.cool, 100);
+
+
+
+
+
+
