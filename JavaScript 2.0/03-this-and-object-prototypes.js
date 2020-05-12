@@ -1,4 +1,4 @@
-// "use strict"
+"use strict"
 
 // this и прототипы объектов
 
@@ -27,8 +27,7 @@
 
 // this обретает смысл!
 
-
-// Связывание по умолчанию
+// this Связывание по умолчанию
 
 // function foo(){
 // 	"use strict"
@@ -104,26 +103,95 @@
 // copyLink();
 
 
-function foo(){
-	console.log(this.a);
+// function foo(){
+// 	console.log(this.a);
+// }
+
+// var obj = {
+// 	a: 2,
+// 	callFoo: foo
+// };
+
+// function toFunc(fn){
+// 	fn();
+// }
+
+// var a = "Ops Glabal";
+
+// // toFunc(obj.callFoo);
+// setTimeout(obj.callFoo, 1000);
+
+// Явное связывание
+
+// function foo(){
+// 	console.log(this.a);
+// 	console.log(this.b);
+// }
+
+// let obj = {
+// 	a: 2,
+// 	b: 3
+// }
+
+// foo.apply(String("Birinchi"));
+// foo.call("Birinchi this"); // undefined
+
+// Жесткое связывание
+
+// function foo(){
+// 	console.log(this.a);
+// }
+
+// let obj = {
+// 	a: 2
+// };
+
+// let bar = function(){
+// 	foo.call(obj);
+// }
+
+// let a = "Ops Glabal";
+
+// bar()
+// setTimeout(bar, 1000);
+
+// function foo(smothing,limpus){
+// 	console.log(this.a, smothing, limpus);
+// 	return this.a + smothing + limpus;
+// }
+
+// let obj = {
+// 	a: 2
+// };
+
+// let func = function(){
+// 	return foo.apply(obj, arguments);
+// }
+
+// let b = func(3,5);
+// console.log(b);
+
+// function foo(smothing, limpus){
+// 	console.log(this.a, smothing, limpus);
+// 	return this.a + smothing + limpus;
+// }
+
+// let obj = {
+// 	a: 2
+// };
+
+// let bar = foo.bind(obj);
+// let b = bar(3,5);
+// console.log(b);
+
+// Связывание new
+
+function foo(a){
+	this.a = a;
 }
 
-var obj = {
-	a: 2,
-	callFoo: foo
-};
-
-function toFunc(fn){
-	fn();
-}
-
-var a = "Ops Glabal";
-
-// toFunc(obj.callFoo);
-setTimeout(obj.callFoo, 1000);
-
-
-
+let bar = new foo(2);
+console.log(bar.a);
 
 
 
