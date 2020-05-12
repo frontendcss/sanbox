@@ -1,4 +1,4 @@
-"use strict"
+// "use strict"
 
 // this и прототипы объектов
 
@@ -46,7 +46,7 @@
 // 	foo();
 // })();
 
-// Неявное связывание
+// Неявное связывание 1 праритет
 
 // function foo(){
 // 	console.log(this.a);
@@ -121,7 +121,8 @@
 // // toFunc(obj.callFoo);
 // setTimeout(obj.callFoo, 1000);
 
-// Явное связывание
+// Явное связывание 2 праритет
+// new и call/apply не могут использоваться вместе
 
 // function foo(){
 // 	console.log(this.a);
@@ -133,10 +134,11 @@
 // 	b: 3
 // }
 
-// foo.apply(String("Birinchi"));
+// foo.apply(obj));
 // foo.call("Birinchi this"); // undefined
 
 // Жесткое связывание
+// new никак не может переопределить жесткое связывание
 
 // function foo(){
 // 	console.log(this.a);
@@ -185,15 +187,24 @@
 // console.log(b);
 
 // Связывание new
+// new и call/apply не могут использоваться вместе
 
-function foo(a){
-	this.a = a;
-}
+// function foo(a){
+// 	this.a = a;
+// }
 
-let bar = new foo(2);
-console.log(bar.a);
+// let bar = new foo(2);
+// console.log(bar.a);
 
+// Исключения связывания
+// "use stritct bilan ishlamidi"
+// function foo(){
+// 	console.log(this.a);
+// }
 
+// var a = 2;
+
+// foo.call(null);
 
 
 
