@@ -26,7 +26,6 @@
 // speak.call(me);
 
 // this обретает смысл!
-
 // this Связывание по умолчанию
 
 // function foo(){
@@ -68,6 +67,7 @@
 
 // Для места вызова важен только верхний/последний уровень цепочки
 // ссылок на свойства объекта. Пример:
+
 // function foo(){
 // 	console.log(this.a);
 // }
@@ -82,10 +82,10 @@
 // 	obj2: obj2
 // }
 
-
 // obj1.obj2.fooCall();
 
 // Неявная потеря this
+
 // "use strict bilan ishlamidi"
 // function foo(){
 // 	console.log(this.a);
@@ -101,7 +101,6 @@
 // var copyLink = obj.linkFoo;
 // var a = "Soart";// Типерь a также является свойством глобального объекта
 // copyLink();
-
 
 // function foo(){
 // 	console.log(this.a);
@@ -203,14 +202,27 @@
 // }
 
 // var a = 2;
+// foo.call(undefined // null);
 
-// foo.call(null);
+// Лексическое поведение this стрелочные функция
+// Но в ES6 появилась особая разновидность функций
+// которая не использует эти правила.
+function foo(){
+	return (a) => {
+		console.log(this.a);
+	}
+}
 
+let obj1 = {
+	a: "Limpus"
+};
 
+let obj2 = {
+	b: "Soart"
+};
 
-
-
-
+let bar = foo.call(obj1);
+bar.call(obj2);
 
 
 
