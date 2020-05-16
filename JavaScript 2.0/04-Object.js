@@ -166,10 +166,27 @@
 
 // Enumerable
 
+// Объектные константы
 
+// let myObject = {};
 
+// Object.defineProperty(myObject, "KANSTANT", {
+// 	value: 43,
+// 	writable: false,
+// 	configureble: false
+// });
 
+// console.log(myObject.KANSTANT);
 
+// Запрет расширения
+
+// let myObject = {
+// 	a: 2
+// };
+
+// Object.preventExtensions(myObject);
+// myObject.b = 3;
+// console.log(myObject.b); // object is not extensible
 
 
 
