@@ -32,10 +32,10 @@
 
 // let key = "key 000 key";
 
-// console.log(obj.key);
-// // console.log(obj["key 000 key"]);
-// console.log(obj[key]);
-// console.log(obj[123]);
+// console.log(obj.key); // Hello
+// // console.log(obj["key 000 key"]); // Hello Object
+// console.log(obj[key]); // Hello Object
+// console.log(obj[123]); // Hello Num
 
 // Вычисление имен свойств ES6
 
@@ -46,7 +46,7 @@
 // 	[prifix + "baz"]: " world"
 // }
 
-// console.log(obj["foobar"] + obj["foobaz"]);
+// console.log(obj["foobar"] + obj["foobaz"]); // Hello world
 
 // Свойства и методы
 
@@ -165,6 +165,29 @@
 // console.log(myObject.a);
 
 // Enumerable
+// let myObject = {};
+
+// Object.defineProperty(myObject, "a",{
+// 	enumerable: true,
+// 	value: 2
+// });
+
+// Object.defineProperty(myObject, "b",{
+// 	enumrable: false,
+// 	value: 3
+// });
+
+// console.log(myObject.b);
+// console.log(("b" in myObject)); // b ni tekshiramiz bomi yoqmi
+// console.log(myObject.hasOwnProperty("b")); // b ni tekshiramiz bomi yoqmi
+
+// for(let value in myObject){
+// 	console.log(value, myObject[value])
+// }
+
+// console.log(myObject.propertyIsEnumerable("b")); // false
+// console.log(Object.keys(myObject)); // возвращает массив всех перечисляемых свойств
+// console.log(Object.getOwnPropertyNames(myObject)); // возвращает массив всех свойств (как перечисляемых, так и нет)
 
 // Объектные константы
 
@@ -187,6 +210,118 @@
 // Object.preventExtensions(myObject);
 // myObject.b = 3;
 // console.log(myObject.b); // object is not extensible
+
+// Seal
+
+// let obj = {
+// 	a: 2,
+// 	b: 3,
+// 	d: 4
+// };
+
+// Object.seal(obj);
+// console.log(Object.getOwnPropertyDescriptor(obj, "d"));
+// // obj.c = 5; // Невозможно добавить свойство c, объект не расширяемы
+// obj.a = 1;
+// console.log(obj);
+// delete obj.a; // Error delete
+
+// Freeze
+
+// let obj = {
+// 	a: 2,
+// 	b: 3,
+// 	d: 4
+// };
+
+// Object.freeze(obj);
+// console.log(Object.getOwnPropertyDescriptor(obj, "a"));
+// // obj.a = 1;
+// obj.c = 5;
+
+// let obj = {
+// 	a: 1
+// };
+
+// console.log(obj);
+// console.log(obj.b);
+// console.log(obj);
+
+// Геттеры и сеттеры
+
+// let user = {
+// 	// name: "Sarvar",
+// 	// surname: "Artikov",
+
+// 	get fullName(){
+// 		return `${this.name} ${this.surname}`;
+// 	},
+
+// 	set fullName(value){
+// 		[this.name, this.surname] = value.split(" ");
+// 	}
+// };
+
+// // console.log(user.fullName);
+// // console.log(user);
+// user.fullName = "Name Family";
+// console.log(user);
+
+// let obj = {
+// 	get a(){
+// 		// определить геттер для `a`
+// 		return this._a_;
+// 	},
+
+// 	set a(value){
+// 		// определить сеттер для `a`
+// 		this._a_ = value * 2;
+// 	}
+// };
+
+// obj.a = 2;
+// console.log(obj._a_); // 4
+// console.log(obj);
+// obj._a_ = 3;
+// console.log(obj._a_); // 3
+
+// Существование
+
+// let obj = {
+// 	a: 2
+// };
+
+// // console.log(obj.a);
+// console.log(("a" in obj)); // true
+// console.log(("b" in obj)); // false
+
+// console.log(obj.hasOwnProperty("a")); // true
+// console.log(obj.hasOwnProperty("b")); // fale
+
+// Перебор
+// Здесь перебираются не значения, а индексы, которые использу-
+// ются для обращения к значениям (myArray[i]).
+
+let mass = [1, 2, 3];
+mass.bar = "bar";
+
+console.log(mass);
+
+for(let i  = 0; i <= mass.length; i++){
+	console.log(mass[i]);
+} // bar undefined
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
