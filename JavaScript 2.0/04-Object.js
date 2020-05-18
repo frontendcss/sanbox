@@ -302,19 +302,38 @@
 // Здесь перебираются не значения, а индексы, которые использу-
 // ются для обращения к значениям (myArray[i]).
 
+// let mass = [1, 2, 3];
+// mass.bar = "bar";
+
+// console.log(mass);
+
+// for(let i  = 0; i <= mass.length; i++){
+// 	console.log(mass[i]);
+// } // bar undefined
+
+// for..of
+// Для перебора массивов
+
 let mass = [1, 2, 3];
 mass.bar = "bar";
 
-console.log(mass);
+// console.log(mass);
 
-for(let i  = 0; i <= mass.length; i++){
-	console.log(mass[i]);
-} // bar undefined
+for(let index of mass){
+	console.log(index);
+}
 
+// Для перебор бъектов
 
+let obj = {
+	a: "bir",
+	b: "ikki",
+	d: "uch"
+};
 
-
-
+for(let indexObj in obj){
+	console.log(obj[indexObj]);
+}
 
 
 
