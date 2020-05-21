@@ -133,7 +133,7 @@
 // 	b: 3
 // }
 
-// foo.apply(obj));
+// foo.apply(obj);
 // foo.call("Birinchi this"); // undefined
 
 // Жесткое связывание
