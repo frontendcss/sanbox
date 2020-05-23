@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 // ====== Почему важно отличать LHS b = от RHS a? ======
 
@@ -37,7 +37,6 @@
 // }
 
 // foo("var b = 3;", 1);
-
 
 // with "use strict bilan ishlamidi"
 
@@ -111,7 +110,7 @@
 // ====== Блоки как области видимости ======
 
 // {
-// 	// console.log(abc); ReferenceError: Cannot access 'abc' before initialization
+// 	// console.log(abc); //ReferenceError: Cannot access 'abc' before initialization
 // 	let abc = "Hello";
 // 	console.log(abc);
 // }
@@ -140,8 +139,6 @@
 // var a; //^ Поднятие
 // a = 2;
 // console.log( a );
-
-
 
 // console.log( a );
 // var a = 2;
@@ -188,7 +185,7 @@
 
 // 	function fooInner(){
 // 		console.log(a);
-// 		// bar() все еще содержит ссылку на эту область видимости, и эта 
+// 		// fooInner() все еще содержит ссылку на эту область видимости, и эта 
 // 		// ссылка называется замыканием.
 // 	}
 
@@ -359,8 +356,6 @@
 
 // console.log(a);
 
-// Лексическое this
-
 // стрелочные функции
 
 // var foo = (a) => {
@@ -377,9 +372,10 @@
 // 	}
 // }
 
-// var id = "Not osome";
 // abc.cool();
-// setTimeout(abc.cool, 100);
+
+// var id = "Not osome";
+// setTimeout(abc.cool, 1000);
 
 
 

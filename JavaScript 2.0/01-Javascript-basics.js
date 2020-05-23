@@ -27,7 +27,7 @@
 // Оператор запятая
 // let abs = 1;
 // let result = (abs++, abs);
-// console.log(result);
+// console.log(result); // 2
 
 // Унарные операторы
 // delete obj, valueObject, array;
@@ -73,7 +73,7 @@
 // 	let abs = "Limpus";
 // 	console.log(abs);
 // }
-// console.log(abs);
+// console.log(abs); // undefined
 
 // Условные конструкции
 /*
@@ -125,10 +125,9 @@ false
 // 	function inner(){
 // 		let b = 2;
 // 		console.log(a + b + s); // a go'rsanadi
-// 	}
+// 	}// return b; go'rsanimidi
 
 // 	return inner();
-// 	// return b; go'rsanimidi
 // }
 
 // fun();
@@ -143,7 +142,7 @@ false
 // 		let le = "Hello Object";
 // 		return le;
 // 	}
-// }
+// };
 
 // console.log(typeof obj.g);
 // Скобочная нотация полезна, если у вас есть имя свойства, содержащее спецсимволы
