@@ -44,8 +44,18 @@
 
 // console.log(Object.getPrototypeOf(a) === foo.prototype);
 
+// «Конструкторы»
 
+// function Foo(){
+// 	//
+// }
 
+// // .constructor, и это свойство содержит обратную ссылку на функцию
+// // (Foo в данном случае)
+// console.log(Foo.prototype.constructor === Foo);
+
+// let a = new Foo();
+// console.log(a.constructor === Foo);
 
 
 

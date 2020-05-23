@@ -43,7 +43,7 @@
 // (function foo1(){
 // 	let a = 2;
 // 	foo();
-// })();
+// })(); // TypeError:
 
 // Неявное связывание 1 праритет
 
@@ -58,8 +58,8 @@
 // let obj = {
 // 	b: "Hello, 'this'",
 // 	a: 2,
-// 	fooCall: foo,
-// 	fooCall2: foo2
+// 	fooCall: foo, // function foo chaqiradi
+// 	fooCall2: foo2 // function foo2 chaqiradi
 // }
 
 // obj.fooCall();
@@ -79,14 +79,14 @@
 
 // let obj1 = {
 // 	a: 200,
-// 	obj2: obj2
+// 	objinner2: obj2
 // }
 
-// obj1.obj2.fooCall();
+// obj1.objinner2.fooCall();
 
 // Неявная потеря this
-
 // "use strict bilan ishlamidi"
+
 // function foo(){
 // 	console.log(this.a);
 // }
@@ -99,8 +99,8 @@
 // obj.linkFoo();
 
 // var copyLink = obj.linkFoo;
-// var a = "Soart";// Типерь a также является свойством глобального объекта
-// copyLink();
+// var a = "Soart"; // Типерь a также является свойством глобального объекта
+// copyLink(); // kantext glabal bo'ldi
 
 // function foo(){
 // 	console.log(this.a);
@@ -111,9 +111,9 @@
 // 	callFoo: foo
 // };
 
-// function toFunc(fn){
-// 	fn();
-// }
+// // function toFunc(fn){
+// // 	fn();
+// // }
 
 // var a = "Ops Glabal";
 
@@ -153,7 +153,7 @@
 
 // let a = "Ops Glabal";
 
-// bar()
+// bar();
 // setTimeout(bar, 1000);
 
 // function foo(smothing,limpus){
@@ -202,27 +202,27 @@
 // }
 
 // var a = 2;
-// foo.call(undefined // null);
+// foo.call(undefined); // null
 
 // Лексическое поведение this стрелочные функция
 // Но в ES6 появилась особая разновидность функций
 // которая не использует эти правила.
-function foo(){
-	return (a) => {
-		console.log(this.a);
-	}
-}
+// function foo(){
+// 	return (a) => {
+// 		console.log(this.a);
+// 	}
+// }
 
-let obj1 = {
-	a: "Limpus"
-};
+// let obj1 = {
+// 	a: "Limpus"
+// };
 
-let obj2 = {
-	b: "Soart"
-};
+// let obj2 = {
+// 	b: "Soart"
+// };
 
-let bar = foo.call(obj1);
-bar.call(obj2);
+// let bar = foo.call(obj1);
+// bar();
 
 
 
