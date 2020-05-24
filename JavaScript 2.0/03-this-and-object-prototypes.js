@@ -1,4 +1,91 @@
-// "use strict"
+"use strict"
+
+// Примеры методов
+// let user = {
+// 	name: "Limpus",
+// 	age: 27
+// };
+
+// // называют методом объектa user
+// user.foo = function(){
+// 	console.log("Hello, This");
+// }
+
+// user.foo();
+
+// Существует более короткий синтаксис для методов в литерале объекта:
+
+// let user = {
+// 	name: "Limpus",
+// 	foo: function(){
+// 		console.log("Hello, This")
+// 	}
+// }
+// // Сокращённая запись метода
+
+// let user2 = {
+// 	name: "Limpus",
+// 	foo(){
+// 		console.log("Hello, This 2")
+// 	}
+// }
+
+// user2.foo();
+
+// Ключевое слово «this» в методах
+// let obj = {
+// 	name: "Limpus",
+// 	age: 27,
+// 	foo(){
+// 		console.log(this.name);
+// 	}
+// };
+//  значением this будет являться user (ссылка на объект user).
+// obj.foo();
+
+// Технически также возможно получить доступ к объекту без ключевого слова this
+// Но такой код будет ненадёжным
+// let objCopy = obj;// скопировать ссылку на объект obj в objCopy
+// obj = null; // перезапишем переменную obj
+// objCopy.foo();
+
+// «this» не является фиксированным
+// let user = {
+// 	name: "Soart"
+// };
+
+// function foo(){
+// 	console.log(this.name); // this == user
+// }
+
+// user.fooMethod = foo; // user ni ichina fooMethod ni qo'shamiz
+// user.fooMethod();
+// // неважен способ доступа к методу - через точку или квадратные скобки
+// user["fooMethod"]();
+
+// Последствия свободного this
+
+// let obj = {
+// 	name: "Limpus",
+// 	foo(){console.log(this.name);},
+// 	foo2(){console.log("Foo 2");}
+// };
+// (obj.name === "Limpus" ? obj.foo: obj.foo2)(); // Erorr
+// Затем метод тут же вызывается с помощью скобок ()
+
+// У стрелочных функций нет «this»
+
+// let obj = {
+// 	firstName: "Limpus",
+// 	foo(){
+// 		let arrow = () => {
+// 			console.log(this.firstName);
+// 		}
+// 		arrow();
+// 	}
+// };
+// let firstName = "Limpus Glabal"
+// obj.foo();
 
 // this и прототипы объектов
 

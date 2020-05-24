@@ -120,7 +120,6 @@
 // console.log(a.myName());
 // console.log(a.myLabel());
 
-
 // let animal = {
 // 	ears: "animal",
 // 	// Если у нас есть метод в animal, он может быть вызван на rabbit: *
