@@ -45,9 +45,10 @@
 
 // Технически также возможно получить доступ к объекту без ключевого слова this
 // Но такой код будет ненадёжным
+
 // let objCopy = obj;// скопировать ссылку на объект obj в objCopy
 // obj = null; // перезапишем переменную obj
-// objCopy.foo();
+// objCopy.foo(); // undifined
 
 // «this» не является фиксированным
 // let user = {
@@ -55,11 +56,12 @@
 // };
 
 // function foo(){
-// 	console.log(this.name); // this == user
+// 	console.log(this.name); 
 // }
 
 // user.fooMethod = foo; // user ni ichina fooMethod ni qo'shamiz
-// user.fooMethod();
+// user.fooMethod(); // this == user
+
 // // неважен способ доступа к методу - через точку или квадратные скобки
 // user["fooMethod"]();
 
@@ -70,44 +72,32 @@
 // 	foo(){console.log(this.name);},
 // 	foo2(){console.log("Foo 2");}
 // };
+
 // (obj.name === "Limpus" ? obj.foo: obj.foo2)(); // Erorr
 // Затем метод тут же вызывается с помощью скобок ()
-
-// У стрелочных функций нет «this»
-
-// let obj = {
-// 	firstName: "Limpus",
-// 	foo(){
-// 		let arrow = () => {
-// 			console.log(this.firstName);
-// 		}
-// 		arrow();
-// 	}
-// };
-// let firstName = "Limpus Glabal"
-// obj.foo();
 
 // this и прототипы объектов
 
 // function identify(){
-// 	return this.name.toUpperCase();
+// 	return this.name2.toUpperCase();
 // }
 
 // function speak(){
-// 	var greeting = "Hello, I'm " + identify.call( this );
+// 	var greeting = "Hello, I'm " + identify.call(this); // obj you ni argymen atib yuboramaniz indentify ga
 // 	console.log(greeting);
 // }
 
 // var you = {
-// 	name: "Kale"
+// 	name: "Kale",
+// 	name2: "Limpus"
 // }
 
 // var me = {
 // 	name: "Rader"
 // }
 
-// console.log(identify.call(you));
-// console.log(identify.call(me));
+// console.log(identify.call(you)); // Kantext obj > you
+// console.log(identify.call(me)); // // Kantext obj > me
 
 // speak.call(you);
 // speak.call(me);
@@ -145,8 +135,8 @@
 // let obj = {
 // 	b: "Hello, 'this'",
 // 	a: 2,
-// 	fooCall: foo, // function foo chaqiradi
-// 	fooCall2: foo2 // function foo2 chaqiradi
+// 	fooCall: foo, // function foo ni kantexti obj
+// 	fooCall2: foo2 // function foo2 ni kantexti obj
 // }
 
 // obj.fooCall();
@@ -169,7 +159,7 @@
 // 	objinner2: obj2
 // }
 
-// obj1.objinner2.fooCall();
+// obj1.objinner2.fooCall(); // > 2
 
 // Неявная потеря this
 // "use strict bilan ishlamidi"
@@ -198,13 +188,13 @@
 // 	callFoo: foo
 // };
 
-// // function toFunc(fn){
-// // 	fn();
-// // }
+// function toFunc(fn){
+// 	fn();
+// }
 
 // var a = "Ops Glabal";
 
-// // toFunc(obj.callFoo);
+// toFunc(obj.callFoo);
 // setTimeout(obj.callFoo, 1000);
 
 // Явное связывание 2 праритет
@@ -276,11 +266,11 @@
 // new и call/apply не могут использоваться вместе
 
 // function foo(a){
-// 	this.a = a;
+// 	this.a = a; // bar.a = 2
 // }
 
-// let bar = new foo(2);
-// console.log(bar.a);
+// let bar = new foo(2); // new object yaratadi let bar = {a: 2};
+// console.log(bar);
 
 // Исключения связывания
 // "use stritct bilan ishlamidi"
@@ -295,7 +285,7 @@
 // Но в ES6 появилась особая разновидность функций
 // которая не использует эти правила.
 // function foo(){
-// 	return (a) => {
+// 	return () => {
 // 		console.log(this.a);
 // 	}
 // }
@@ -309,9 +299,20 @@
 // };
 
 // let bar = foo.call(obj1);
-// bar();
+// bar(); // > Limpus
 
+// // У стрелочных функций нет «this»
 
+// let obj = {
+// 	firstName: "Limpus",
+// 	foo(){
+// 		return () => {
+// 			console.log(this.firstName);
+// 		}
+// 	}
+// };
+// let firstName = "Limpus Glabal";
+// obj.foo(); // > Limpus
 
 
 

@@ -2,13 +2,18 @@
 
 // Прототипы
 // [[Prototype]]
+// let obj = {
+// 	a: 2
+// };
+
+// console.log(obj.b); // agar obj ni ichinda b svostva yo'q bo'lsa [[prototoype]] sepochkasinda qoridi
 
 // let antherObj = {
 // 	a: 2,
 // 	b: 3
 // }
 
-// let myObj = Object.create(antherObj);
+// let myObj = Object.create(antherObj); // myObj ni prototype ni ichina ko'chiradi antherObj ni
 // console.log(antherObj);
 // console.log(myObj);
 
@@ -16,20 +21,27 @@
 // 	console.log("From: " + k);
 // }
 
-// console.log(("b" in myObj));
+// console.log(("b" in myObj)); // myObj ni ichinna qaridi b ni [[prototype]] orqali
 
 // Назначение и замещение свойств
 
-// let antherObj = {
-// 	foo: "Hello"
-// };
+let antherObj = {
+	foo: "Hello"
+};
 
-// let myObject = Object.create(antherObj);
-// myObject.foo = "bar"; // замещением (shadowing)
-// console.log(myObject);
+let myObject = Object.create(antherObj);
+myObject.foo = "bar";
+
+let myObject2 = Object.create(myObject);
+myObject2.foo = "World";
+
+console.log(myObject2);
+
+// svoystva foo ni payski eng pasgi sepochkadan boshlanadi yani myObject2 dan
+console.log(myObject2.foo); // > Hello замещением (shadowing)
+console.log(myObject2.hasOwnProperty("foo")); // false myObject2.foo ni ochirib durish garak
 
 // Функции «классов»
-
 // function foo(){
 //  // 
 // }
@@ -165,24 +177,24 @@
 // longEar.foo(); // **
 
 // В приведённом ниже примере мы присваиваем rabbit собственный метод walk:
-let animal = {
-	ears: "animal",
-	foo(){
-		console.log("Bu Method ishlatilmidi")
-	}
-};
+// let animal = {
+// 	ears: "animal",
+// 	foo(){
+// 		console.log("Bu Method ishlatilmidi")
+// 	}
+// };
 
-let rabbit = {
-	jumps: "rabbit",
-	__proto__: animal
-};
+// let rabbit = {
+// 	jumps: "rabbit",
+// 	__proto__: animal
+// };
 
-rabbit.foo = function(){
-	console.log("Hello __Prototype");
-}
+// rabbit.foo = function(){
+// 	console.log("Hello __Prototype");
+// }
 
-console.log(rabbit);
-rabbit.foo(); // Agar rabbit ni ichinda Method foo topilmasa rabbit ni prototype ni chindan qidiriladi
+// console.log(rabbit);
+// rabbit.foo(); // Agar rabbit ni ichinda Method foo topilmasa rabbit ni prototype ni chindan qidiriladi
 
 
 

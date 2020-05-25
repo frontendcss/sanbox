@@ -1,4 +1,4 @@
-"use strict"
+ "use strict"
 // Объекты
 // Литеральный синтаксис объекта
 
@@ -78,7 +78,7 @@
 
 // let myObjectCopy = myObject; // myObject ni copya atamiz! Test
 // myObjectCopy.a = 3;
-// console.log(myObjectCopy);
+// console.log(myObjectCopy); // myObjectin ichindaki a nam o'zgartirdi 3 atdi
 
 // console.log(myObjectCopy.b === myObject.b);
 // console.log(myObjectCopy.d === myObject.d);
@@ -95,18 +95,18 @@
 
 // Дескрипторы свойств
 
-// console.log(Object.getOwnPropertyDescriptor(myObject, "c"));
+// console.log(Object.getOwnPropertyDescriptor(myObject, "c")); // myObjectni discriptorini chiqarish
 
 // Writable
 // Характеристика writable определяет возможность изменения значения свойства.
 
 // let myObject = {};
 
-// Object.defineProperty(myObject, "a", {
-// 	value: 2,
+// Object.defineProperty(myObject, "a", { // определить свойство object'a
+// 	value: 2, // значение
 // 	writable: false, // запись невозможна
-// 	configurable: true,
-// 	enumerable: true
+// 	configurable: true, // конфигурируемый
+// 	enumerable: true // перечислимый
 // });
 
 // console.log(myObject);
@@ -198,8 +198,8 @@
 // 	writable: false,
 // 	configureble: false
 // });
-
-// console.log(myObject.KANSTANT);
+// console.log(myObject.KANSTANT = 45); // TypeError
+// // console.log(myObject.KANSTANT);
 
 // Запрет расширения
 
@@ -209,7 +209,7 @@
 
 // Object.preventExtensions(myObject);
 // myObject.b = 3;
-// console.log(myObject.b); // object is not extensible
+// console.log(myObject.b); // предотвратить расширения
 
 // Seal
 
@@ -237,7 +237,7 @@
 // Object.freeze(obj);
 // console.log(Object.getOwnPropertyDescriptor(obj, "a"));
 // // obj.a = 1;
-// obj.c = 5;
+// // obj.c = 5;
 
 // let obj = {
 // 	a: 1
@@ -264,18 +264,19 @@
 
 // // console.log(user.fullName);
 // // console.log(user);
+
 // user.fullName = "Name Family";
-// console.log(user);
+// console.log(user.surname);
 
 // let obj = {
 // 	get a(){
 // 		// определить геттер для `a`
-// 		return this._a_;
+// 		return this._a_; 
 // 	},
 
 // 	set a(value){
 // 		// определить сеттер для `a`
-// 		this._a_ = value * 2;
+// 		this._a_ = value * 2; // Setter ni yaratishda a odini o'zgartirish garask _a_
 // 	}
 // };
 
@@ -314,26 +315,26 @@
 // for..of
 // Для перебора массивов
 
-let mass = [1, 2, 3];
-mass.bar = "bar";
+// let mass = [1, 2, 3];
+// mass.bar = "bar";
 
 // console.log(mass);
 
-for(let index of mass){
-	console.log(index);
-}
+// for(let index of mass){
+// 	console.log(index);
+// }
 
-// Для перебор бъектов
+// // Для перебор бъектов
 
-let obj = {
-	a: "bir",
-	b: "ikki",
-	d: "uch"
-};
+// let obj = {
+// 	a: "bir",
+// 	b: "ikki",
+// 	d: "uch"
+// };
 
-for(let indexObj in obj){
-	console.log(obj[indexObj]);
-}
+// for(let indexObj in obj){
+// 	console.log(obj[indexObj]);
+// }
 
 
 
