@@ -314,6 +314,8 @@
 // let firstName = "Limpus Glabal";
 // obj.foo(); // > Limpus
 
+// Декораторы и переадресация вызова, сall/apply
+
 
 
 
