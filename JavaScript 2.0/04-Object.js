@@ -17,10 +17,10 @@
 // let abc = "I,am String";
 // console.log(typeof abc); // String
 
+// язык автоматически преобразует строковый примитив в объект String
 // let abcObj = new String("I, am String Object");
 // console.log(typeof abcObj); // Object
 
-// язык автоматически преобразует строковый примитив в объект String
 // let abc = "I,am String";
 // console.log(typeof abc);
 
@@ -78,7 +78,7 @@
 
 // let myObjectCopy = myObject; // myObject ni copya atamiz! Test
 // myObjectCopy.a = 3;
-// console.log(myObjectCopy); // myObjectin ichindaki a nam o'zgartirdi 3 atdi
+// console.log(myObjectCopy); // myObjectni ichindaki a nam o'zgartirdi 3 atdi
 
 // console.log(myObjectCopy.b === myObject.b);
 // console.log(myObjectCopy.d === myObject.d);
@@ -262,16 +262,16 @@
 // 	}
 // };
 
-// // console.log(user.fullName);
-// // console.log(user);
+// console.log(user.fullName);
+// console.log(user);
 
 // user.fullName = "Name Family";
-// console.log(user.surname);
+// console.log(user.fullName);
 
 // let obj = {
 // 	get a(){
 // 		// определить геттер для `a`
-// 		return this._a_; 
+// 		return this._a_;
 // 	},
 
 // 	set a(value){
@@ -322,7 +322,7 @@
 
 // for(let index of mass){
 // 	console.log(index);
-// }
+// } // bar ni ignor atadi!
 
 // // Для перебор бъектов
 

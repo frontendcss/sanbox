@@ -1,4 +1,4 @@
-"use strict"
+// "use strict"
 
 // Примеры методов
 // let user = {
@@ -119,7 +119,7 @@
 
 // (function foo1(){
 // 	let a = 2;
-// 	foo();
+// 	foo(); // foo dapaga ko'tariladi a dan!
 // })(); // TypeError:
 
 // Неявное связывание 1 праритет
@@ -173,11 +173,11 @@
 // 	linkFoo: foo
 // };
 
-// obj.linkFoo();
+// obj.linkFoo(); // > Limpus
 
 // var copyLink = obj.linkFoo;
 // var a = "Soart"; // Типерь a также является свойством глобального объекта
-// copyLink(); // kantext glabal bo'ldi
+// copyLink(); // kantext glabal bo'ldi va oshibka baradi browser agar "use strict" rejim bo'lsa
 
 // function foo(){
 // 	console.log(this.a);
@@ -246,8 +246,8 @@
 // 	return foo.apply(obj, arguments);
 // }
 
-// let b = func(3,5);
-// console.log(b);
+// let b = func(3,5); // 2 3 5
+// console.log(b); // 10
 
 // function foo(smothing, limpus){
 // 	console.log(this.a, smothing, limpus);
@@ -258,8 +258,8 @@
 // 	a: 2
 // };
 
-// let bar = foo.bind(obj);
-// let b = bar(3,5);
+// let bar = foo.bind(obj); // 1 chi orgumemt bilan this ga obj ni yuboramiz
+// let b = bar(3,5); // 2 3 argument bilan 3,5 ni yuboramiz
 // console.log(b);
 
 // Связывание new
@@ -269,7 +269,7 @@
 // 	this.a = a; // bar.a = 2
 // }
 
-// let bar = new foo(2); // new object yaratadi let bar = {a: 2};
+// let bar = new foo(2); // new object yaratadi let foo = {a: 2};
 // console.log(bar);
 
 // Исключения связывания
@@ -313,8 +313,6 @@
 // };
 // let firstName = "Limpus Glabal";
 // obj.foo(); // > Limpus
-
-// Декораторы и переадресация вызова, сall/apply
 
 
 

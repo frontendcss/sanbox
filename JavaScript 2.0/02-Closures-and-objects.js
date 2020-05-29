@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // ====== Почему важно отличать LHS b = от RHS a? ======
 
@@ -38,6 +38,7 @@
 
 // foo("var b = 3;", 1);
 
+
 // with "use strict bilan ishlamidi"
 
 // let obj = {
@@ -47,6 +48,7 @@
 // }
 
 // // "более простая" сокращенная запись
+// // Objectni svoystvasini tez o'zgartirish uchun ishlatiladi
 // with(obj){
 // 	a = 2;
 // 	b = 3;
@@ -69,7 +71,7 @@
 // 	}
 // }
 
-// foo(o1);
+// foo(o1); // arugument orqali yuboramiz
 // console.log(o1.a); // 5
 
 // foo(o2);
@@ -140,11 +142,11 @@
 // a = 2;
 // console.log( a );
 
-// console.log( a );
+// console.log( a ); // undefined
 // var a = 2;
 
 // var a; //^ Поднятие
-// console.log( a );
+// console.log( a ); // // undefined
 // a = 2;
 
 // Объявления функций поднимаются
@@ -154,7 +156,6 @@
 // function foo(){ // Объявления функций
 // 	console.log("Hello");
 // }
-
 
 // foo(); // ReferenceError: Cannot access 'foo' before initialization
 
@@ -193,7 +194,7 @@
 // }
 
 // let baz = foo();
-// baz();
+// baz(); // > Hello
 
 // Теперь я вижу
 
@@ -205,7 +206,6 @@
 // }
 
 // wait("Hello closure!");
-
 
 // Циклы и замыкания
 
@@ -222,7 +222,6 @@
 // 		console.log(i);
 // 	}, i * 1000)
 // }
-
 
 // Модули
 
@@ -252,7 +251,6 @@
 // var foo = coolMudle();
 // foo.birinchi();
 // foo.ikkinchi();
-// foo();
 
 // Ikkinchi variant
 // Здесь функция модуля была преобразована в выражение IIFE
@@ -277,8 +275,8 @@
 // 	}
 // })();
 
-// foo.birinchi();
-// foo.ikkinchi();
+// // foo.birinchi();
+// // foo.ikkinchi();
 
 
 /*Модули представляют собой обычные функции, так что они могут
@@ -354,7 +352,7 @@
 // 	console.log(a);
 // }
 
-// console.log(a);
+// console.log(a); // > undenfined
 
 // стрелочные функции
 
@@ -372,10 +370,10 @@
 // 	}
 // }
 
-// abc.cool();
+// // abc.cool();
 
 // var id = "Not osome";
-// setTimeout(abc.cool, 1000);
+// setTimeout(abc.cool, 1000); // this == glabal
 
 
 
