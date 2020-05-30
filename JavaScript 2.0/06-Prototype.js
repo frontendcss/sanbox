@@ -33,12 +33,12 @@
 // myObject.foo = "bar";
 
 // let myObject2 = Object.create(myObject);
-// myObject2.foo = "World";
+// myObject2.foo = "World"; // pasgi sepochka
 
-// console.log(myObject2);
+// // console.log(myObject2);
 
 // // svoystva foo ni payski eng pasgi sepochkadan boshlanadi yani myObject2 dan
-// console.log(myObject2.foo); // > Hello замещением (shadowing)
+// console.log(myObject2.foo); // > World замещением (shadowing)
 // console.log(myObject2.hasOwnProperty("foo")); // false myObject2.foo ni ochirib durish garak
 
 // Функции «классов»
@@ -51,8 +51,8 @@
 // function Foo(){
 // 	//
 // }
-
-// let a = new Foo(); // a получает внутреннюю ссылку [[Prototype]] на объект, на который указывает Foo.prototype.
+// // a получает внутреннюю ссылку [[Prototype]] на объект, на который указывает Foo.prototype.
+// let a = new Foo();
 
 // // Object.getPrototypeOf(a) paluchit pratotype objecta
 // console.log(Object.getPrototypeOf(a) === Foo.prototype);
@@ -79,19 +79,24 @@
 // let a = new Foo("a"); // new Foo function dan object yaratadi
 // let b = new Foo("b"); // new Foo function dan object yaratadi
 
-// Foo.prototype.myName = function(){ // function myName ni Foo.prototpype. ni ichina object ni methodi aytib qo'shadi
+// // function myName ni Foo.prototpype. ni ichina object ni methodi aytib qo'shadi
+// Foo.prototype.myName = function(){
 // 	return this.name;
 // };
 
-// Foo.prototype.myName2 = function(){ // function myName ni Foo.prototpype. ni ichina object ni methodi aytib qo'shadi
+// // function myName ni Foo.prototpype. ni ichina object ni methodi aytib qo'shadi
+// Foo.prototype.myName2 = function(){
 // 	return this.name;
 // };
 
-// console.log(Foo.prototype); // function ni [[prototype]]
-// console.log(a.__proto__); // object ni [[prototype]]
+// // console.log(Foo.prototype); // function ni [[prototype]]
+// // console.log(a.__proto__); // object ni [[prototype]]
 
 // console.log(a.myName());
 // console.log(b.myName2());
+
+// canstructor kim akanligini bilanmiz
+// console.log(a.constructor);
 
 // И снова о «конструкторе»
 
@@ -106,12 +111,11 @@
 // // console.log(Foo.prototype);
 
 // let a1 = new Foo();
-// console.log(a1.constructor === Foo); // falfe
+// console.log(a1.constructor === Foo); // false
 
 // // А у этого объекта имеется свойство .constructor,
 // // которое указывает на встроенную функцию Object(..).
 // console.log(a1.constructor === Object);
-
 
 // Наследование (на основе прототипов)
 
@@ -119,7 +123,8 @@
 // 	this.name = name;
 // }
 
-// Foo.prototype.myName = function(){ // Foo.prototype ni ichinda myName object yaratiladi
+// // Foo.prototype ni ichinda myName method yaratiladi
+// Foo.prototype.myName = function(){
 // 	return this.name;
 // };
 
@@ -140,27 +145,17 @@
 
 // let a = new Foo();
 
-// // a ni ichnda prototype bomi yo'qmi shini tekshiradi
+// a ni ichinda prototype bomi yo'qmi shini tekshiradi
 // console.log(a instanceof Foo); // true
-// // встречается ли во всей цепочке [[Prototype]] объекта a объект Foo.prototype ?
+// console.log(a.constructor); // true
+
+// встречается ли во всей цепочке [[Prototype]] объекта a объект Foo.prototype ?
 // console.log(Foo.prototype.isPrototypeOf(a)); // true
 // console.log(Object.getPrototypeOf(a) === Foo.prototype); // true
 
 // console.log(a.__proto__ === Foo.prototype); // true
 
 // ==============================================================================
-
-// // здесь мы создаем новый объект `Bar.prototype`, связанный с `Foo.prototype`
-// Bar.prototype = Object.create(Foo.prototype);
-
-// Bar.prototype.myLabel = function(){
-// 	return this.label;
-// };
-
-// let a = new Bar("myName", "myLabel");
-
-// console.log(a.myName());
-// console.log(a.myLabel());
 
 // let animal = {
 // 	ears: "animal",
@@ -175,8 +170,8 @@
 // 	__proto__: animal
 // };
 
-// Здесь мы можем сказать, что "animal является прототипом rabbit" или 
-// "rabbit прототипно наследует от animal".
+// // Здесь мы можем сказать, что "animal является прототипом rabbit" или 
+// // "rabbit прототипно наследует от animal".
 // rabbit.__proto__ = animal;
 
 // console.log(rabbit.ears); // animal
@@ -204,8 +199,8 @@
 // 	__proto__: rabbit
 // };
 
-// longEar.foo(); // **
-// console.log(longEar.ears); > animal
+// longEar.foo(); // > Hello, __Proto__
+// console.log(longEar.ears); // > animal
 
 // В приведённом ниже примере мы присваиваем rabbit собственный метод foo:
 // let animal = {
@@ -220,28 +215,28 @@
 // 	__proto__: animal
 // };
 
+// // Agar rabbit ni ichinda Method foo topilmasa rabbit ni prototype ni chindan qidiriladi
 // rabbit.foo = function(){
 // 	console.log("Hello __Prototype");
 // }
 
 // // console.log(rabbit);
 // rabbit.foo();
-// Agar rabbit ni ichinda Method foo topilmasa rabbit ni prototype ni chindan qidiriladi
 
 // Связи между объектами
 
 // let obj = {
 // 	a: 2,
 // 	foo(){
-// 		console.log("Hello Objct");
+// 		console.log("Hello Object");
 // 	}
 // };
 
 // // Object.create создает новый объект (bar), связанный с заданным объектом (obj)
 // let bar = Object.create(obj);
 
-// bar.foo();
-// console.log(bar.a);
+// bar.foo(); // > Hello Object
+// console.log(bar.a); // > 2
 
 
 

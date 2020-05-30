@@ -24,32 +24,52 @@
 
 // Сравнение моделей мышления
 
-let Foo = {
-	init: function(who){
-		this.me = who;
-	},
+// let Foo = {
+// 	init: function(who){
+// 		this.me = who;
+// 	},
 
-	identife: function(){
-		return " I, am" + this.me;
-	},
-	obj: function(){
-		console.log("Hello, world");
-	}
-};
+// 	identife: function(){
+// 		return " I, am" + this.me;
+// 	},
+// 	obj: function(){
+// 		console.log("Hello, Limpus");
+// 	}
+// };
 
-let Bar = Object.create(Foo);
+// let Bar = Object.create(Foo);
 
-Bar.spaek = function(){
-	console.log("Hello" + this.identife() + ".");
-}
+// Bar.spaek = function(){
+// 	console.log("Hello" + this.identife() + ".");
+// }
 
-let BarCopy1 = Object.create(Bar);
-BarCopy1.init(" BarCopy1");
+// let BarCopy1 = Object.create(Bar);
+// BarCopy1.init(" BarCopy1");
 
-let BarCopy2 = Object.create(Bar);
-BarCopy2.init(" BarCopy2");
+// let BarCopy2 = Object.create(Bar);
+// BarCopy2.init(" BarCopy2");
 
-BarCopy1.spaek();
-BarCopy2.spaek();
+// BarCopy1.spaek(); // > Hello I, am BarCopy1.
+// BarCopy2.spaek(); // > Hello I, am BarCopy2.
 
-BarCopy2.obj();
+// BarCopy2.obj(); // Hello, Limpus
+
+// Нелексичность
+
+// Интроспекция
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
