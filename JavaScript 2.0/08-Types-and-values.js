@@ -89,14 +89,22 @@
 
 // console.log(abc[1] === abc[2]); // > true
 
-let abc = [];
+// let abc = [];
 
-abc[0] = 0;
-abc["foo"] = 1;
-console.log(abc.length); // > 1
+// abc[0] = 0;
+// abc["foo"] = 1;
+// console.log(abc.length); // > 1 / Agar key ni o'rnina tip sring ishlatilsa length xosobga olmidi
 
+// Подобие массивов
 
+// function foo(){
+// 	// let arr = Array.prototype.slice.call(arguments);
+// 	let arr = Array.from(arguments); // ES6
+// 	arr.push("Olma");
+// 	console.log(arr);
+// }
 
+// foo("Nok", "Anor", "Uzum");
 
 
 
