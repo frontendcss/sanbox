@@ -83,7 +83,7 @@
 // let abc = [];
 // abc[0] = "0";
 // abc[2] = undefined;
-// abc[3] = "3";
+// abc[3] = undefined;
 
 // console.log(abc);
 
@@ -93,7 +93,8 @@
 
 // abc[0] = 0;
 // abc["foo"] = 1;
-// console.log(abc.length); // > 1 / Agar key ni o'rnina tip sring ishlatilsa length xosobga olmidi
+// console.log(abc.length);
+// > 1 / Agar key ni o'rnina tip string ishlatilsa length xosobga olmidi
 
 // Подобие массивов
 
@@ -106,14 +107,75 @@
 
 // foo("Nok", "Anor", "Uzum");
 
+// Строки
+// String.prototype
 
+// let a = "foo";
+// let b = ["f", "o", "o"];
 
+// console.log(a.length);
+// console.log(b.length);
 
+// // simvolni pazitsyasi go'rsatadi
+// console.log(a.indexOf("f"));
+// console.log(b.indexOf("o"));
 
+// let c = a.concat("bar");
+// let d = b.concat(["b","a","r"]);
 
+// CтpoкиjavaScript неизменяемы, тогда как массивы вполне могут изменяться (мутировать)
+// console.log(c === a); // false
+// console.log(d === b); // false
 
+// c = a.toUpperCase();
+// console.log(a === c);
 
+// b.push("!");
+// console.log(b);
 
+// let t = Array.prototype.join.call(a, "-");
+// console.log(t); // > f-o-o
+
+// // Перестановка строки в обратном поряд­ке
+// console.log(a.reverse); // > undefined
+// console.log(b.reverse());
+
+// let g = a.split(""); // разбиение ·а· на массив символов
+// g.reverse(); // переставить массив символов в обратном порядке
+// g.join(""); // снова объединить массив символов в строку
+// console.log(g);
+
+// Числа
+// Стандарт IEEE 754
+// Number.prototype
+
+// let a = 5E10;
+// console.log(a); // > 5*0
+// console.log(a.toExponential()); // > 5e+10
+
+// let a = 27.34;
+// console.log(a.toFixed(1)); // > 27.34 // type string!
+
+// console.log(27.toFixed(2)); // SyntaxError
+// console.log((27).toFixed(1)); // > 27.0
+// console.log(27..toFixed(2)); // > 27.00
+// console.log(27.00.toFixed(1)); // > 27.0
+
+// Малые дробные значения
+// let a = 0.1 + 0.2;
+// console.log(a.toFixed(17)); // 0.1 + 0.2 === 0.3 > false
+
+// Проверка целых чисел
+
+// является ли значение целым числом
+console.log(Number.isInteger(42)); // true
+console.log(Number.isInteger(42.000)); // true
+console.log(Number.isInteger(27.7)); // false
+
+// является ли значение безопасным целым чис­лом
+
+console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER)); // true
+console.log(Number.isSafeInteger(Math.pow(2,53))); // false
 
 
 
