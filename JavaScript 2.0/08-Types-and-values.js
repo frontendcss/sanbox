@@ -282,7 +282,7 @@ function foo(mass){
 let a = [1,2,3];
 
 foo(a.slice());
-
+j
 console.log(a);
 
 
