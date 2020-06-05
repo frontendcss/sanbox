@@ -60,7 +60,6 @@
 // console.log(typeof b.valueOf()); // > string > Limpus
 // console.log(typeof c.valueOf()); // > bloolean > true
 
-
 // Массивы, содержащие как минимум один «пустой элемент», часто называются «разреженными» (sparse)
 // Array(..)
 
@@ -84,27 +83,44 @@
 
 // массив со значениями undefined
 
-let a = Array.apply(null, {length: 3});
-console.log(a); // undefined * 3
+// let a = Array.apply(null, {length: 3});
+// console.log(a); // undefined * 3
 
+// Object(..), Function(..) и RegExp(..)
 
+// let a = new Object();
+// a.foo = "bar";
+// console.log(a);
 
+// Date(..) и Error(..)
 
+// let a = new Date();
+// console.log(a.toUTCString());
+// console.log(Date.prototype);
 
+// let e = new Error("Xato");
+// throw e; // Uncaught Error: Xato
+// console.log(Error.prototype);
 
+// Symbol(..)
 
+// let a = Symbol("_Limp_dip_ita");
+// console.log(a); // Symbol(Limp dip ita)
 
+// a.toString();
+// console.log(a);
 
+// console.log(typeof a); // > symbol
 
+// let obj = {};
+// obj[a] = "foobar";
 
+// console.log(obj);
 
-
-
-
-
-
-
-
+// console.log(Array.prototype);
+// Array.prototype.push(1,2,3);
+// // Array.prototype.length = 0;
+// console.log(Array.prototype);
 
 
 
