@@ -105,10 +105,10 @@
 // Symbol(..)
 
 // let a = Symbol("_Limp_dip_ita");
-// console.log(a); // Symbol(Limp dip ita)
+// console.log(a); // > Symbol(_Limp_dip_ita)
 
 // a.toString();
-// console.log(a);
+// console.log(a); // > Symbol(_Limp_dip_ita)
 
 // console.log(typeof a); // > symbol
 
@@ -116,6 +116,10 @@
 // obj[a] = "foobar";
 
 // console.log(obj);
+
+// for(indexObj in obj){
+// 	console.log(obj[indexObj]);
+// } // obj empty
 
 // console.log(Array.prototype);
 // Array.prototype.push(1,2,3);
