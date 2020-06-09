@@ -116,30 +116,81 @@
 // let b = +a;
 // console.log(typeof b); // > type number!
 
-let a = "1.5";
-let b = 1+ +a;
-console.log(b); // > 2.5
+// let a = "1.5";
+// let b = 1+ +a;
+// console.log(b); // > 2.5
 
 // let a = "1.5";
 // let b = 1+ -a;
 // console.log(b); // > -0.5
 
+// Преобразование даты в число
 
+// let timeStamp = +new Date();
+// // let timeStamp = +new Date; Afar argument yo'q bo'lsa
+// console.log(timeStamp);
 
+// let timeStamp = new Date().getTime();
+// console.log(timeStamp);
 
+// Но еще лучше воспользоваться статической функцией Date. поw(), добавленной в ES5:
 
+// let timeStamp = Date.now();
+// console.log(timeStamp);
 
+// Занятный случай с оператором ~
+// console.log(~27); // -(42+1) ==> -43
 
+// let a = "Hello world";
 
+// if(~a.indexOf("lo")){
+// 	console.log("'lo' bor a ni ichinda");
+// } // true
 
+// Усечение битов
+// console.log(~~27.35);
 
+// console.log(Math.floor(-27.6)); // > -28
+// console.log(~~-27.6); // > -27
 
+// Явные преобразования: разбор числовых строк
 
+// let a = "27";
+// let b = "27px";
+// let d = "27.45%";
 
+// console.log(Number(a)); // > type number 27
+// console.log(Number(b)); // > NaN
 
+// console.log(parseInt(a)); // > 27
+// console.log(parseInt(b)); // > 27
 
+// console.log(parseFloat(d)); // > 27.45
 
+// Явные преобразования:--> Boolean
 
+// let a = "0";
+// let b = [];
+// let d = {};
+
+// let c = a && b && d;
+// console.log(Boolean(c)); // true
+
+let f = "";
+let g = null;
+let t = 0;
+let l;
+
+console.log(Boolean(f)); // > false
+console.log(Boolean(g)); // > false
+console.log(Boolean(t)); // > false
+console.log(Boolean(l)); // > false
+
+// Разработчики JS чаще всего используют оператор двойного отрицания !!
+console.log(!!f); // > false
+console.log(!!g); // > false
+console.log(!!t); // > false
+console.log(!!l); // > false
 
 
 
