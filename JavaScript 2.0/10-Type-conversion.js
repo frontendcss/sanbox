@@ -1,9 +1,4 @@
-// "use strict"
-
-// Преобразование типов
-// let a = 42;
-// let b = a + ""; // number to string
-// console.log(typeof b); // > string
+"use strict"
 
 // Преобразование JSON в строку
 
@@ -21,8 +16,8 @@
 // let b = JSON.stringify([1, function(){}, 2]); // massivni ichinda chiqsa o'rnina null chiqadi
 // let d = JSON.stringify({a:1, b:function(){}, d:2}); // objectda chiqsa o'tgazib yuboriladi
 // console.log(a);
-// console.log(b);
-// console.log(d);
+// console.log(b); // > 1, null, 2
+// console.log(d); // > 1,2
 
 // let o = {};
 
@@ -38,7 +33,7 @@
 // // // выдаст ошибку из-за циклической ссылки
 // // JSON.stringify(obj);
 
-// // определить нестандартную сериализацию значения JSON
+// определить нестандартную сериализацию значения JSON
 // obj.toJSON = function(){
 // 	// включить для сериализации только свойство a
 // 	return{
@@ -56,14 +51,14 @@
 // };
 
 // let a = JSON.stringify(obj, ["b", "c"]);
-// console.log(a);
+// console.log(a); // > b,c
 
 // let b = JSON.stringify(obj, function(k, v){
 // 	if(k !== "c"){
 // 		return v;
 // 	}
 // });
-// console.log(b);
+// console.log(b); // > b,d
 
 // let d = JSON.stringify(obj, null, 3); // "----"
 // console.log(d);
@@ -82,7 +77,7 @@
 // console.log(Boolean(-0)); // false
 // console.log(Boolean(NaN)); // false
 
-// console.log(Boolean("''")); // > true
+// console.log(Boolean("|")); // > true
 // console.log(Boolean(obj = {})); // > true
 
 // Ложные объекты
@@ -104,7 +99,7 @@
 // console.log(result); // true!
 
 // Явные преобразования
- // Number <--> String
+// Number <--> String
 // let a = 27;
 // // let b = String(a);
 // let b = a.toString();
@@ -127,13 +122,13 @@
 // Преобразование даты в число
 
 // let timeStamp = +new Date();
-// // let timeStamp = +new Date; Afar argument yo'q bo'lsa
+// // let timeStamp = +new Date; Agar argument yo'q bo'lsa
 // console.log(timeStamp);
 
 // let timeStamp = new Date().getTime();
 // console.log(timeStamp);
 
-// Но еще лучше воспользоваться статической функцией Date. поw(), добавленной в ES5:
+// Но еще лучше воспользоваться статической функцией Date.поw(), добавленной в ES5:
 
 // let timeStamp = Date.now();
 // console.log(timeStamp);
@@ -176,21 +171,64 @@
 // let c = a && b && d;
 // console.log(Boolean(c)); // true
 
-let f = "";
-let g = null;
-let t = 0;
-let l;
+// let f = "";
+// let g = null;
+// let t = 0;
+// let l;
 
-console.log(Boolean(f)); // > false
-console.log(Boolean(g)); // > false
-console.log(Boolean(t)); // > false
-console.log(Boolean(l)); // > false
+// console.log(Boolean(f)); // > false
+// console.log(Boolean(g)); // > false
+// console.log(Boolean(t)); // > false
+// console.log(Boolean(l)); // > false
 
-// Разработчики JS чаще всего используют оператор двойного отрицания !!
-console.log(!!f); // > false
-console.log(!!g); // > false
-console.log(!!t); // > false
-console.log(!!l); // > false
+// // Разработчики JS чаще всего используют оператор двойного отрицания !!
+// console.log(!!f); // > false
+// console.log(!!g); // > false
+// console.log(!!t); // > false
+// console.log(!!l); // > false
+
+// Неявное преобразование
+// String <--> Number
+
+// let a = "27";
+// let b = 0;
+// console.log(a + b); // > 270 type string
+
+// let c = 27;
+// let d = 0;
+// console.log(c + d); // > 27 type number
+
+// let t = [1,2];
+// let g = [3,4];
+
+// console.log(t + g);
+
+// Преобразование чисел в строки
+// let a = 42;
+// let b = a + ""; // number to string
+// console.log(typeof b); // > string
+
+// Неявно преобразовать строку в число
+
+// let a = "27.06";
+// let b = a - 0; //- * /
+// console.log(typeof b); // > number
+
+// Неявные преобразования: * --> Boolean
+
+// var a = 42;
+// var b = "аbс";
+// var c;
+// var d = null;
+
+// if((a && d) || c){ // > false demak ishlamidi
+// 	console.log("if ni ichina true tushdi");
+// }
+
+
+
+
+
 
 
 
