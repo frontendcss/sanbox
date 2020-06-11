@@ -201,7 +201,7 @@
 // let t = [1,2];
 // let g = [3,4];
 
-// console.log(t + g);
+// console.log(t + g); // [1,23,4]
 
 // Преобразование чисел в строки
 // let a = 42;
@@ -224,6 +224,68 @@
 // if((a && d) || c){ // > false demak ishlamidi
 // 	console.log("if ni ichina true tushdi");
 // }
+
+// Операторы || и &&
+
+// let a = 27;
+// let b = "abc";
+// let c = null;
+
+// // || если условие истинно, то результатом выражения становится значение первого операнда
+// console.log(a || b); // > 27
+// console.log(a && b); // > abc
+
+// // И наоборот, для оператора && если условие истинно,
+// // то резуль­татом выражения && становится значение второго операнда.
+// // Если же условие ложно, то результатом выражения && становит­ся значение первого операнда
+
+// console.log(c || b); // > abc
+// console.log(c && b); // > null
+
+// function foo(a,b){
+// 	a = a || "Hello";
+// 	b = b || "World";
+
+// 	console.log(a + " " + b);
+// }
+
+// foo();
+// foo("Hello", "JavaSctipt");
+
+// Защитным оператором
+
+// function foo(){
+// 	console.log(a);
+// }
+
+// let a = true;
+// a && foo(); // agar a true bolsa functionni chaqiramiz
+
+// let a = 27;
+// let b = null;
+// let d = "foo";
+
+// // Команда if инициирует преобразование значения
+// // "foo" в boolean, что, ко­нечно, дает true.
+// if(a && (b || d)){
+// 	console.log("if ishladi");
+// }
+
+// Преобразование символических имен
+// let a = Symbol("coll");
+// console.log(String(a)); // >  Symbol("coll")
+
+// let b = Symbol("not coll");
+// b + 0;
+// console.log(b); // > Cannot convert a Symbol value to a number
+
+// Они равны только в том случае, если оба они ссылаются в точности на одно значение.
+// Никакое преобразование типа при этом не выполняется.
+let a = [1];
+let b = a
+
+console.log(a === b); // > true
+
 
 
 
