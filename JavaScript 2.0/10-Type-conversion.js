@@ -42,7 +42,7 @@
 // };
 
 // let result = JSON.stringify(obj);
-// console.log(result);
+// console.log(result); // > {"a":2}
 
 // let obj = {
 // 	b: 27,
@@ -116,7 +116,7 @@
 // console.log(b); // > 2.5
 
 // let a = "1.5";
-// let b = 1+ -a;
+// let b = 1+ -a; // + ishlamidi nachunkini aniklash garak!
 // console.log(b); // > -0.5
 
 // Преобразование даты в число
@@ -134,15 +134,15 @@
 // console.log(timeStamp);
 
 // Занятный случай с оператором ~
-// console.log(~27); // -(42+1) ==> -43
+// console.log(~27); // -(27+1) ==> -28
 
 // let a = "Hello world";
-
-// if(~a.indexOf("lo")){
-// 	console.log("'lo' bor a ni ichinda");
+// let b;
+// if(b = ~a.indexOf("lo")){
+// 	console.log("'lo' bor a ni ichinda " + Boolean(b));
 // } // true
 
-// Усечение битов
+// Усечение битовs
 // console.log(~~27.35);
 
 // console.log(Math.floor(-27.6)); // > -28
@@ -192,7 +192,7 @@
 
 // let a = "27";
 // let b = 0;
-// console.log(a + b); // > 270 type string
+// console.log(a + b); // > 270 type string // oporator + ishlidi
 
 // let c = 27;
 // let d = 0;
@@ -252,14 +252,14 @@
 // foo();
 // foo("Hello", "JavaSctipt");
 
-// Защитным оператором
+// Защитный оператор
 
 // function foo(){
 // 	console.log(a);
 // }
 
 // let a = true;
-// a && foo(); // agar a true bolsa functionni chaqiramiz
+// a && foo(); // agar a true bolsa function ni chaqiramiz
 
 // let a = 27;
 // let b = null;
@@ -269,7 +269,7 @@
 // // "foo" в boolean, что, ко­нечно, дает true.
 // if(a && (b || d)){
 // 	console.log("if ishladi");
-// }
+// } // > if ishladi!
 
 // Преобразование символических имен
 // let a = Symbol("coll");
@@ -281,10 +281,99 @@
 
 // Они равны только в том случае, если оба они ссылаются в точности на одно значение.
 // Никакое преобразование типа при этом не выполняется.
-let a = [1];
-let b = a
+// let a = [1];
+// let b = a
 
-console.log(a === b); // > true
+// console.log(a === b); // > true
+
+// Сравнение: что угодно с логическими значениями
+
+// let y = "27"; // > 27
+// let x = true; // > toNumber(x) > 1
+
+// console.log(a == b); // > 27 == 1 > false
+
+// Сравнение: null с undefined
+
+// let a = null;
+// let b = undefined;
+// let c;
+
+// console.log(a == b); // > true
+// console.log(c == b); // > true
+// console.log(a == null); // > true
+
+// console.log(a == false); // > false
+// console.log(b == false); // > false
+// console.log(a == ""); // > false
+// console.log(b == ""); // > false
+// console.log(a == 0); // > false
+// console.log(b == 0); // > false
+
+// function foo(){
+// 	return null;
+// }
+// let d = foo();
+
+// // if(d == undefined){
+// // 	console.log("function 'Null' yoki 'Undefined' qaytardi");
+// // } // > if ishladi
+
+// // ikkinchi variant
+// if(d === undefined || d === null){
+// 	console.log("function 'Null' yoki 'Undefined' qaytardi");
+// }
+
+// Сравнение: объекты и необъекты
+
+// let x = 27;
+// let y = {a: 27};
+// let y = [27];
+
+// console.log(x == y); // > true // toPrimitive(y) ga aylanadi yoki teskarisi!
+
+// let a = "abc";
+// let b = Object(a);
+
+// console.log(a == b); // > toPrimitive(b) > abc
+
+// let a = null;
+// let b = Object(a);
+// console.log(a == b); // false
+
+// let a = undefined;
+// let b = Object(a);
+// console.log(a == b); // false
+
+// let a = NaN;
+// let b = Object(a);
+// console.log(a == b); // false
+
+// Особые случаи
+// Number.prototype.valueOf = function(){
+// 	return 3;
+// };
+
+// console.log(new Object(2) == 3); // true
+
+// Самые странные случаи
+// console.log([] == ![]); // true
+// // Итак, еще перед обработкой ус­ловие [] == ![] уже преобразуется в [] == false.
+
+// console.log("" == [null]); // [null] просто превращается в "".
+// console.log([null].toString()); // > ""?
+
+// Еще один часто приводимый пример:
+// console.log(0 == "\n"); // true
+
+
+
+
+
+
+
+
+
 
 
 
