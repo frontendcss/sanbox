@@ -360,14 +360,17 @@
 // console.log([] == ![]); // true
 // // Итак, еще перед обработкой ус­ловие [] == ![] уже преобразуется в [] == false.
 
-// console.log("" == [null]); // [null] просто превращается в "".
+// console.log("" == [null]); // > true [null] просто превращается в "".
 // console.log([null].toString()); // > ""?
 
 // Еще один часто приводимый пример:
-// console.log(0 == "\n"); // true
+// console.log(0 == "\n"); // > true
 
+// Абстрактное относительное сравнение
 
-
+let a = {b: 27}; // > {object object}
+let b = {b: 28}; // > {object object}
+console.log(a <= b); // > true
 
 
 
