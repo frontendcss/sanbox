@@ -368,9 +368,9 @@
 
 // Абстрактное относительное сравнение
 
-let a = {b: 27}; // > {object object}
-let b = {b: 28}; // > {object object}
-console.log(a <= b); // > true
+// let a = {b: 27}; // > {object object}
+// let b = {b: 28}; // > {object object}
+// console.log(a <= b); // > true
 
 
 
