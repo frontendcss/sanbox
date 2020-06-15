@@ -6,7 +6,7 @@
 // let a = 3 * 8; // 3 * 8 > выражения
 // let b = 5; // > выражения
 // b; // > выражения
-// // а и ba являются значения
+// // а и b являются значения
 
 // Для сохранения завершающего значения
 // let a,b;
@@ -28,8 +28,8 @@
 // foo(); // результат: undefined, побочный эффект: изменение 'a'
 
 // let a = 27;
-// // let b = a++; // постфиксном farmat
-// let b = ++a; // префиксном farmat
+// // let b = a++; // постфиксном формат
+// let b = ++a; // префиксном формат
 
 // let a = 27;
 // let b = (a++, a);
@@ -45,29 +45,89 @@
 // console.log(delete obj.a); // > false
 
 // побочный эффект =
-let a;
-a = 27;
-console.log(a);
+// let a;
+// a = 27;
+// console.log(a); // > 27
+
+// Прерывание цикла: «break»
+
+// let sum = 0;
+// while(true){
+// 	let value = +prompt("Chislo yozing", '');
+
+// 	// Директива break в строке полностью прекращает выполнение цикла и передаёт
+// 	// управление на строку за его телом, то есть на console.log.
+
+// 	if(!value) break;
+// 	sum += value;
+// }
+
+// console.log("Summa " + sum);
+
+// Переход к следующей итерации: continue
+// При её выполнении цикл не прерывается, а переходит к следующей итерации
+// (если условие все ещё равно true).
+
+// for(let i = 0; i < 10; i++){
+// 	if(i % 2 == 0){continue;}
+// 	console.log(i);
+
+// 	// if(i % 2 == 0){
+// 	// 	console.log(i);
+// 	// }
+// }
+
+// Метки
+
+// let str = "";
+
+// foo: for(let i = 0; i < 5; i++){
+// 	if(i === 1){
+// 		continue foo;
+// 	}
+
+// 	str += i; // agar if ishlamasa str ga qo'shadi i ni
+// }
+
+// console.log(str); // > 0,2,3,4
+
+// outer: for(let i = 0; i < 3; i++){
+// 	for(let j = 0; j < 3; j++){
+// 		let input = prompt(`Yozing ${i}, ${j}`, '');
+// 		// если пустая строка или Отмена, то выйти из обоих циклов
+// 		if(!input){break outer;}
+// 	}
+// }
+
+// break outer будет разорван внешний цикл до метки с именем outer, и управление перейдёт на console
+// console.log("Tayyor");
+
+// Блоки
+// [] + {}; // > [object object]
+// {} + []; // > 0
+
+// Деструктуризация объектов
+
+// function foo(){
+// 	return{
+// 		a: 27,
+// 		b: "Hello"
+// 	}
+// }
+
+// let {a,b} = foo();
+// console.log(a, b);
 
 
+function foo({a, b, c}){
+	console.log(a, b, c);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+foo({
+	a: [1, 2, 3],
+	c: 27,
+	b: "Hello"
+});
 
 
 
