@@ -97,9 +97,9 @@
 // 		// если пустая строка или Отмена, то выйти из обоих циклов
 // 		if(!input){break outer;}
 // 	}
-// }
+// } // > metka garak agar blokla vlojenniy bolsa (continue) faqat siklni ichinda ishlidi
 
-// break outer будет разорван внешний цикл до метки с именем outer, и управление перейдёт на console
+// // break outer будет разорван внешний цикл до метки с именем outer, и управление перейдёт на console
 // console.log("Tayyor");
 
 // Блоки
@@ -116,18 +116,59 @@
 // }
 
 // let {a,b} = foo();
-// console.log(a, b);
+// console.log(a, b); // > 27 Hello
+
+// function foo({a, b, c}){
+// 	console.log(a, b, c);
+// }
+
+// foo({
+// 	a: [1, 2, 3],
+// 	c: 27,
+// 	b: "Hello"
+// });
+
+// Приоритет операторов
+
+// let a = 27;
+// let b = "foo";
+// let d = [1,2,3];
+
+// console.log(a && b || d); // > foo
+// console.log(a || b && d); // > 27
+
+// Плотное связывание
+// let a = 27;
+// let b = "foo";
+// let c = false;
+
+// let d = (a && b || c) ? (c || b) ? a : (c && b) : a;
+// console.log(d); // > 27
+
+// Ассоциативность
+
+let d = (true ? "uchunchi" : (true ? "birinchi" : "ikkinchi"));
+console.log(d); // > birinchi
 
 
-function foo({a, b, c}){
-	console.log(a, b, c);
-}
 
-foo({
-	a: [1, 2, 3],
-	c: 27,
-	b: "Hello"
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
