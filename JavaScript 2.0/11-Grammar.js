@@ -32,7 +32,8 @@
 // let b = ++a; // префиксном формат
 
 // let a = 27;
-// let b = (a++, a);
+// let b = (a++, a); // oparatro (,) vrajenya izinma keyin ishlashni bildiradi
+// console.log(b);
 
 // let obj = {
 // 	a: 27
@@ -141,14 +142,15 @@
 // let a = 27;
 // let b = "foo";
 // let c = false;
+// let s = "result true";
 
-// let d = (a && b || c) ? (c || b) ? a : (c && b) : a;
+// let d = (a && b || c) ? (c || b) ? s : (c && b) : a;
 // console.log(d); // > 27
 
 // Ассоциативность
 
-let d = (true ? "uchunchi" : (true ? "birinchi" : "ikkinchi"));
-console.log(d); // > birinchi
+let d = (false ? "uchunchi" : (false ? "birinchi" : "ikkinchi"));
+console.log(d); // > ikkinchi
 
 
 
