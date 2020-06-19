@@ -149,48 +149,166 @@
 
 // Ассоциативность
 
-let d = (false ? "uchunchi" : (false ? "birinchi" : "ikkinchi"));
-console.log(d); // > ikkinchi
+// let d = (false ? "uchunchi" : (false ? "birinchi" : "ikkinchi"));
+// console.log(d); // > ikkinchi
 
+// Автоматические точки с запятой
+// ASI (Automatic Semicolon Insertion)
 
+// let a = 1 let b = 2 // > ishlamidi 
 
+// Ошибки
+// let а = /+foo/;
+// let 42 = "a";
+// function foo(a, b, a){};s
+// (function foo(){
+// 	let obj = {
+// 		a: 23,
+// 		a: 24
+// 	};
+// })(); // > Erorr
 
+// Преждевременное использование переменных
 
+// «Временной мертвой зоны» TDZ (Temporal Dead Zone)
+// {
+// 	console.log(typeof b); // > undefined
+// 	// a = 27; // > Error TDZ
+// 	// let a;
+// } 
 
+// Аргументы функций
+// При использовании значений параметров по умолчанию ES6 значение по умолчанию применяется к
+// параметру, если аргумент пропущен или же вместо него передается значение undefined:
 
+// let b = 3;
+// (function foo(a = 1, b = a + 2){
+// 	console.log(a, b);
+// })(5);
 
+// function foo(a){
+// 	// "use strict"; bilan aloqa yo'q
+// 	a = 27;
+// 	console.log(arguments[0]);
+// }
 
+// foo(2); // > 27
+// // foo(undefined); // > undefined
+// // foo(); > undefined
 
+// Обработка ошибок, "try..catch"
 
+// try{
+// 	console.log("1");
+// 	a;
+// 	console.log("2");
+// }catch(err){
+// 	console.log("Oshibka", err.stack);
+// } // > 1, Oshibka
 
+// Использование «try…catch»
 
+// let json = "{некорректный JSON}";
+// let json = '{"name": "Limpus"}'; // > ishlidi
 
+// try{
+// 	let user = JSON.parse(json); // <-- тут возникает ошибка...s
+// 	console.log(user.name); // не сработает
+// }catch(e){
+// 	// ...выполнение прыгает сюда
+// 	console.log("Извините, в данных ошибка, мы попробуем получить их ещё раз.");
+// 	console.log(e.name);
+// 	console.log(e.message);
+// }
 
+// Генерация собственных ошибок
+// let json = '{"age": 27}'; // // данные неполны
 
+// try{
+// 	let user = JSON.parse(json);
+// 	if(!user.name){
+// 		throw new TypeError("Данные неполны: нет имени");
+// 	}
+// }catch(e){
+// 	console.log("JSON Error: " + e.message);
+// }
 
+// try…catch…finally
 
+// try {
+// 	console.log('try');
+// 	error;
+// }catch (e){
+// 	console.log('catch');
+// }finally {
+// 	console.log('finally');
+// }
 
+// finally и return
 
+// function foo(){
+// 	try{
+// 		return 1;
+// 	}catch(e){
+// 		//
+// 	}finally{
+// 		console.log("Functionni ichinda return bolsa xam birichi finally bloki ishlidi");
+// 	}
+// }
 
+// foo();
 
+// switch
+// let a = 27;
+// switch(a){
+// 	case 25:
+// 	console.log("25 bilan dang");
+// 	break;
 
+// 	case 26:
+// 	console.log("26 bilan dang");
+// 	break;
 
+// 	case 27:
+// 	console.log("27 bilan dang");
+// 	break;
 
+// 	default: console.log("default");
+// }
 
+// вы­ражением в case выполняется по правилам алгоритма ===
+// let a = "27";
+// switch(true){
+// 	case a == 25:
+// 	console.log("25 bilan dang");
+// 	break;
 
+// 	case a == 26:
+// 	console.log("26 bilan dang");
+// 	break;
 
+// 	case a == 27:
+// 	console.log("27 bilan dang");
+// 	break;
 
+// 	default: console.log("default");
+// }
 
+let a = 10;
 
+switch(a){
+ case 1:
+ case 2:
 
+ default: console.log("birsam to'g'ri galmadi");
 
+ case 3:
+	console.log("Blok 3");
+	break;
 
-
-
-
-
-
-
+	case 4:
+	console.log("Blok 4");
+} // > default > Blok 3
 
 
 
