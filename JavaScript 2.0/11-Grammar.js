@@ -294,21 +294,21 @@
 // 	default: console.log("default");
 // }
 
-let a = 10;
+// let a = 10;
 
-switch(a){
- case 1:
- case 2:
+// switch(a){
+//  case 1:
+//  case 2:
 
- default: console.log("birsam to'g'ri galmadi");
+//  default: console.log("birsam to'g'ri galmadi");
 
- case 3:
-	console.log("Blok 3");
-	break;
+//  case 3:
+// 	console.log("Blok 3");
+// 	break;
 
-	case 4:
-	console.log("Blok 4");
-} // > default > Blok 3
+// 	case 4:
+// 	console.log("Blok 4");
+// } // > default > Blok 3
 
 
 

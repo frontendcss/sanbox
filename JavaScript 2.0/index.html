@@ -7,9 +7,16 @@
 		<meta name="keywords" content="HTML,CSS,JavaScript">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
-		
 	</head>
 	<body>
+		<!-- <div class="foo"></div> -->
+		<!-- <script>foo();</script> --> <!-- foo is not defined -->
+		<script>
+			function foo(){
+				console.log("Hello 1");
+			}
+		</script>
+		 <script>foo();</script> <!-- > Hello 1 -->
 
 	<!-- <script src="01-Javascript-basics.js"></script> -->
 	<!-- <script src="02-Closures-and-objects.js"></script> -->
@@ -21,6 +28,7 @@
 	<!-- <script src="08-Types-and-values.js"></script> -->
 	<!-- <script src="09-Inline-Objects.js"></script> -->
 	<!-- <script src="10-Type-conversion.js"></script> -->
-	<script src="11-Grammar.js"></script>
+	<!-- <script src="11-Grammar.js"></script> -->
+	<script src="12-JavaScript-in-different-environments.js"></script>
 	</body>
 </html>	
