@@ -29,17 +29,15 @@
 // Function eval
 // setInterval
 // setTimeout
+// with, eval "use strict bilan ishlamidi"
 
 // function foo(str, a){
 // 	eval(str);
 
-// 	console.log(b, a);
+// 	console.log(b, a); // > 3 1
 // }
 
 // foo("var b = 3;", 1);
-
-
-// with "use strict bilan ishlamidi"
 
 // let obj = {
 // 	a: 1,
@@ -55,7 +53,7 @@
 // 	c = 4;
 // }
 
-// console.log(obj.a);
+// console.log(obj.a); // > 2
 
 // let o1 = {
 // 	a: 2
@@ -81,7 +79,7 @@
 
 // ====== Функциональные и блочные области видимости ======
 
-//Немедленный вызов функциональных выражений
+// Немедленный вызов функциональных выражений
 
 // (function muFunction(){
 // 	console.log("Hello world");
@@ -96,10 +94,10 @@
 // 	console.log(" 1 secund");
 // }, 1000)
 
-/*имя global, чтобы в программе существовало четкое
+/* имя global, чтобы в программе существовало четкое
 стилистическое разграничение между глобальными и неглобальными ссылками. Конечно, вы можете передать все что угодно из
 внешней области видимости, и параметру можно будет присвоить
-любое подходящее имя*/
+любое подходящее имя */
 // let param = "Limpus";
 // let glabal = " Glabal";
 
@@ -119,24 +117,16 @@
 
 // console.log(abc); // ReferenceError: abc is not defined
 
-// const
+// // const
 
 // const ABC = "Limpus";
 // ABC = "New"; // TypeError
-
-// try/catch 
-
-// try{
-
-// }catch(){
-
-// }
 
 // ====== Поднятие ======
 
 // a = 2;
 // var a;
-// console.log( a );
+// console.log( a ); // > 2
 
 // var a; //^ Поднятие
 // a = 2;
@@ -164,20 +154,6 @@
 // };
 
 // Сначала функции
-
-// let a = false;
-// if(a){
-// 	function foo(){
-// 		console.log("birichi let");
-// 	}
-// 	foo();
-// }else{
-// 	function foo(){
-// 		console.log("birinchi function");
-// 	}
-// 	foo();
-// }
-
 
 // Замыкание области видимости
 
@@ -275,9 +251,8 @@
 // 	}
 // })();
 
-// // foo.birinchi();
-// // foo.ikkinchi();
-
+// foo.birinchi();
+// foo.ikkinchi();
 
 /*Модули представляют собой обычные функции, так что они могут
 получать параметры:*/
@@ -325,10 +300,9 @@
 
 // })("MyModel 2020");
 
-// foo.idintify();
-// foo.change();
-// foo.idintify();
-
+// foo.idintify(); // > MyModel 2020
+// foo.change(); // > pubicAPI.idintify > idintify2
+// foo.idintify(); // > MYMODEL 2020
 
 // Динамическая область видимости
 
@@ -370,10 +344,10 @@
 // 	}
 // }
 
-// // abc.cool();
+// abc.cool();
 
 // var id = "Not osome";
-// setTimeout(abc.cool, 1000); // this == glabal
+// setTimeout(abc.cool, 1000); // this == glabal.id
 
 
 
