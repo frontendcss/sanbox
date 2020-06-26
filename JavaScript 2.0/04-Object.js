@@ -11,18 +11,18 @@
 
 // let myObj1 = new Object();
 // myObj1.key = "value";
-// console.log(myObj1.key);
+// console.log(myObj1.key); // > value
 
 // Встроенные объекты
 // let abc = "I,am String";
 // console.log(typeof abc); // String
 
-// язык автоматически преобразует строковый примитив в объект String
+// // язык автоматически преобразует строковый примитив в объект String
 // let abcObj = new String("I, am String Object");
 // console.log(typeof abcObj); // Object
 
 // let abc = "I,am String";
-// console.log(typeof abc);
+// console.log(typeof abc); // > string
 
 // let obj = {
 // 	123: "Hello Num", // key string tipa aylanadi
@@ -76,22 +76,22 @@
 // myArray.push(obj, myObject);
 // console.log(myObject);
 
-// let myObjectCopy = myObject; // myObject ni copya atamiz! Test
-// myObjectCopy.a = 3;
-// console.log(myObjectCopy); // myObjectni ichindaki a nam o'zgartirdi 3 atdi
+// // let myObjectCopy = myObject; // myObject ni copya atamiz! Test
+// // myObjectCopy.a = 3;
+// // console.log(myObjectCopy); // myObjectni ichindaki a nam o'zgartirdi 3 atdi
 
-// console.log(myObjectCopy.b === myObject.b);
-// console.log(myObjectCopy.d === myObject.d);
-// console.log(myObjectCopy.c === myObject.c);
+// // console.log(myObjectCopy.b === myObject.b); // > true
+// // console.log(myObjectCopy.d === myObject.d); // > true
+// // console.log(myObjectCopy.c === myObject.c); // > true
 
 // let copyObject = Object.assign({}, myObject); // myObject ni copya atamiz! Test 2
 // copyObject.a = 3;
 // console.log(copyObject);
 
-// console.log(copyObject.a === myObject.a);
-// console.log(copyObject.b === myObject.b);
-// console.log(copyObject.d === myObject.d);
-// console.log(copyObject.c === myObject.c);
+// console.log(copyObject.a === myObject.a); // false
+// console.log(copyObject.b === myObject.b); // true
+// console.log(copyObject.d === myObject.d); // true
+// console.log(copyObject.c === myObject.c); // true
 
 // Дескрипторы свойств
 
@@ -199,7 +199,7 @@
 // 	configureble: false
 // });
 // console.log(myObject.KANSTANT = 45); // TypeError
-// // console.log(myObject.KANSTANT);
+// console.log(myObject.KANSTANT);
 
 // Запрет расширения
 
@@ -239,14 +239,6 @@
 // // obj.a = 1;
 // // obj.c = 5;
 
-// let obj = {
-// 	a: 1
-// };
-
-// console.log(obj);
-// console.log(obj.b);
-// console.log(obj);
-
 // Геттеры и сеттеры
 
 // let user = {
@@ -262,8 +254,8 @@
 // 	}
 // };
 
-// console.log(user.fullName);
-// console.log(user);
+// // console.log(user.fullName);
+// // console.log(user);
 
 // user.fullName = "Name Family";
 // console.log(user.fullName);
@@ -276,7 +268,7 @@
 
 // 	set a(value){
 // 		// определить сеттер для `a`
-// 		this._a_ = value * 2; // Setter ni yaratishda a odini o'zgartirish garask _a_
+// 		this._a_ = value * 2; // Setter ni yaratishda a odini o'zgartirish garak _a_
 // 	}
 // };
 
@@ -297,7 +289,7 @@
 // console.log(("b" in obj)); // false
 
 // console.log(obj.hasOwnProperty("a")); // true
-// console.log(obj.hasOwnProperty("b")); // fale
+// console.log(obj.hasOwnProperty("b")); // false
 
 // Перебор
 // Здесь перебираются не значения, а индексы, которые использу-
@@ -310,7 +302,7 @@
 
 // for(let i  = 0; i <= mass.length; i++){
 // 	console.log(mass[i]);
-// } // bar undefined
+// } // bar > undefined
 
 // for..of
 // Для перебора массивов
@@ -324,7 +316,7 @@
 // 	console.log(index);
 // } // bar ni ignor atadi!
 
-// // Для перебор бъектов
+// Для перебор объектов
 
 // let obj = {
 // 	a: "bir",

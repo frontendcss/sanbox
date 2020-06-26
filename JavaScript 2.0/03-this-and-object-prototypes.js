@@ -11,7 +11,7 @@
 // 	console.log("Hello, This");
 // }
 
-// user.foo();
+// user.foo(); // > Hello, This
 
 // Существует более короткий синтаксис для методов в литерале объекта:
 
@@ -74,33 +74,33 @@
 // };
 
 // (obj.name === "Limpus" ? obj.foo: obj.foo2)(); // Erorr
-// Затем метод тут же вызывается с помощью скобок ()
+// // Затем метод тут же вызывается с помощью скобок ()
 
 // this и прототипы объектов
 
 // function identify(){
-// 	return this.name2.toUpperCase();
+// 	return this.name.toUpperCase();
 // }
 
 // function speak(){
-// 	var greeting = "Hello, I'm " + identify.call(this); // obj you ni argymen atib yuboramaniz indentify ga
+// 	// obj you ni argymen atib yuboramaniz indentify ga
+// 	var greeting = "Hello, I'm " + identify.call(this);
 // 	console.log(greeting);
 // }
 
 // var you = {
-// 	name: "Kale",
-// 	name2: "Limpus"
+// 	name: "Kale"
 // }
 
 // var me = {
 // 	name: "Rader"
 // }
 
-// console.log(identify.call(you)); // Kantext obj > you
-// console.log(identify.call(me)); // // Kantext obj > me
+// console.log(identify.call(you)); // > KALE
+// console.log(identify.call(me)); // > RADER
 
-// speak.call(you);
-// speak.call(me);
+// speak.call(you); // > Hello, I'm KALE
+// speak.call(me); // > Hello, I'm RADER
 
 // this обретает смысл!
 // this Связывание по умолчанию
@@ -139,8 +139,8 @@
 // 	fooCall2: foo2 // function foo2 ni kantexti obj
 // }
 
-// obj.fooCall();
-// obj.fooCall2();
+// obj.fooCall(); // > 2
+// obj.fooCall2(); // > Hello, 'this'
 
 // Для места вызова важен только верхний/последний уровень цепочки
 // ссылок на свойства объекта. Пример:
@@ -179,6 +179,8 @@
 // var a = "Soart"; // Типерь a также является свойством глобального объекта
 // copyLink(); // kantext glabal bo'ldi va oshibka baradi browser agar "use strict" rejim bo'lsa
 
+// ======================
+
 // function foo(){
 // 	console.log(this.a);
 // }
@@ -194,8 +196,8 @@
 
 // var a = "Ops Glabal";
 
-// toFunc(obj.callFoo);
-// setTimeout(obj.callFoo, 1000);
+// // toFunc(obj.callFoo); // > Ops Glabal
+// setTimeout(obj.callFoo, 1000); // > Ops Glabal
 
 // Явное связывание 2 праритет
 // new и call/apply не могут использоваться вместе
@@ -210,8 +212,8 @@
 // 	b: 3
 // }
 
-// foo.apply(obj);
-// foo.call("Birinchi this"); // undefined
+// foo.apply(obj); // > 2, 3
+// // foo.call("Birinchi this"); // undefined
 
 // Жесткое связывание
 // new никак не может переопределить жесткое связывание
@@ -232,6 +234,8 @@
 
 // bar();
 // setTimeout(bar, 1000);
+
+// ======================
 
 // function foo(smothing,limpus){
 // 	console.log(this.a, smothing, limpus);
@@ -269,7 +273,7 @@
 // 	this.a = a; // bar.a = 2
 // }
 
-// let bar = new foo(2); // new object yaratadi let foo = {a: 2};
+// let bar = new foo(2); // new object yaratadi let bar = {a: 2};
 // console.log(bar);
 
 // Исключения связывания
@@ -301,7 +305,7 @@
 // let bar = foo.call(obj1);
 // bar(); // > Limpus
 
-// // У стрелочных функций нет «this»
+// У стрелочных функций нет «this»
 
 // let obj = {
 // 	firstName: "Limpus",
