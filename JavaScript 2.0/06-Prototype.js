@@ -35,11 +35,11 @@
 // let myObject2 = Object.create(myObject);
 // myObject2.foo = "World"; // pasgi sepochka
 
-// // console.log(myObject2);
+// console.log(myObject2);
 
 // // svoystva foo ni payski eng pasgi sepochkadan boshlanadi yani myObject2 dan
 // console.log(myObject2.foo); // > World замещением (shadowing)
-// console.log(myObject2.hasOwnProperty("foo")); // false myObject2.foo ni ochirib durish garak
+// console.log(myObject2.hasOwnProperty("foo")); // > false pasgi sepochka ni ochirib durish garak
 
 // Функции «классов»
 // function foo(){
@@ -55,7 +55,7 @@
 // let a = new Foo();
 
 // // Object.getPrototypeOf(a) paluchit pratotype objecta
-// console.log(Object.getPrototypeOf(a) === Foo.prototype);
+// console.log(Object.getPrototypeOf(a) === Foo.prototype); // > true
 
 // «Конструкторы»
 
@@ -89,13 +89,13 @@
 // 	return this.name;
 // };
 
-// // console.log(Foo.prototype); // function ni [[prototype]]
-// // console.log(a.__proto__); // object ni [[prototype]]
+// console.log(Foo.prototype); // function ni [[prototype]]
+// console.log(a.__proto__); // object ni [[prototype]]
 
 // console.log(a.myName());
 // console.log(b.myName2());
 
-// canstructor kim akanligini bilanmiz
+// // canstructor kim akanligini bilanmiz
 // console.log(a.constructor);
 
 // И снова о «конструкторе»
@@ -108,14 +108,14 @@
 // 	// sepochkani buzadi va a1 olmidi Foo ga silkani
 // }
 
-// // console.log(Foo.prototype);
+// console.log(Foo.prototype);
 
 // let a1 = new Foo();
 // console.log(a1.constructor === Foo); // false
 
 // // А у этого объекта имеется свойство .constructor,
 // // которое указывает на встроенную функцию Object(..).
-// console.log(a1.constructor === Object);
+// console.log(a1.constructor === Object); // true
 
 // Наследование (на основе прототипов)
 
@@ -145,11 +145,11 @@
 
 // let a = new Foo();
 
-// a ni ichinda prototype bomi yo'qmi shini tekshiradi
+// // a ni ichinda prototype bomi yo'qmi shuni tekshiradi
 // console.log(a instanceof Foo); // true
 // console.log(a.constructor); // true
 
-// встречается ли во всей цепочке [[Prototype]] объекта a объект Foo.prototype ?
+// // встречается ли во всей цепочке [[Prototype]] объекта a объект Foo.prototype ?
 // console.log(Foo.prototype.isPrototypeOf(a)); // true
 // console.log(Object.getPrototypeOf(a) === Foo.prototype); // true
 
@@ -177,7 +177,7 @@
 // console.log(rabbit.ears); // animal
 // console.log(rabbit.jumps); // rabbit
 
-// rabbit.foo(); // **
+// rabbit.foo(); // Hello, __Proto__
 
 // Цепочка прототипов может быть длиннее:
 // let animal = {

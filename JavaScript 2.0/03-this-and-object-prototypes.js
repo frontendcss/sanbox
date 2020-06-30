@@ -196,7 +196,7 @@
 
 // var a = "Ops Glabal";
 
-// // toFunc(obj.callFoo); // > Ops Glabal
+// toFunc(obj.callFoo); // > Ops Glabal
 // setTimeout(obj.callFoo, 1000); // > Ops Glabal
 
 // Явное связывание 2 праритет
@@ -232,8 +232,8 @@
 
 // let a = "Ops Glabal";
 
-// bar();
-// setTimeout(bar, 1000);
+// bar(); // > 2
+// setTimeout(bar, 1000); // > 2
 
 // ======================
 

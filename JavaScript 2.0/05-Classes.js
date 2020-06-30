@@ -14,8 +14,8 @@
 
 // Конструктор
 
-// Joe = new CoolGuy( "jumping rope" )
-// Joe.showOff() // Here's my trick: jumping rope
+Joe = new CoolGuy( "jumping rope" )
+Joe.showOff() // Here's my trick: jumping rope
 
 // «Классы» Наследование
 
@@ -69,7 +69,7 @@
 // 		console.log("Turning on my engine.");
 // 	},
 
-// 	drive: function(){ // kaprat atilmidi drive bo carni ic
+// 	drive: function(){ // kapiravat atilmidi drive bo carni ic
 // 		this.ignition();
 // 		console.log("Steering and moving forward!");
 // 	}
