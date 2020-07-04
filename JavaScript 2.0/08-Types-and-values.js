@@ -46,7 +46,7 @@
 // undefined и необъявленные переменные
 
 // let a;
-// console.log(typeof a);
+// console.log(typeof a); // undefined
 // console.log(typeof b); // Erorr JavaScrit > undeclared
 
 // typeof для необъявленных переменных
@@ -94,7 +94,7 @@
 // abc[0] = 0;
 // abc["foo"] = 1;
 // console.log(abc.length);
-// > 1 / Agar key ni o'rnina tip string ishlatilsa length xosobga olmidi
+// // > 1 / Agar key ni o'rnina tip string ishlatilsa length xosobga olmidi
 
 // Подобие массивов
 
@@ -113,8 +113,8 @@
 // let a = "foo";
 // let b = ["f", "o", "o"];
 
-// console.log(a.length);
-// console.log(b.length);
+// console.log(a.length); // > 3
+// console.log(b.length); // > 3
 
 // // simvolni pazitsyasini go'rsatadi
 // console.log(a.indexOf("f"));
@@ -142,8 +142,8 @@
 
 // let g = a.split(""); // разбиение а на массив символов
 // g.reverse(); // переставить массив символов в обратном порядке
-// g.join(""); // снова объединить массив символов в строку
-// console.log(g);
+// let s = g.join(""); // снова объединить массив символов в строку
+// console.log(s); // oof
 
 // Числа
 // Стандарт IEEE 754
@@ -167,7 +167,7 @@
 
 // // Проверка целых чисел
 
-// // является ли значение целым числом
+// является ли значение целым числом
 // console.log(Number.isInteger(42)); // true
 // console.log(Number.isInteger(42.000)); // true
 // console.log(Number.isInteger(27.7)); // false
@@ -206,9 +206,9 @@
 // console.log(a); // > Infinity
 // console.log(b); // > -Infinity
 
-// console.log(Number.POSITIVE_INFINITY); // > Infinity
-// console.log(Number.NEGATIVE_INFINITY); // > -Infinity
-
+// console.log(Number.POSITIVE_INFINITY === Infinity); // > true
+// console.log(Number.NEGATIVE_INFINITY === -Infinity); // > true
+ 
 // let a = Number.MAX_VALUE;
 // console.log(a + a); // > Infinity
 
@@ -255,7 +255,7 @@
 // Значения и ссылки
 
 // let a = 27;
-// let b = a; // 'Ь' всегда содержит копию значения из 'а'
+// let b = a; // 'b' всегда содержит копию значения из 'а'
 // b++;
 
 // console.log(a); // > 27
@@ -271,18 +271,18 @@
 // d = [6,7,8,9,10]
 // console.log(d); // [6,7,8,9,10]
 
-function foo(mass){
-	mass.push(4);
-	mass.length = 0;
+// function foo(mass){
+// 	mass.push(4);
+// 	// mass.length = 0;
 
-	mass.push(5,6,7,8);
-	console.log(mass);
-}
+// 	mass.push(5,6,7,8);
+// 	console.log(mass);
+// }
 
-let a = [1,2,3];
+// let a = [1,2,3];
 
-foo(a.slice());
-console.log(a);
+// foo(a.slice());
+// console.log(a);
 
 
 

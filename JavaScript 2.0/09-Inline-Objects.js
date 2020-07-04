@@ -19,7 +19,7 @@
 // console.log(Object.prototype.toString.call(obj)); // > [object String]
 
 // // Суть в том, что new String("аЬс") создает объектнуюо бертку для
-// // строки "аЬс ", а не само примитивное значение "аЬс ".
+// // строки "аbс ", а не само примитивное значение "аbс ".
 // console.log(obj);
 
 // Внутреннее свойство [[Class]]
@@ -52,13 +52,13 @@
 
 // Распаковка
 
-// let a = new Number(27);
-// let b = new String("Limpus");
-// let c = new Boolean(true);
+// let a = new Number("27");
+// let b = new String(27);
+// let c = new Boolean(1);
 
-// console.log(typeof a.valueOf()); // > number > 27
-// console.log(typeof b.valueOf()); // > string > Limpus
-// console.log(typeof c.valueOf()); // > bloolean > true
+// console.log(a); // > number > 27
+// console.log(b); // > string > Limpus
+// console.log(c); // > bloolean > true
 
 // Массивы, содержащие как минимум один «пустой элемент», часто называются «разреженными» (sparse)
 // Array(..)
@@ -98,8 +98,8 @@
 // console.log(a.toUTCString());
 // console.log(Date.prototype);
 
-// let e = new Error("Xato");
-// throw e; // Uncaught Error: Xato
+// // let e = new Error("Xato");
+// // throw e; // Uncaught Error: Xato
 // console.log(Error.prototype);
 
 // Symbol(..)
