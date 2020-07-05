@@ -33,7 +33,7 @@
 // // // выдаст ошибку из-за циклической ссылки
 // // JSON.stringify(obj);
 
-// определить нестандартную сериализацию значения JSON
+// // определить нестандартную сериализацию значения JSON
 // obj.toJSON = function(){
 // 	// включить для сериализации только свойство a
 // 	return{
@@ -105,7 +105,7 @@
 // let b = a.toString();
 // console.log(typeof b); // type string!
 
-// String <--> Number
+// // String <--> Number
 // let a = "27";
 // // let b = Number(a);
 // let b = +a;
@@ -142,7 +142,7 @@
 // 	console.log("'lo' bor a ni ichinda " + Boolean(b));
 // } // true
 
-// Усечение битовs
+// // Усечение битов
 // console.log(~~27.35);
 
 // console.log(Math.floor(-27.6)); // > -28
@@ -192,7 +192,7 @@
 
 // let a = "27";
 // let b = 0;
-// console.log(a + b); // > 270 type string // oporator + ishlidi
+// console.log(a + b); // > 270 type string // operator + ishlidi
 
 // let c = 27;
 // let d = 0;
@@ -327,15 +327,15 @@
 // Сравнение: объекты и необъекты
 
 // let x = 27;
-// let y = {a: 27};
-// let y = [27];
+// let y = Object(27);
+// // let y = [27];
 
 // console.log(x == y); // > true // toPrimitive(y) ga aylanadi yoki teskarisi!
 
 // let a = "abc";
 // let b = Object(a);
 
-// console.log(a == b); // > toPrimitive(b) > abc
+// console.log(a == b); // > toPrimitive(b) > abc > true
 
 // let a = null;
 // let b = Object(a);
@@ -370,11 +370,11 @@
 
 // let a = {b: 27}; // > {object object}
 // let b = {b: 28}; // > {object object}
-// console.log(a <= b); // > true
+// console.log(a >= b); // > true
 
-
-
-
+// let d = [27];
+// let s = [28];
+// console.log(d <= s); // > true
 
 
 
