@@ -33,7 +33,7 @@
 
 // let a = 27;
 // let b = (a++, a); // oparatro (,) vrajenya izinma keyin ishlashni bildiradi
-// console.log(b);
+// console.log(b); // > 28
 
 // let obj = {
 // 	a: 27
@@ -145,7 +145,7 @@
 // let s = "result true";
 
 // let d = (a && b || c) ? (c || b) ? s : (c && b) : a;
-// console.log(d); // > 27
+// console.log(d); // result true
 
 // Ассоциативность
 
@@ -155,12 +155,12 @@
 // Автоматические точки с запятой
 // ASI (Automatic Semicolon Insertion)
 
-// let a = 1 let b = 2 // > ishlamidi 
+// let a = 1 let b = 2 // > ishlamidi
 
 // Ошибки
 // let а = /+foo/;
 // let 42 = "a";
-// function foo(a, b, a){};s
+// function foo(a, b, a){};
 // (function foo(){
 // 	let obj = {
 // 		a: 23,
@@ -193,8 +193,8 @@
 // }
 
 // foo(2); // > 27
-// // foo(undefined); // > undefined
-// // foo(); > undefined
+// foo(undefined); // > undefined
+// foo(); // > undefined
 
 // Обработка ошибок, "try..catch"
 
