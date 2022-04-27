@@ -2,7 +2,7 @@
 	"name": "UzMusicHD",
 	"version": "2.0.0",
 	"devDependencies": {
-		"grunt": "^1.0.3",
+		"grunt": "^1.5.2",
 		"grunt-browser-sync": "^2.2.0",
 		"grunt-contrib-clean": "^2.0.0",
 		"grunt-contrib-imagemin": "^3.1.0",
